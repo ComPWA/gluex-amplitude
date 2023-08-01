@@ -21,4 +21,5 @@ repository:
 
 sphinx:
   config:
+    myst_heading_anchors: 3
     nb_execution_show_tb: True
