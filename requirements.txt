@@ -4,6 +4,7 @@ sympy
 
 # Documentation
 jupyterlab
+jupyterlab-code-formatter
 
 # Dev
 pre-commit
