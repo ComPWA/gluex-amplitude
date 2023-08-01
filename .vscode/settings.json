@@ -27,6 +27,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
+  "git.autoRepositoryDetection": false,
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.refresh.enabled": true,
   "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
