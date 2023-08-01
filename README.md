@@ -1,6 +1,6 @@
 # Comparison repository for GlueX amplitude models
 
-_Notes for the discussions are taken [here](https://hackmd.io/@QHYjhejHTIWXL2MltV3WNQ/r17prtBo3) on HackMD._
+_Notes for the discussions are taken [here](https://hackmd.io/@QHYjhejHTIWXL2MltV3WNQ/r17prtBo3) on HackMD. Current state of the symbolic implementation can be found on [redeboer.github.io/gluex-amplitude](https://redeboer.github.io/gluex-amplitude)._
 
 ## Installation
 

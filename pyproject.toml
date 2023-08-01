@@ -6,7 +6,10 @@ requires = ["setuptools"]
 [project]
 dependencies = [
     "ampform",
+    "ipympl",
     "ipywidgets",
+    "ipywidgets",
+    "matplotlib",
     "sympy",
 ]
 name = "gluex-amplitude"
