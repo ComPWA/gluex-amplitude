@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "eamodio.gitlens",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "executablebookproject.myst-highlight",
+    "github.vscode-github-actions",
+    "github.vscode-pull-request-github",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-toolsai.vscode-jupyter-cell-tags",
+    "ms-vscode.live-server",
+    "ms-vsliveshare.vsliveshare",
+    "redhat.vscode-yaml",
+    "tamasfe.even-better-toml",
+    "yzhang.markdown-all-in-one"
+  ]
+}
