@@ -1,0 +1,39 @@
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools"]
+
+[project]
+dependencies = [
+    "ampform",
+    "ipywidgets",
+    "sympy",
+]
+name = "gluex-amplitude"
+requires-python = ">=3.7"
+version = "0.0.0"
+
+[project.optional-dependencies]
+dev = [
+    "gluex-amplitude[doc]",
+    "gluex-amplitude[jupyter]",
+    "gluex-amplitude[sty]",
+]
+doc = ["jupyter-book"]
+jupyter = [
+    "jupyterlab",
+    "jupyterlab-code-formatter",
+    "jupyterlab-myst",
+]
+sty = [
+    "black",
+    "isort",
+    "pre-commit",
+]
+
+[tool.isort]
+known_third_party = "THIRDPARTY,sympy"
+profile = "black"
+
+[tool.nbqa.addopts]
+black = ["--line-length=85"]

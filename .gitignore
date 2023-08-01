@@ -1,0 +1,38 @@
+# Output files
+*.gv
+*.npy
+*.pdf
+*.pickle
+*.png
+*.svg
+*.v2
+*.xml
+
+# Build files
+*.egg-info/
+*build/
+.eggs/
+.fuse_*
+dist/
+version.py
+
+# Temporary files
+*.pyc
+*condaenv.*
+.coverage
+.coverage.*
+.ipynb_checkpoints/
+.mypy*/
+.pytest_cache/
+__pycache__/
+htmlcov/
+prof/
+
+# Virtual environments
+*venv/
+.tox/
+pyvenv*/
+
+# Settings
+.idea/
+**.code-workspace
