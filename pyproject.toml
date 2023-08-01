@@ -6,6 +6,7 @@ requires = ["setuptools"]
 [project]
 dependencies = [
     "ampform",
+    "ipywidgets",
     "sympy",
 ]
 name = "gluex-amplitude"
@@ -20,7 +21,6 @@ dev = [
 ]
 doc = ["jupyter-book"]
 jupyter = [
-    "ipywidgets",
     "jupyterlab",
     "jupyterlab-code-formatter",
     "jupyterlab-myst",
