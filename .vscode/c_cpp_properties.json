@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "cppStandard": "c++98",
+      "cStandard": "c17",
+      "includePath": [
+        "${workspaceFolder}/src/GlueXAmplitude",
+        "/usr/include/c++/11",
+        "${env:HOME}/miniconda3/envs/gluex-amplitude/include",
+        "${workspaceFolder}/extern/AmpTools/AmpTools",
+        "${workspaceFolder}/extern/AmpTools/Tutorials/Dalitz/DalitzLib",
+        "${env:ROOTSYS}/include"
+      ],
+      "name": "Linux"
+    }
+  ],
+  "version": 4
+}
