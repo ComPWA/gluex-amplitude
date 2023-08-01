@@ -1,0 +1,19 @@
+title: GlueX amplitude model
+author: GlueX PWA team
+copyright: "2023"
+
+execute:
+  allow_errors: false
+  execute_notebooks: cache
+  timeout: 600
+
+only_build_toc_files: true
+
+repository:
+  url: https://github.com/redeboer/gluex-amplitude
+  path_to_book: docs
+  branch: main
+
+sphinx:
+  config:
+    nb_execution_show_tb: True
