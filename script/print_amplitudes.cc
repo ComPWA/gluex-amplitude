@@ -26,7 +26,7 @@ int main( int argc, char* argv[] ){
 
 		if ( arg == "-c" ){ configfile = argv[++i]; }
 	}
-	
+
 	if( configfile.size() == 0 ){
 		cout << "No config file specified" << endl;
 		exit(1);
@@ -50,7 +50,6 @@ int main( int argc, char* argv[] ){
 	Kinematics kin( p4List );
 
 	ati.printEventDetails( cfgInfo->reactionList()[0]->reactionName(), &kin );
-	
+
 	return 0;
 }
-

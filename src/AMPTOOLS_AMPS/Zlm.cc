@@ -30,20 +30,20 @@ Zlm::Zlm( const vector< string >& args ) :
    //    Usage: amplitude <reaction>::<sum>::<ampName> Zlm <J> <m> <r> <s>
    if(args.size() == 4) {
       m_polInTree = true;
-   
+
    // 2: six arguments, polarization fixed per amplitude and passed as flag
    //    Usage: amplitude <reaction>::<sum>::<ampName> Zlm <J> <m> <r> <s> <polAngle> <polFraction>
    } else if(args.size() == 6) {
       m_polInTree = false;
       m_polAngle = atof( args[4].c_str() );
       m_polFraction = atof( args[5].c_str() );
-   
+
    // 3: eight arguments, read polarization from histogram <hist> in file <rootFile>
    //    Usage: amplitude <reaction>::<sum>::<ampName> Zlm <J> <m> <r> <s> <polAngle> <polFraction=0.> <rootFile> <hist>
    } else if(args.size() == 8) {
       m_polInTree = false;
       m_polAngle = atof( args[4].c_str() );
-      m_polFraction = 0.; 
+      m_polFraction = 0.;
       TFile* f = new TFile( args[6].c_str() );
       m_polFrac_vs_E = (TH1D*)f->Get( args[7].c_str() );
       assert( m_polFrac_vs_E != NULL );
@@ -88,13 +88,13 @@ Zlm::calcUserVars( GDouble** pKin, GDouble* userVars ) const {
       beam.SetPxPyPzE( 0., 0., pKin[0][0], pKin[0][0]);
       eps.SetXYZ(pKin[0][1], pKin[0][2], 0.); // makes default output gen_amp trees readable as well (without transforming)
    } else {
-      beam.SetPxPyPzE( pKin[0][1], pKin[0][2], pKin[0][3], pKin[0][0] ); 
+      beam.SetPxPyPzE( pKin[0][1], pKin[0][2], pKin[0][3], pKin[0][0] );
       eps.SetXYZ(cos(m_polAngle*TMath::DegToRad()), sin(m_polAngle*TMath::DegToRad()), 0.0); // beam polarization vector
    }
 
-   TLorentzVector recoil ( pKin[1][1], pKin[1][2], pKin[1][3], pKin[1][0] ); 
-   TLorentzVector p1     ( pKin[2][1], pKin[2][2], pKin[2][3], pKin[2][0] ); 
-   TLorentzVector p2     ( pKin[3][1], pKin[3][2], pKin[3][3], pKin[3][0] ); 
+   TLorentzVector recoil ( pKin[1][1], pKin[1][2], pKin[1][3], pKin[1][0] );
+   TLorentzVector p1     ( pKin[2][1], pKin[2][2], pKin[2][3], pKin[2][0] );
+   TLorentzVector p2     ( pKin[3][1], pKin[3][2], pKin[3][3], pKin[3][0] );
 
    TLorentzVector resonance = p1 + p2;
 
@@ -128,13 +128,13 @@ Zlm::calcUserVars( GDouble** pKin, GDouble* userVars ) const {
    if(m_polInTree) {
       pGamma = eps.Mag();
    } else {
-      if(m_polFraction > 0.) { // for fitting with constant polarization 
+      if(m_polFraction > 0.) { // for fitting with constant polarization
          pGamma = m_polFraction;
       } else{
          int bin = m_polFrac_vs_E->GetXaxis()->FindBin(pKin[0][0]);
          if (bin == 0 || bin > m_polFrac_vs_E->GetXaxis()->GetNbins()){
             pGamma = 0.;
-         } else 
+         } else
             pGamma = m_polFrac_vs_E->GetBinContent(bin);
       }
    }
