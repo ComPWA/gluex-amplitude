@@ -21,6 +21,19 @@ conda install root -c conda-forge
 
 The benefit of AmpTools as a sub-module and installing ROOT into the conda environment is that you have out-of-the-box [language navigation in VSCode](https://code.visualstudio.com/docs/cpp/cpp-ide#_navigate-source-code).
 
+To build all source code, you first need to compile AmpTools. Either do this by cloning AmpTools and following the instructions, or with:
+
+```shell
+cd extern/AmpTools
+make
+```
+
+You can then compile the code for this repository by navigating back to the root directory (`cd ../../`) and running:
+
+```
+make
+```
+
 ### Python implementation
 
 Install Conda (recommended: [Miniconda](https://docs.conda.io/en/latest/miniconda.html#linux-installers)), then just create a Conda environment from [`environment.yml`](./environment.yml):

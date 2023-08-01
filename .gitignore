@@ -9,11 +9,14 @@
 *.xml
 
 # Build files
+*.[ado]
 *.egg-info/
 *build/
 .eggs/
 .fuse_*
+compiler_flags
 dist/
+lib/
 version.py
 
 # Temporary files
