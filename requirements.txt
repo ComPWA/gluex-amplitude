@@ -7,4 +7,6 @@ jupyterlab
 jupyterlab-code-formatter
 
 # Dev
+black
+isort
 pre-commit

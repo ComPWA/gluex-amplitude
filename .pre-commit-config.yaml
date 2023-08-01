@@ -7,14 +7,12 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
-      - id: check-ast
       - id: check-case-conflict
       - id: check-json
       - id: check-merge-conflict
       - id: check-toml
       - id: check-vcs-permalinks
       - id: check-yaml
-      - id: debug-statements
       - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
@@ -23,6 +21,7 @@ repos:
     rev: 1.7.0
     hooks:
       - id: nbqa-black
+      - id: nbqa-isort
 
   - repo: https://github.com/kynan/nbstripout
     rev: 0.6.1
