@@ -3,6 +3,7 @@ ampform
 sympy
 
 # Documentation
+ipywidgets
 jupyterlab
 jupyterlab-code-formatter
 
