@@ -1,4 +1,28 @@
 {
+  "[git-commit]": {
+    "rewrap.wrappingColumn": 72
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "off"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.formatOnSave": true,
+  "git.rebaseWhenSync": true,
+  "github-actions.workflows.pinned.refresh.enabled": true,
+  "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
   "livePreview.defaultPreviewPath": "docs/_build/html"
 }
