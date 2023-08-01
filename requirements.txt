@@ -1,0 +1,9 @@
+# Runtime
+ampform
+sympy
+
+# Documentation
+jupyterlab
+
+# Dev
+pre-commit
