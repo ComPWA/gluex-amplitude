@@ -9,8 +9,10 @@ dependencies = [
     "ipympl",
     "ipywidgets",
     "ipywidgets",
+    "jax",
+    "jaxlib",
     "matplotlib",
-    "sympy",
+    "sympy>=1.11",
 ]
 name = "gluex-amplitude"
 requires-python = ">=3.7"
