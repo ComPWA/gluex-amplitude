@@ -1,12 +1,14 @@
 # GlueX amplitude model formulation
 
-## Table of contents
-
-```{tableofcontents}
-
-```
-
 ```{include} ../README.md
-:start-line: 1
+:start-line: 2
+:end-line: 3
 :relative-docs: ..
 ```
+
+See [the repository](https://github.com/redeboer/gluex-amplitude) for installation instructions.
+
+:::{rubric} Notebooks
+:::
+:::{tableofcontents}
+:::
