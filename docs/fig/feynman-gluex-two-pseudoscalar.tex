@@ -1,0 +1,26 @@
+\documentclass[a5paper]{article}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage{nopageno}
+
+\begin{document}
+\Large
+\begin{tikzpicture}
+    \begin{feynman}
+    \vertex (a);
+    \vertex [below=of a] (b);
+    \vertex [right=of a] (c);
+    \vertex [above left=of a] (i1) {\(\gamma\)};
+    \vertex [below left=of b] (i2) {\(p\)};
+    \vertex [below right=of b] (f1) {\(p'\)};
+    \vertex [above right=of c] (f2) {\(\eta\)};
+    \vertex [below right=of c] (f3) {\(\pi^0\)};
+    \diagram* {
+        (i1) -- (a) --[scalar] (b) -- (i2),
+        (b) -- (f1),
+        (a) -- [blue, edge label=\(X\)](c),
+        (f2) -- (c) -- (f3),
+    };
+    \end{feynman}
+\end{tikzpicture}
+
+\end{document}
