@@ -1,6 +1,19 @@
 # Comparison repository for GlueX amplitude models
 
-_Notes for the discussions are taken [here](https://hackmd.io/@QHYjhejHTIWXL2MltV3WNQ/r17prtBo3) on HackMD. Current state of the symbolic implementation can be found on [redeboer.github.io/gluex-amplitude](https://redeboer.github.io/gluex-amplitude)._
+This repository was created during PWA working group meetings for GlueX at Jefferson Lab, July 31st to August 4th, 2023. Live notes for these discussions can be found [here](https://hackmd.io/@QHYjhejHTIWXL2MltV3WNQ/r17prtBo3) on HackMD. Each meeting was organised like a hackathon and the results of these programming sessions can be found on [redeboer.github.io/gluex-amplitude](https://redeboer.github.io/gluex-amplitude).
+
+The main target for the week was to implement a simple intensity function for two-pseudoscalar system with photo-production:
+
+$$
+I(\Omega,\Phi) = 2\kappa\sum_{k}\left(
+  (1-P_{\gamma})\left|\sum_{l,m}[l]_{m;k}^{(-)}\Re[Z_{l}^{m}(\Omega,\Phi)]\right|^2
+  +(1-P_{\gamma})\left|\sum_{l,m}[l]_{m;k}^{(+)}\Im[Z_{l}^{m}(\Omega,\Phi)]\right|^2
+  +(1+P_{\gamma})\left|\sum_{l,m}[l]_{m;k}^{(+)}\Re[Z_{l}^{m}(\Omega,\Phi)]\right|^2
+  +(1+P_{\gamma})\left|\sum_{l,m}[l]_{m;k}^{(-)}\Im[Z_{l}^{m}(\Omega,\Phi)]\right|^2
+\right)
+$$
+
+where $Z_{l}^{m}(\Omega,\Phi)=Y_{l}^{m}(\Omega)e^{-i\Phi}$ is a phase-rotated spherical harmonic, $\Omega$ is the solid angle, $\Phi$ is the angle between the production and polarization planes, $P_{\gamma}$ is the polarization magnitude, $[l]$ are the partial wave amplitudes, $m$ is the associated m-projection, $k$ refers to a spin flip ($k=1$) or non-flip ($k=0$) at the nucleon vertex, and $\kappa$ is an overall phase space factor.
 
 ## Installation
 
