@@ -53,7 +53,7 @@ jupyter lab
 You can also run all notebooks and render them as static HTML pages with [Jupyter Book](https://jupyterbook.org) as follows:
 
 ```shell
-jb build docs/
+jb build docs/ -W
 ```
 
 Open `docs/_build/html/index.html` to view the resulting HTML pages. In VSCode, you can view the output HTML files by searching for "Live Preview: Start Server" through the [command pallette](https://code.visualstudio.com/api/ux-guidelines/command-palette) (`Ctrl+Shift+P`).

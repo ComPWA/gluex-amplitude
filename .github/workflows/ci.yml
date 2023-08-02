@@ -22,7 +22,7 @@ jobs:
         with:
           extras: doc
           python-version: "3.10"
-      - run: jupyter book build docs
+      - run: jupyter book build docs -W
       - uses: actions/upload-pages-artifact@v1
         if: always()
         with:
