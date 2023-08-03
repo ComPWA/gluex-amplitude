@@ -1,10 +1,10 @@
-import ROOT
 import re
 import numpy as np
+import uproot
 
-# Load the root tree
-data = ROOT.RDataFrame("kin", "data.root").AsNumpy(
-    ["cosTheta_eta_hel_thrown", "phi_eta_hel_thrown", "Phi_thrown"]
+# Load the data from the root file
+data = uproot.open("data.root")["kin"].arrays(
+    ["cosTheta_eta_hel_thrown", "phi_eta_hel_thrown", "Phi_thrown"], library="pd"
 )
 
 # Load the intensities extracted by print_amplitudes.cc
@@ -20,24 +20,18 @@ assert len(intensities) == len(data["cosTheta_eta_hel_thrown"])
 
 # Rename dictionary keys
 data["intensity"] = intensities
-data["theta"] = np.arccos(data.pop("cosTheta_eta_hel_thrown"))
-data["phi"] = data.pop("phi_eta_hel_thrown")
-data["Phi"] = data.pop("Phi_thrown")/(2*np.pi)
-
-# Convert the dictionary to a structured array
-structured_array = np.empty(
-    len(next(iter(data.values()))),
-    dtype=[(key, data[key].dtype) for key in data.keys()],
+data = data.rename(
+    {
+        "cosTheta_eta_hel_thrown": "theta",
+        "phi_eta_hel_thrown": "phi",
+        "Phi_thrown": "Phi",
+    },
+    axis=1,
 )
-for key in data.keys():
-    structured_array[key] = data[key]
 
-# Save the structured array to a CSV file
-np.savetxt(
-    "comparison.csv",
-    structured_array,
-    delimiter=",",
-    fmt="%s",
-    header=",".join(data.keys()),
-    comments="",
-)
+# Standardize the data to be angles in radians
+DEGREE_TO_RADIAN = np.pi / 180.0
+data["theta"] = np.arccos(data["theta"])
+data["Phi"] = data["Phi"] * DEGREE_TO_RADIAN
+
+data.to_csv("comparison.csv", index=False, sep=",")
