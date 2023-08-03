@@ -1,0 +1,7 @@
+*
+!.gitignore
+!*.cc
+!*.cfg
+!*.md
+!*.py
+!*.root
