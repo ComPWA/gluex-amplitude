@@ -4,4 +4,4 @@
 !*.cfg
 !*.md
 !*.py
-!*.root
+!data.root
