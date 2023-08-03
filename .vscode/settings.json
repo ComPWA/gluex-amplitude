@@ -26,6 +26,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
+  "git.autofetch": true,
   "git.autoRepositoryDetection": false,
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.refresh.enabled": true,
