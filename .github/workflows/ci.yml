@@ -27,8 +27,11 @@ jobs:
           tar_file=root_$ROOT_VERSION.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
           wget https://root.cern/download/$tar_file -q
           tar xzf $tar_file
+      - run: |
           source ./root/bin/thisroot.sh
-      - run: pushd extern/AmpTools && make && popd
+          pushd extern/AmpTools
+          make
+          popd
       - run: make
 
   doc:
