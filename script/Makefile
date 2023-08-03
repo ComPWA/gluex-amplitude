@@ -25,7 +25,7 @@ CXX_FLAGS += $(shell root-config --cflags)
 # need some linking information available
 LIB_DIR += -L$(shell root-config --libdir) -L$(AMPTOOLS)/lib -L$(AMPPLOTTER)/lib
 
-LIBS :=  -lAmpTools$(ATSUFFIX) $(EXTRA_LIBS) $(shell root-config --glibs) -lstdc++
+LIBS := $(EXTRA_LIBS) -lAmpTools$(ATSUFFIX) $(shell root-config --glibs) -lstdc++
 
 # any source file falls into one of these two categories -- we'll
 # assume that anything that has MPI in the name is an MPI executable
