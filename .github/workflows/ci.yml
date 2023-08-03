@@ -21,7 +21,7 @@ jobs:
       - uses: ComPWA/actions/pip-install@v1
         with:
           extras: doc
-          python-version: "3.10"
+          python-version: "3.9"
       - run: jupyter book build docs -W
       - uses: actions/upload-pages-artifact@v1
         if: always()
