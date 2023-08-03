@@ -13,6 +13,24 @@ on:
   workflow_dispatch:
 
 jobs:
+  cpp:
+    name: Build AmpTools and GlueXAmplitude libraries
+    runs-on: ubuntu-22.04
+    env:
+      ROOT_VERSION: v6.28.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - run: sudo apt install g++
+      - run: |
+          tar_file=root_$ROOT_VERSION.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
+          wget https://root.cern/download/$tar_file
+          tar xzf $tar_file
+          source ./root/bin/thisroot.sh
+      - run: pushd extern/AmpTools && make && popd
+      - run: make
+
   doc:
     name: Execute and build documentation
     runs-on: ubuntu-22.04
