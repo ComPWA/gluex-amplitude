@@ -25,7 +25,7 @@ jobs:
       - run: sudo apt install g++
       - run: |
           tar_file=root_$ROOT_VERSION.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
-          wget https://root.cern/download/$tar_file
+          wget https://root.cern/download/$tar_file -q
           tar xzf $tar_file
           source ./root/bin/thisroot.sh
       - run: pushd extern/AmpTools && make && popd
