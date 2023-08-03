@@ -1,6 +1,7 @@
-import ROOT
 import re
+
 import numpy as np
+import ROOT
 
 # Load the root tree
 data = ROOT.RDataFrame("kin", "data.root").AsNumpy(
@@ -22,7 +23,7 @@ assert len(intensities) == len(data["cosTheta_eta_hel_thrown"])
 data["intensity"] = intensities
 data["theta"] = np.arccos(data.pop("cosTheta_eta_hel_thrown"))
 data["phi"] = data.pop("phi_eta_hel_thrown")
-data["Phi"] = data.pop("Phi_thrown")/(2*np.pi)
+data["Phi"] = data.pop("Phi_thrown") / (2 * np.pi)
 
 # Convert the dictionary to a structured array
 structured_array = np.empty(
