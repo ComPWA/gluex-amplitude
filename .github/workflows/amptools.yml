@@ -38,18 +38,18 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
-      - name: Install ROOT (macOS)
-        if: matrix.os == 'macos-12'
-        run: brew install root
       - uses: actions/cache@v3
-        if: contains(matrix.os, 'ubuntu')
         with:
-          key: root-${{ env.ROOT_VERSION }}
+          key: root-${{env.ROOT_VERSION}}-${{matrix.os}}
           path: ./root
-      - name: Install ROOT (Ubuntu)
-        if: contains(matrix.os, 'ubuntu') && ! hashFiles('root/**')
+      - name: Install ROOT
+        if: ${{ ! hashFiles('root/**') }}
         run: |
-          tar_file=root_$ROOT_VERSION.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
+          if [[ ${{matrix.os}}=='ubuntu-22.04' ]]; then
+            tar_file=root_${ROOT_VERSION}.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
+          elif [[ ${{matrix.os}}=='macos-12' ]]; then
+            tar_file=root_${ROOT_VERSION}.macos-12.6-arm64-clang140.tar.gz
+          fi
           wget https://root.cern/download/$tar_file -q
           tar xzf $tar_file
       - name: Enforce bash instead of dash
@@ -69,9 +69,7 @@ jobs:
             **/lib
       - name: Build libraries and executables
         run: |
-          if [[ ${{ matrix.os }} =~ "ubuntu" ]]; then
-            source ./root/bin/thisroot.sh
-          fi
+          source ./root/bin/thisroot.sh
           pushd extern/AmpTools; make -j$(nproc); popd
           make -j$(nproc)
       - name: Run executables
