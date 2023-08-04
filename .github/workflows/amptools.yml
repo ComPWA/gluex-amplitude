@@ -49,3 +49,6 @@ jobs:
           source ./root/bin/thisroot.sh
           pushd extern/AmpTools; make;popd
           make
+      - name: Run executables
+        run: |
+          ./print_amplitudes -c zlm.cfg
