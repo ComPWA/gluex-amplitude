@@ -42,7 +42,8 @@ jobs:
             wget https://root.cern/download/$tar_file -q
             tar xzf $tar_file
           fi
-      - run: |
+      - name: Build libraries and executables
+        run: |
           sudo rm /bin/sh
           sudo ln -s /bin/bash /bin/sh
           source ./root/bin/thisroot.sh
