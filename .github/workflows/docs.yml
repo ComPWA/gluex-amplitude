@@ -1,4 +1,4 @@
-name: CI
+name: Documentation
 
 env:
   PYTHONHASHSEED: "0"
@@ -10,40 +10,14 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - docs/**
+      - pyproject.toml
   workflow_dispatch:
 
 jobs:
-  cpp:
-    name: Build AmpTools and GlueXAmplitude libraries
-    runs-on: ubuntu-22.04
-    env:
-      ROOT_VERSION: v6.28.04
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true
-      - run: sudo apt install g++
-      - uses: actions/cache@v3
-        with:
-          key: root-${{ env.ROOT_VERSION }}
-          path: ./root
-      - name: Install ROOT
-        run: |
-          if [[ ! -d root ]]; then
-            tar_file=root_$ROOT_VERSION.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
-            wget https://root.cern/download/$tar_file -q
-            tar xzf $tar_file
-          fi
-      - run: |
-          source ./root/bin/thisroot.sh
-          pushd extern/AmpTools
-          make
-          popd
-        shell: bash
-      - run: make
-
   doc:
-    name: Execute and build documentation
+    name: Execute and build
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
