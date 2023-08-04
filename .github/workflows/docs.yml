@@ -1,5 +1,9 @@
 name: Documentation
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   PYTHONHASHSEED: "0"
 
