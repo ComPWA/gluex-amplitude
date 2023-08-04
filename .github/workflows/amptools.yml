@@ -29,6 +29,7 @@ jobs:
       ROOT_VERSION: v6.28.04
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os:
           - macos-12
