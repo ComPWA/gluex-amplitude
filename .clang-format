@@ -1,0 +1,3 @@
+BasedOnStyle: LLVM
+Language: Cpp
+Standard: c++17
