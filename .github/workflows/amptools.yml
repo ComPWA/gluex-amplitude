@@ -38,7 +38,5 @@ jobs:
           sudo rm /bin/sh
           sudo ln -s /bin/bash /bin/sh
           source ./root/bin/thisroot.sh
-          pushd extern/AmpTools
+          pushd extern/AmpTools; make;popd
           make
-          popd
-      - run: make
