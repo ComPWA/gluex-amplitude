@@ -58,6 +58,16 @@ jobs:
         run: |
           sudo rm /bin/sh
           sudo ln -s /bin/bash /bin/sh
+      - uses: actions/cache@v3
+        with:
+          key: binaries-${{ matrix.os }}-${{ hashFiles('**/*.cc', '**/*.h', 'extern/AmpTools', '**/Makefile*') }}
+          path: |
+            **/*.a
+            **/*.d
+            **/*.o
+            **/compiler_flags
+            **/bin
+            **/lib
       - name: Build libraries and executables
         run: |
           source ./root/bin/thisroot.sh
