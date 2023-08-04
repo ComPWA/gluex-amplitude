@@ -5,3 +5,4 @@
 !*.md
 !*.py
 !data.root
+!Makefile

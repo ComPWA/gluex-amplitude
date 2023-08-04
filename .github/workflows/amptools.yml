@@ -1,0 +1,82 @@
+name: C++
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONHASHSEED: "0"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "**/*.cc"
+      - "**/*.cfg"
+      - "**/*.h"
+      - "**/Makefile"
+      - .github/workflows/amptools.yml
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build and execute
+    env:
+      ROOT_VERSION: v6.28.04
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-12
+          - ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Install ROOT (macOS)
+        if: matrix.os == 'macos-12'
+        run: brew install root
+      - uses: actions/cache@v3
+        if: contains(matrix.os, 'ubuntu')
+        with:
+          key: root-${{ env.ROOT_VERSION }}
+          path: ./root
+      - name: Install ROOT (Ubuntu)
+        if: contains(matrix.os, 'ubuntu') && ! hashFiles('root/**')
+        run: |
+          tar_file=root_$ROOT_VERSION.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
+          wget https://root.cern/download/$tar_file -q
+          tar xzf $tar_file
+          source ./root/bin/thisroot.sh
+          echo 'cout << "Works!" << endl;' | root -l
+      - name: Enforce bash instead of dash
+        if: contains(matrix.os, 'ubuntu')
+        run: |
+          sudo rm /bin/sh
+          sudo ln -s /bin/bash /bin/sh
+      - uses: actions/cache@v3
+        with:
+          key: binaries-${{ matrix.os }}-${{ hashFiles('**/*.cc', '**/*.h', 'extern/AmpTools', '**/Makefile*') }}
+          path: |
+            **/*.a
+            **/*.d
+            **/*.o
+            **/compiler_flags
+            **/bin
+            **/lib
+      - name: Build libraries and executables
+        run: |
+          if [[ ${{ matrix.os }} =~ "ubuntu" ]]; then
+            source ./root/bin/thisroot.sh
+          fi
+          pushd extern/AmpTools; make -j$(nproc); popd
+          make -j$(nproc)
+      - name: Run executables
+        run: |
+          cd script
+          ./print_amplitudes -c zlm.cfg
