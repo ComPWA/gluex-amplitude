@@ -20,7 +20,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build and execute
     env:
       ROOT_VERSION: v6.28.04
     runs-on: ${{ matrix.os }}
