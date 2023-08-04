@@ -52,6 +52,8 @@ jobs:
           fi
           wget https://root.cern/download/$tar_file -q
           tar xzf $tar_file
+          source ./root/bin/thisroot.sh
+          echo 'cout << "Works!" << endl;' | root -l
       - name: Enforce bash instead of dash
         if: contains(matrix.os, 'ubuntu')
         run: |
