@@ -87,6 +87,7 @@ jobs:
           ./draw_zlm.cc
         working-directory: script
       - uses: actions/upload-artifact@v3
+        if: always()
         with:
           path: |
             script/**.log
