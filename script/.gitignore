@@ -1,0 +1,5 @@
+*
+!*.cc
+!*.cfg
+!.gitignore
+!Makefile
