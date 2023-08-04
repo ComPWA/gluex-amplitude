@@ -21,6 +21,10 @@ repos:
     rev: v16.0.6
     hooks:
       - id: clang-format
+        types_or:
+          - c++
+          - c
+          - cuda
 
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.7.0
