@@ -76,7 +76,20 @@ jobs:
           fi
           pushd extern/AmpTools; make -j$(nproc); popd
           make -j$(nproc)
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - run: pip install .
       - name: Run executables
         run: |
-          cd script
-          ./print_amplitudes -c zlm.cfg
+          ./print_amplitudes -c zlm.cfg > .print_amplitudes.log
+          python ./makeComparison.py
+          ./draw_zlm
+        working-directory: script
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          path: |
+            script/**.log
+            script/**.root
+            !script/data.root

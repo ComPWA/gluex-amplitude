@@ -9,6 +9,7 @@
 
 #include "TSystem.h"
 
+#include "AMPTOOLS_AMPS/ROOTDataReader.h"
 #include "AMPTOOLS_AMPS/Zlm.h"
 
 #include "IUAmpTools/AmpToolsInterface.h"
@@ -23,7 +24,6 @@ int main(int argc, char *argv[]) {
 
   for (int i = 1; i < argc; i++) {
     string arg(argv[i]);
-
     if (arg == "-c") {
       configfile = argv[++i];
     }
@@ -36,25 +36,45 @@ int main(int argc, char *argv[]) {
 
   ConfigFileParser parser(configfile);
   ConfigurationInfo *cfgInfo = parser.getConfigurationInfo();
-  cfgInfo->display();
+  string reactionName = cfgInfo->reactionList()[0]->reactionName();
+
+  // cfgInfo->display();
 
   AmpToolsInterface::registerAmplitude(Zlm());
+  AmpToolsInterface::registerDataReader(ROOTDataReader());
 
   AmpToolsInterface ati(cfgInfo);
-  vector<TLorentzVector> p4List;
 
-  // list lab frame p4s, in the order specified in the AmpTools config file
-  p4List.push_back(TLorentzVector(0, 0, 8.209470, 8.209470)); // beam photon
-  p4List.push_back(TLorentzVector(-0.291810, -0.315238, 0.695296,
-                                  1.244320)); // recoil proton
-  p4List.push_back(TLorentzVector(0.183147, 0.002392, 0.384435,
-                                  0.448137)); // resonance daughter 1
-  p4List.push_back(TLorentzVector(0.151104, 0.333728, 1.914300,
-                                  1.953710)); // resonance daughter 2
+  int iDataSet = 0; // if use used {data, accmc, genmc datasets}, we can choose
+                    // one of them here
 
-  Kinematics kin(p4List);
+  //////////////////////////////////////////////////////////////////////////
+  ///       TESTING PURPOSES
+  // vector< TLorentzVector > p4List;
+  ////// list lab frame p4s, in the order specified in the AmpTools config file
+  // p4List.push_back( TLorentzVector(0.000000,0.000000,8.419198,8.419198) );
+  // p4List.push_back( TLorentzVector(-0.105035,0.014094,1.106842,1.454883) );
+  // p4List.push_back( TLorentzVector(-0.330669,-0.777849,0.458704,0.971092) );
+  // p4List.push_back( TLorentzVector(0.435704,0.763756,6.855184,6.933026) );
+  // Kinematics kin_test( p4List );
+  // ati.printIntensity( reactionName, &kin_test );
+  //////////////////////////////////////////////////////////////////////////
 
-  ati.printEventDetails(cfgInfo->reactionList()[0]->reactionName(), &kin);
+  // Have to loadEvents before using kinematics (and numEvents) but cannot run
+  // processEvents.
+  //   To use the intensity method, we need to processEvents first
+  Kinematics kin;
+  ati.loadEvents(ati.dataReader(reactionName), iDataSet);
+  int nentries = ati.numEvents(iDataSet);
+  printf("Number of entries: %i\n", nentries);
+  // cout << ati.processEvents(reactionName,iDataSet) << endl;
+  for (int i = 0; i < nentries; ++i) {
+    kin = *ati.kinematics(i, iDataSet);
+    // for (auto four_vector: kin.particleList()){
+    //     four_vector.Print();
+    // }
+    ati.printIntensity(reactionName, &kin);
+  }
 
   return 0;
 }

@@ -10,7 +10,9 @@ dependencies = [
     "ipywidgets",
     "ipywidgets",
     "matplotlib",
+    "pandas",
     "sympy",
+    "uproot",
 ]
 name = "gluex-amplitude"
 requires-python = ">=3.7"

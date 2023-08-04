@@ -1,5 +1,8 @@
 *
+!.gitignore
 !*.cc
 !*.cfg
-!.gitignore
+!*.md
+!*.py
+!data.root
 !Makefile

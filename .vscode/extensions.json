@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "albertopdrf.root-file-viewer",
     "eamodio.gitlens",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
