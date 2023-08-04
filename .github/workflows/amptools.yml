@@ -72,8 +72,8 @@ jobs:
           if [[ ${{ matrix.os }} =~ "ubuntu" ]]; then
             source ./root/bin/thisroot.sh
           fi
-          pushd extern/AmpTools; make; popd
-          make
+          pushd extern/AmpTools; make -j$(nproc); popd
+          make -j$(nproc)
       - name: Run executables
         run: |
           cd script
