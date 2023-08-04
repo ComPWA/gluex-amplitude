@@ -28,13 +28,11 @@ jobs:
           wget https://root.cern/download/$tar_file -q
           tar xzf $tar_file
       - run: |
-          sudo rm /usr/bin/sh
-          sudo ln -s $shell_choice /usr/bin/sh
-      - run: |
           source ./root/bin/thisroot.sh
           pushd extern/AmpTools
           make
           popd
+        shell: bash
       - run: make
 
   doc:
