@@ -4,23 +4,21 @@
 #include "IUAmpTools/Kinematics.h"
 #include "IUAmpTools/UserDataReader.h"
 
-#include "TString.h"
 #include "TFile.h"
+#include "TString.h"
 #include "TTree.h"
 
 #include <string>
 
 using namespace std;
 
-class ROOTDataReader : public UserDataReader< ROOTDataReader >
-{
+class ROOTDataReader : public UserDataReader<ROOTDataReader> {
 
 public:
-
   /**
    * Default constructor for ROOTDataReader
    */
-  ROOTDataReader() : UserDataReader< ROOTDataReader >(), m_inFile( NULL ) { }
+  ROOTDataReader() : UserDataReader<ROOTDataReader>(), m_inFile(NULL) {}
 
   ~ROOTDataReader();
 
@@ -28,11 +26,11 @@ public:
    * Constructor for ROOTDataReader
    * \param[in] args vector of string arguments
    */
-  ROOTDataReader( const vector< string >& args );
+  ROOTDataReader(const vector<string> &args);
 
   string name() const { return "ROOTDataReader"; }
 
-  virtual Kinematics* getEvent();
+  virtual Kinematics *getEvent();
   virtual void resetSource();
 
   /**
@@ -40,13 +38,12 @@ public:
    * with weight-reading enabled and had this tree branch,
    * false, if these criteria are not met.
    */
-  virtual bool hasWeight(){ return m_useWeight; };
+  virtual bool hasWeight() { return m_useWeight; };
   virtual unsigned int numEvents() const;
 
 private:
-
-  TFile* m_inFile;
-  TTree* m_inTree;
+  TFile *m_inFile;
+  TTree *m_inTree;
   unsigned int m_eventCounter;
   bool m_useWeight;
 
