@@ -10,6 +10,12 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - "**/*.cc"
+      - "**/*.cfg"
+      - "**/*.h"
+      - "**/Makefile"
+      - .github/workflows/amptools.yml
   workflow_dispatch:
 
 jobs:
