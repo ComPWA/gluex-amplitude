@@ -54,7 +54,7 @@ jobs:
             tar xzf $tar_file
           fi
       - name: Enforce bash instead of dash
-        if: contains('ubuntu', matrix.os)
+        if: contains(matrix.os, 'ubuntu')
         run: |
           sudo rm /bin/sh
           sudo ln -s /bin/bash /bin/sh
