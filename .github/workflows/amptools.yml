@@ -52,12 +52,15 @@ jobs:
             wget https://root.cern/download/$tar_file -q
             tar xzf $tar_file
           fi
-      - name: Build libraries and executables
+      - name: Enforce bash instead of dash
+        if: contains('ubuntu', matrix.os)
         run: |
           sudo rm /bin/sh
           sudo ln -s /bin/bash /bin/sh
+      - name: Build libraries and executables
+        run: |
           source ./root/bin/thisroot.sh
-          pushd extern/AmpTools; make;popd
+          pushd extern/AmpTools; make; popd
           make
       - name: Run executables
         run: |
