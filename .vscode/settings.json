@@ -29,6 +29,9 @@
   "git.autoRepositoryDetection": false,
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.refresh.enabled": true,
-  "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
+  "github-actions.workflows.pinned.workflows": [
+    ".github/workflows/amptools.yml",
+    ".github/workflows/docs.yml"
+  ],
   "livePreview.defaultPreviewPath": "docs/_build/html"
 }
