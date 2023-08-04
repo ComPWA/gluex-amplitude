@@ -69,7 +69,9 @@ jobs:
             **/lib
       - name: Build libraries and executables
         run: |
-          source ./root/bin/thisroot.sh
+          if [[ ${{ matrix.os }} =~ "ubuntu" ]]; then
+            source ./root/bin/thisroot.sh
+          fi
           pushd extern/AmpTools; make; popd
           make
       - name: Run executables
