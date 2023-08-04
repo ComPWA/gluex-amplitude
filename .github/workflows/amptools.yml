@@ -48,7 +48,7 @@ jobs:
           if [[ ${{matrix.os}}=='ubuntu-22.04' ]]; then
             tar_file=root_${ROOT_VERSION}.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
           elif [[ ${{matrix.os}}=='macos-12' ]]; then
-            tar_file=root_${ROOT_VERSION}.macos-12.6-arm64-clang140.tar.gz
+            tar_file=root_${ROOT_VERSION}.macos-12.6-x86_64-clang140.tar.gz
           fi
           wget https://root.cern/download/$tar_file -q
           tar xzf $tar_file
