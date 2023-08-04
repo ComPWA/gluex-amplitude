@@ -23,10 +23,17 @@ jobs:
         with:
           submodules: true
       - run: sudo apt install g++
-      - run: |
-          tar_file=root_$ROOT_VERSION.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
-          wget https://root.cern/download/$tar_file -q
-          tar xzf $tar_file
+      - uses: actions/cache@v3
+        with:
+          key: root-${{ env.ROOT_VERSION }}
+          path: ./root
+      - name: Install ROOT
+        run: |
+          if [[ ! -d root ]]; then
+            tar_file=root_$ROOT_VERSION.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
+            wget https://root.cern/download/$tar_file -q
+            tar xzf $tar_file
+          fi
       - run: |
           source ./root/bin/thisroot.sh
           pushd extern/AmpTools
