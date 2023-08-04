@@ -78,5 +78,13 @@ jobs:
           make -j$(nproc)
       - name: Run executables
         run: |
-          cd script
-          ./print_amplitudes -c zlm.cfg
+          ./print_amplitudes -c zlm.cfg > .print_amplitudes.log
+          python ./makeComparison.py
+          ./draw_zlm.cc
+        working-directory: script
+      - uses: actions/upload-artifact@v3
+        with:
+          path: |
+            script/**.log
+            script/**.root
+            !script/data.root
