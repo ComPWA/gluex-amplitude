@@ -74,5 +74,5 @@ jobs:
           make
       - name: Run executables
         run: |
-          cd scripts
+          cd script
           ./print_amplitudes -c zlm.cfg
