@@ -1,4 +1,8 @@
-name: CI
+name: Documentation
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   PYTHONHASHSEED: "0"
@@ -10,11 +14,14 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - docs/**
+      - pyproject.toml
   workflow_dispatch:
 
 jobs:
   doc:
-    name: Execute and build documentation
+    name: Execute and build
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
