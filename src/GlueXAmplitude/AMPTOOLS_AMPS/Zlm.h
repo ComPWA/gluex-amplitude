@@ -1,22 +1,20 @@
 #if !defined(ZLM)
 #define ZLM
 
+#include "GPUManager/GPUCustomTypes.h"
+#include "IUAmpTools/AmpParameter.h"
 #include "IUAmpTools/Amplitude.h"
 #include "IUAmpTools/UserAmplitude.h"
-#include "IUAmpTools/AmpParameter.h"
-#include "GPUManager/GPUCustomTypes.h"
 
 #include "TH1D.h"
-#include <string>
 #include <complex>
+#include <string>
 #include <vector>
 
 #ifdef GPU_ACCELERATION
-void
-GPUZlm_exec( dim3 dimGrid, dim3 dimBlock, GPU_AMP_PROTO,
-      int j, int m, int r, int s );
+void GPUZlm_exec(dim3 dimGrid, dim3 dimBlock, GPU_AMP_PROTO, int j, int m,
+                 int r, int s);
 #endif // GPU_ACCELERATION
-
 
 using std::complex;
 using namespace std;
@@ -31,49 +29,46 @@ using namespace std;
 
 class Kinematics;
 
-class Zlm : public UserAmplitude< Zlm >
-{
+class Zlm : public UserAmplitude<Zlm> {
 
-   public:
+public:
+  Zlm() : UserAmplitude<Zlm>(){};
+  Zlm(const vector<string> &args);
 
-      Zlm() : UserAmplitude< Zlm >() { };
-      Zlm( const vector< string >& args );
+  enum UserVars { kPgamma = 0, kCosTheta, kPhi, kBigPhi, kNumUserVars };
+  unsigned int numUserVars() const { return kNumUserVars; }
 
-      enum UserVars { kPgamma = 0, kCosTheta, kPhi, kBigPhi, kNumUserVars };
-      unsigned int numUserVars() const { return kNumUserVars; }
+  string name() const { return "Zlm"; }
 
-      string name() const { return "Zlm"; }
+  complex<GDouble> calcAmplitude(GDouble **pKin, GDouble *userVars) const;
+  void calcUserVars(GDouble **pKin, GDouble *userVars) const;
 
-      complex< GDouble > calcAmplitude( GDouble** pKin, GDouble* userVars ) const;
-      void calcUserVars( GDouble** pKin, GDouble* userVars ) const;
+  // we can calcualte everything we need from userVars block so allow
+  // the framework to purge the four-vectors
+  bool needsUserVarsOnly() const { return true; }
 
-      // we can calcualte everything we need from userVars block so allow
-      // the framework to purge the four-vectors
-      bool needsUserVarsOnly() const { return true; }
-
-      // the user variables above are the same for all instances of this amplitude
-      bool areUserVarsStatic() const { return true; }
+  // the user variables above are the same for all instances of this amplitude
+  bool areUserVarsStatic() const { return true; }
 
 #ifdef GPU_ACCELERATION
 
-      void launchGPUKernel( dim3 dimGrid, dim3 dimBlock, GPU_AMP_PROTO ) const;
+  void launchGPUKernel(dim3 dimGrid, dim3 dimBlock, GPU_AMP_PROTO) const;
 
-      bool isGPUEnabled() const { return true; }
+  bool isGPUEnabled() const { return true; }
 
 #endif // GPU_ACCELERATION
 
-   private:
+private:
+  int m_j;
+  int m_m;
+  int m_r;
+  int m_s;
 
-      int m_j;
-      int m_m;
-      int m_r;
-      int m_s;
+  double m_polAngle;
+  double m_polFraction;
+  bool m_polInTree;
 
-      double m_polAngle;
-      double m_polFraction;
-      bool m_polInTree;
-
-      TH1D* m_polFrac_vs_E;
+  TH1D *m_polFrac_vs_E;
 };
 
 #endif
