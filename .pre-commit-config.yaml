@@ -18,6 +18,10 @@ repos:
       - id: check-vcs-permalinks
       - id: check-yaml
       - id: end-of-file-fixer
+        exclude: >
+          (?x)^(
+            .*\.svg
+          )$
       - id: mixed-line-ending
       - id: trailing-whitespace
 
