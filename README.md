@@ -4,7 +4,7 @@ This repository was created during PWA working group meetings for GlueX at Jeffe
 
 The main target for the week was to implement a simple intensity function for two-pseudoscalar system with photo-production:
 
-![](docs/fig/eq-gluex-two-pseusoscalar.svg)
+![](docs/fig/eq-gluex-two-pseudoscalar.svg)
 
 where $Z_{l}^{m}(\Omega,\Phi)=Y_{l}^{m}(\Omega)e^{-i\Phi}$ is a phase-rotated spherical harmonic, $\Omega$ is the solid angle, $\Phi$ is the angle between the production and polarization planes, $P_{\gamma}$ is the polarization magnitude, $[l]$ are the partial wave amplitudes, $m$ is the associated m-projection, $k$ refers to a spin flip ($k=1$) or non-flip ($k=0$) at the nucleon vertex, and $\kappa$ is an overall phase space factor.
 
