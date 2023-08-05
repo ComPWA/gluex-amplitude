@@ -28,6 +28,9 @@ I(\Omega,\Phi) = 2\kappa\sum_{k}\left(
 :end-line: 13
 ```
 
+:::{figure} fig/feynman-gluex-vector-meson.svg
+:::
+
 See [the repository](https://github.com/compwa/gluex-amplitude) for installation instructions.
 
 ## Table of contents
