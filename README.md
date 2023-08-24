@@ -1,6 +1,6 @@
 # Comparison repository for GlueX amplitude models
 
-This repository was created during PWA working group meetings for GlueX at Jefferson Lab, July 31st to August 4th, 2023. Live notes for these discussions can be found [here](https://hackmd.io/@QHYjhejHTIWXL2MltV3WNQ/r17prtBo3) on HackMD. Each meeting was organised like a 'hackathon' and the results of these programming sessions can be found on [redeboer.github.io/gluex-amplitude](https://redeboer.github.io/gluex-amplitude).
+This repository was created during PWA working group meetings for GlueX at Jefferson Lab, July 31st to August 4th, 2023. Live notes for these discussions can be found [here](https://hackmd.io/@QHYjhejHTIWXL2MltV3WNQ/r17prtBo3) on HackMD. Each meeting was organised like a 'hackathon' and the results of these programming sessions can be found on [compwa.github.io/gluex-amplitude](https://compwa.github.io/gluex-amplitude).
 
 The main target for the week was to implement a simple intensity function for two-pseudoscalar system with photo-production:
 
@@ -19,7 +19,7 @@ The amplitude model is implemented in [AmpTools](https://github.com/mashephe/Amp
 This repository comes with [AmpTools](https://github.com/mashephe/AmpTools) as a submodule. If you clone this repository as:
 
 ```shell
-git clone https://github.com/redeboer/gluex-amplitude --recurse-submodules
+git clone https://github.com/compwa/gluex-amplitude --recurse-submodules
 ```
 
 you should get AmpTools as well. Navigate to [`extern/AmpTools`](./extern/AmpTools) for further build instructions. Additionally, you need to have ROOT installed. Official installation instructions can be found [here](https://root.cern/install), but alternatively, you can install ROOT in your conda environment (see [Python implementation](#python-implementation)) as follows:
