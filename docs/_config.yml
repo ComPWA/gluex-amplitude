@@ -20,7 +20,7 @@ launch_buttons:
 only_build_toc_files: true
 
 repository:
-  url: https://github.com/redeboer/gluex-amplitude
+  url: https://github.com/compwa/gluex-amplitude
   path_to_book: docs
   branch: main
 
