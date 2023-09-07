@@ -1,11 +1,10 @@
-\documentclass[a5paper]{article}
+\documentclass{standalone}
 \usepackage[compat=1.1.0]{tikz-feynman}
-\usepackage{nopageno}
 
 \begin{document}
 \Large
 \begin{tikzpicture}
-    \begin{feynman}
+  \begin{feynman}
     \vertex (a);
     \vertex [below=of a] (b);
     \vertex [right=of a] (c);
@@ -15,12 +14,11 @@
     \vertex [above right=of c] (f2) {\(\eta\)};
     \vertex [below right=of c] (f3) {\(\pi^0\)};
     \diagram* {
-        (i1) -- (a) --[scalar] (b) -- (i2),
-        (b) -- (f1),
-        (a) -- [blue, edge label=\(X\)](c),
-        (f2) -- (c) -- (f3),
+    (i1) -- [photon] (a) --[scalar] (b) -- (i2),
+    (b) -- (f1),
+    (a) -- [blue, edge label=\(X\)](c),
+    (f2) -- (c) -- (f3),
     };
-    \end{feynman}
+  \end{feynman}
 \end{tikzpicture}
-
 \end{document}

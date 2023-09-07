@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+\begin{document}
+\Large
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a);
+    \vertex [below=of a] (b);
+    \vertex [right=of a] (c);
+    \vertex [above right=of c] (d);
+    \vertex [below right=of b] (e);
+    \vertex [below right=of e] (f1) {\(p\)};
+    \vertex [right=of e] (f2) {\(\pi^+\)};
+    \vertex [below right=of c] (f3) {\(\pi^-\)};
+    \vertex [above right=of d] (f4) {\(\pi^+\)};
+    \vertex [right=of d] (f5) {\(\pi^0\)};
+    \vertex [below right=of d] (f6) {\(\pi^-\)};
+    \vertex [above left=of a] (i1) {\(\gamma\)};
+    \vertex [below left=of b] (i2) {\(p\)};
+    \diagram* {
+    (i1) -- [photon] (a) --[scalar] (b) -- (i2),
+    (b) -- [edge label=\(\Delta^{++}\)] (e),
+    (a) -- [blue, edge label=\(X\)](c),
+    (c) -- [edge label=\(\omega\)] (d),
+    (e) -- (f1),
+    (e) -- (f2),
+    (c) -- (f3),
+    (d) -- (f4),
+    (d) -- (f5),
+    (d) -- (f6),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{document}

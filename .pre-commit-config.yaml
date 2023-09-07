@@ -18,6 +18,10 @@ repos:
       - id: check-vcs-permalinks
       - id: check-yaml
       - id: end-of-file-fixer
+        exclude: >
+          (?x)^(
+            .*\.svg
+          )$
       - id: mixed-line-ending
       - id: trailing-whitespace
 
@@ -39,6 +43,13 @@ repos:
     rev: 5.12.0
     hooks:
       - id: isort
+
+  - repo: https://github.com/cmhughes/latexindent.pl
+    rev: V3.22.2
+    hooks:
+      - id: latexindent
+        args:
+          - "-y=defaultIndent: '  '"
 
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.7.0

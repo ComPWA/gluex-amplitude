@@ -20,7 +20,11 @@ lib/
 version.py
 
 # Temporary files
+*.aux
+*.dvi
+*.log
 *.pyc
+*.synctex*
 *condaenv.*
 .coverage
 .coverage.*

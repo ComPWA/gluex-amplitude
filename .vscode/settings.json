@@ -28,5 +28,43 @@
     ".github/workflows/amptools.yml",
     ".github/workflows/docs.yml"
   ],
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "onSucceeded",
+  "latex-workshop.latex.clean.fileTypes": [
+    "%DOCFILE%.aux",
+    "%DOCFILE%.dvi",
+    "%DOCFILE%.log",
+    "%DOCFILE%.synctex",
+    "%DOCFILE%.synctex.gz"
+  ],
+  "latex-workshop.latex.clean.method": "glob",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "feynman",
+      "tools": ["pdf", "dvi", "svg"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "command": "lualatex",
+      "name": "pdf"
+    },
+    {
+      "args": ["--output-format=dvi", "%DOC%"],
+      "command": "lualatex",
+      "name": "dvi"
+    },
+    {
+      "args": ["--no-fonts", "%DOC%"],
+      "command": "dvisvgm",
+      "name": "svg"
+    }
+  ],
   "livePreview.defaultPreviewPath": "docs/_build/html"
 }
