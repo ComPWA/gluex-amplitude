@@ -41,4 +41,4 @@ known_third_party = "THIRDPARTY,sympy"
 profile = "black"
 
 [tool.nbqa.addopts]
-black = ["--line-length=85"]
+isort = ["--line-length=85"]
