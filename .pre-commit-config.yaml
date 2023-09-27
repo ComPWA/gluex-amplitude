@@ -25,6 +25,11 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
 
+  - repo: https://github.com/ComPWA/repo-maintenance
+    rev: 0.0.198
+    hooks:
+      - id: colab-toc-visible
+
   - repo: https://github.com/psf/black
     rev: 23.9.1
     hooks:
