@@ -1,9 +1,24 @@
-
 [build-system]
 build-backend = "setuptools.build_meta"
 requires = ["setuptools"]
 
 [project]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering",
+]
 dependencies = [
     "ampform",
     "ipympl",
@@ -14,6 +29,8 @@ dependencies = [
     "sympy",
     "uproot",
 ]
+description = "Investigation of symbolic amplitude models for the GlueX experiment"
+license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"
 requires-python = ">=3.7"
 version = "0.0.0"
@@ -36,9 +53,37 @@ sty = [
     "pre-commit",
 ]
 
+[project.readme]
+content-type = "text/markdown"
+file = "README.md"
+
+[tool.black]
+preview = true
+target-version = [
+    "py310",
+    "py311",
+    "py37",
+    "py38",
+    "py39",
+]
+
 [tool.isort]
 known_third_party = "THIRDPARTY,sympy"
 profile = "black"
 
 [tool.nbqa.addopts]
-black = ["--line-length=85"]
+isort = ["--line-length=85"]
+
+[tool.tomlsort]
+all = false
+ignore_case = true
+in_place = true
+sort_first = [
+    "build-system",
+    "project",
+    "tool.setuptools",
+    "tool.setuptools_scm",
+]
+sort_table_keys = true
+spaces_indent_inline_array = 4
+trailing_comma_inline_array = true

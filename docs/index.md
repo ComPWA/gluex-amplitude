@@ -1,8 +1,8 @@
 # GlueX amplitude model
 
 ```{include} ../README.md
-:start-line: 2
-:end-line: 6
+:start-line: 4
+:end-line: 8
 ```
 
 ```{math}
@@ -16,16 +16,16 @@ I(\Omega,\Phi) = 2\kappa\sum_{k}\left(
 ```
 
 ```{include} ../README.md
-:start-line: 8
-:end-line: 10
+:start-line: 10
+:end-line: 12
 ```
 
 :::{figure} fig/feynman-gluex-two-pseudoscalar.svg
 :::
 
 ```{include} ../README.md
-:start-line: 12
-:end-line: 13
+:start-line: 14
+:end-line: 15
 ```
 
 :::{figure} fig/feynman-gluex-vector-meson.svg
