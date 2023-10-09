@@ -1,5 +1,6 @@
 {
   "[git-commit]": {
+    "editor.rulers": [72],
     "rewrap.wrappingColumn": 72
   },
   "[json]": {
@@ -14,11 +15,14 @@
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
-    }
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.rulers": [88]
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "black-formatter.importStrategy": "fromEnvironment",
   "editor.formatOnSave": true,
   "git.autofetch": true,
   "git.autoRepositoryDetection": false,
@@ -46,6 +50,16 @@
   ],
   "latex-workshop.latex.tools": [
     {
+      "args": ["--no-fonts", "%DOC%"],
+      "command": "dvisvgm",
+      "name": "svg"
+    },
+    {
+      "args": ["--output-format=dvi", "%DOC%"],
+      "command": "lualatex",
+      "name": "dvi"
+    },
+    {
       "args": [
         "-synctex=1",
         "-interaction=nonstopmode",
@@ -54,17 +68,9 @@
       ],
       "command": "lualatex",
       "name": "pdf"
-    },
-    {
-      "args": ["--output-format=dvi", "%DOC%"],
-      "command": "lualatex",
-      "name": "dvi"
-    },
-    {
-      "args": ["--no-fonts", "%DOC%"],
-      "command": "dvisvgm",
-      "name": "svg"
     }
   ],
-  "livePreview.defaultPreviewPath": "docs/_build/html"
+  "livePreview.defaultPreviewPath": "docs/_build/html",
+  "notebook.gotoSymbols.showAllSymbols": true,
+  "rewrap.wrappingColumn": 88
 }

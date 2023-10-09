@@ -3,12 +3,14 @@ root = true
 [*]
 end_of_line = lf
 indent_size = 2
-indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{ipynb,md}]
+[*.{c,cc,h,hh,ipynb,md}]
 indent_size = unset
 
 [*.{py,toml}]
 indent_size = 4
+
+[.gitmodules]
+indent_size = unset
