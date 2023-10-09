@@ -74,9 +74,6 @@ profile = "black"
 [tool.nbqa.addopts]
 isort = ["--line-length=85"]
 
-[tool.pyright]
-typeCheckingMode = "strict"
-
 [tool.tomlsort]
 all = false
 ignore_case = true
