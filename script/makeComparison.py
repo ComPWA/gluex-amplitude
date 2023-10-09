@@ -10,7 +10,7 @@ data = uproot.open("data.root")["kin"].arrays(
 
 # Load the intensities extracted by print_amplitudes.cc
 intensities = []
-with open(".print_amplitudes.log", "r") as file:
+with open(".print_amplitudes.log") as file:
     for line in file:
         if "INTENSITY =" in line:
             line = re.sub(" +", " ", line.rstrip().lstrip())
