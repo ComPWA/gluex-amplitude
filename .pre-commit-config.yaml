@@ -2,6 +2,7 @@ ci:
   autoupdate_commit_msg: "MAINT: autoupdate pre-commit hooks"
   autoupdate_schedule: quarterly
   skip:
+    - prettier
     - taplo
 
 repos:
@@ -9,23 +10,6 @@ repos:
     hooks:
       - id: check-hooks-apply
       - id: check-useless-excludes
-
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
-    hooks:
-      - id: check-case-conflict
-      - id: check-json
-      - id: check-merge-conflict
-      - id: check-toml
-      - id: check-vcs-permalinks
-      - id: check-yaml
-      - id: end-of-file-fixer
-        exclude: >
-          (?x)^(
-            .*\.svg
-          )$
-      - id: mixed-line-ending
-      - id: trailing-whitespace
 
   - repo: https://github.com/ComPWA/repo-maintenance
     rev: 0.1.11
@@ -50,8 +34,25 @@ repos:
         args:
           - --py37-plus
 
-  - repo: https://github.com/psf/black
-    rev: 23.12.1
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: check-vcs-permalinks
+      - id: check-yaml
+      - id: end-of-file-fixer
+        exclude: >
+          (?x)^(
+            .*\.svg
+          )$
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: PLEASE-UPDATE
     hooks:
       - id: black
       - id: black-jupyter
