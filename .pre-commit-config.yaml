@@ -28,7 +28,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.1.0
+    rev: 0.1.11
     hooks:
       - id: colab-toc-visible
       - id: check-dev-files
@@ -43,7 +43,7 @@ repos:
           - --repo-name=gluex-amplitude
 
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.7.0
+    rev: 1.7.1
     hooks:
       - id: nbqa-isort
       - id: nbqa-pyupgrade
@@ -51,7 +51,7 @@ repos:
           - --py37-plus
 
   - repo: https://github.com/psf/black
-    rev: 23.9.1
+    rev: 23.12.1
     hooks:
       - id: black
       - id: black-jupyter
@@ -59,7 +59,7 @@ repos:
         types_or: [jupyter]
 
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v16.0.6
+    rev: v17.0.6
     hooks:
       - id: clang-format
         types_or:
@@ -68,7 +68,7 @@ repos:
           - cuda
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.7.2
+    rev: 2.7.3
     hooks:
       - id: editorconfig-checker
         name: editorconfig
@@ -79,12 +79,12 @@ repos:
           )$
 
   - repo: https://github.com/PyCQA/isort
-    rev: 5.12.0
+    rev: 5.13.2
     hooks:
       - id: isort
 
   - repo: https://github.com/cmhughes/latexindent.pl
-    rev: V3.23.2
+    rev: V3.23.5
     hooks:
       - id: latexindent
         args:
@@ -116,7 +116,7 @@ repos:
             metadata.vscode
 
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.3
+    rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
 
