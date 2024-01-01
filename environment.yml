@@ -2,9 +2,10 @@ name: gluex-amplitude
 channels:
   - defaults
 dependencies:
-  - python==3.10.*
+  - python==3.8.*
   - pip
   - pip:
       - -e .[dev]
 variables:
   PYTHONHASHSEED: 0
+  PRETTIER_LEGACY_CLI: "1"
