@@ -12,7 +12,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.1.11
+    rev: 0.1.13a2
     hooks:
       - id: colab-toc-visible
       - id: check-dev-files
@@ -52,7 +52,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: PLEASE-UPDATE
+    rev: 23.12.1
     hooks:
       - id: black
       - id: black-jupyter
