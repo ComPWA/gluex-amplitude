@@ -5,7 +5,6 @@
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "executablebookproject.myst-highlight",
-    "garaioag.garaio-vscode-unwanted-recommendations",
     "github.vscode-github-actions",
     "github.vscode-pull-request-github",
     "james-yu.latex-workshop",
@@ -20,6 +19,7 @@
     "ms-vscode.makefile-tools",
     "ms-vsliveshare.vsliveshare",
     "redhat.vscode-yaml",
+    "Soulcode.vscode-unwanted-extensions",
     "stkb.rewrap",
     "tamasfe.even-better-toml",
     "yzhang.markdown-all-in-one"
@@ -27,6 +27,7 @@
   "unwantedRecommendations": [
     "bungcip.better-toml",
     "davidanson.vscode-markdownlint",
+    "garaioag.garaio-vscode-unwanted-recommendations",
     "ms-python.mypy-type-checker",
     "travisillig.vscode-json-stable-stringify"
   ]
