@@ -43,9 +43,14 @@ dev = [
 ]
 doc = ["jupyter-book"]
 jupyter = [
+    "isort",
     "jupyterlab",
     "jupyterlab-code-formatter",
+    "jupyterlab-git",
+    "jupyterlab-lsp",
     "jupyterlab-myst",
+    "python-lsp-ruff",
+    "python-lsp-server[rope]",
 ]
 sty = [
     "black",

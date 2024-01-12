@@ -14,7 +14,7 @@
   },
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     },
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.rulers": [88]
@@ -23,6 +23,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "black-formatter.importStrategy": "fromEnvironment",
+  "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
   "git.autofetch": true,
   "git.autoRepositoryDetection": false,
@@ -71,6 +72,7 @@
     }
   ],
   "livePreview.defaultPreviewPath": "docs/_build/html",
+  "multiDiffEditor.experimental.enabled": true,
   "notebook.gotoSymbols.showAllSymbols": true,
   "rewrap.wrappingColumn": 88
 }

@@ -33,6 +33,7 @@ version.py
 .pytest_cache/
 __pycache__/
 htmlcov/
+node_modules/
 prof/
 
 # Virtual environments
