@@ -11,8 +11,8 @@ repos:
       - id: check-hooks-apply
       - id: check-useless-excludes
 
-  - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.1.13a2
+  - repo: https://github.com/ComPWA/policy
+    rev: 0.2.0
     hooks:
       - id: colab-toc-visible
       - id: check-dev-files
