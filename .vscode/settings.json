@@ -4,7 +4,8 @@
     "rewrap.wrappingColumn": 72
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -33,6 +34,7 @@
     ".github/workflows/amptools.yml",
     ".github/workflows/docs.yml"
   ],
+  "gitlens.telemetry.enabled": false,
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.autoClean.run": "onSucceeded",
   "latex-workshop.latex.clean.fileTypes": [
@@ -74,5 +76,7 @@
   "livePreview.defaultPreviewPath": "docs/_build/html",
   "multiDiffEditor.experimental.enabled": true,
   "notebook.gotoSymbols.showAllSymbols": true,
-  "rewrap.wrappingColumn": 88
+  "redhat.telemetry.enabled": false,
+  "rewrap.wrappingColumn": 88,
+  "telemetry.telemetryLevel": "off"
 }
