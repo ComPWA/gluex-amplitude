@@ -37,7 +37,7 @@ repos:
             metadata.vscode
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.3.3
+    rev: 0.3.4
     hooks:
       - id: colab-toc-visible
       - id: check-dev-files
@@ -106,7 +106,7 @@ repos:
           - --in-place
 
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v18.1.2
+    rev: v18.1.3
     hooks:
       - id: clang-format
         types_or:
