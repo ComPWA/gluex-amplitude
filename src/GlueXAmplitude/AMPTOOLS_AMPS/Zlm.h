@@ -32,7 +32,7 @@ class Kinematics;
 class Zlm : public UserAmplitude<Zlm> {
 
 public:
-  Zlm() : UserAmplitude<Zlm>(){};
+  Zlm() : UserAmplitude<Zlm>() {};
   Zlm(const vector<string> &args);
 
   enum UserVars { kPgamma = 0, kCosTheta, kPhi, kBigPhi, kNumUserVars };
