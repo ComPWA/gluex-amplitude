@@ -31,6 +31,7 @@ version.py
 .ipynb_checkpoints/
 .mypy*/
 .pytest_cache/
+.virtual_documents/
 __pycache__/
 htmlcov/
 node_modules/

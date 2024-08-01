@@ -127,15 +127,19 @@ split-on-trailing-comma = false
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = [
     "B018",
+    "C408",
     "C90",
     "D",
     "E703",
+    "E741",
+    "N803",
     "N806",
     "N816",
     "PLR09",
     "PLR2004",
     "PLW0602",
     "PLW0603",
+    "RUF001",
     "S101",
     "T20",
     "TCH00",
@@ -145,6 +149,8 @@ split-on-trailing-comma = false
     "S101",
     "S113",
 ]
+"script/*" = ["D100", "INP001"]
+"widget.ipynb" = ["S307"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
