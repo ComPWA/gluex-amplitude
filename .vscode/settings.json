@@ -17,13 +17,12 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     },
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.rulers": [88]
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "black-formatter.importStrategy": "fromEnvironment",
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
   "git.autofetch": true,
@@ -75,8 +74,15 @@
   ],
   "livePreview.defaultPreviewPath": "docs/_build/html",
   "multiDiffEditor.experimental.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.organizeImports": "explicit"
+  },
+  "notebook.formatOnSave.enabled": true,
   "notebook.gotoSymbols.showAllSymbols": true,
   "redhat.telemetry.enabled": false,
   "rewrap.wrappingColumn": 88,
+  "ruff.enable": true,
+  "ruff.importStrategy": "fromEnvironment",
+  "ruff.organizeImports": true,
   "telemetry.telemetryLevel": "off"
 }

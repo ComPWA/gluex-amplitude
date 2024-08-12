@@ -43,9 +43,8 @@ dev = [
 ]
 doc = ["jupyter-book"]
 jupyter = [
-    "isort",
     "jupyterlab",
-    "jupyterlab-code-formatter",
+    "jupyterlab-code-formatter >=3.0.0",
     "jupyterlab-git",
     "jupyterlab-lsp",
     "jupyterlab-myst",
@@ -53,31 +52,108 @@ jupyter = [
     "python-lsp-server[rope]",
 ]
 sty = [
-    "black",
-    "isort",
     "pre-commit",
+    "ruff",
 ]
 
 [project.readme]
 content-type = "text/markdown"
 file = "README.md"
 
-[tool.black]
+[tool.ruff]
+extend-include = ["*.ipynb"]
 preview = true
-target-version = [
-    "py310",
-    "py311",
-    "py37",
-    "py38",
-    "py39",
+show-fixes = true
+src = ["src"]
+target-version = "py37"
+
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
+
+[tool.ruff.lint]
+extend-select = [
+    "A",
+    "B",
+    "BLE",
+    "C4",
+    "C90",
+    "D",
+    "EM",
+    "ERA",
+    "FA",
+    "I",
+    "ICN",
+    "INP",
+    "ISC",
+    "N",
+    "NPY",
+    "PGH",
+    "PIE",
+    "PL",
+    "Q",
+    "RET",
+    "RSE",
+    "RUF",
+    "S",
+    "SIM",
+    "T20",
+    "TCH",
+    "TID",
+    "TRY",
+    "UP",
+    "YTT",
 ]
+ignore = [
+    "D101",
+    "D102",
+    "D103",
+    "D105",
+    "D107",
+    "D203",
+    "D213",
+    "D407",
+    "D416",
+    "E501",
+    "ISC001",
+    "PLW1514",
+    "SIM108",
+]
+task-tags = ["cspell"]
 
-[tool.isort]
-known_third_party = "THIRDPARTY,sympy"
-profile = "black"
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
 
-[tool.nbqa.addopts]
-isort = ["--line-length=85"]
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = [
+    "B018",
+    "C408",
+    "C90",
+    "D",
+    "E703",
+    "E741",
+    "N803",
+    "N806",
+    "N816",
+    "PLR09",
+    "PLR2004",
+    "PLW0602",
+    "PLW0603",
+    "RUF001",
+    "S101",
+    "T20",
+    "TCH00",
+]
+"docs/*" = [
+    "INP001",
+    "S101",
+    "S113",
+]
+"script/*" = ["D100", "INP001"]
+"widget.ipynb" = ["S307"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
 
 [tool.tomlsort]
 all = false

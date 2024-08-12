@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "albertopdrf.root-file-viewer",
+    "charliermarsh.ruff",
     "eamodio.gitlens",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
@@ -8,8 +9,6 @@
     "github.vscode-github-actions",
     "github.vscode-pull-request-github",
     "james-yu.latex-workshop",
-    "ms-python.black-formatter",
-    "ms-python.isort",
     "ms-python.python",
     "ms-python.vscode-pylance",
     "ms-toolsai.jupyter",
@@ -19,7 +18,7 @@
     "ms-vscode.makefile-tools",
     "ms-vsliveshare.vsliveshare",
     "redhat.vscode-yaml",
-    "Soulcode.vscode-unwanted-extensions",
+    "soulcode.vscode-unwanted-extensions",
     "stkb.rewrap",
     "tamasfe.even-better-toml",
     "yzhang.markdown-all-in-one"
@@ -28,7 +27,11 @@
     "bungcip.better-toml",
     "davidanson.vscode-markdownlint",
     "garaioag.garaio-vscode-unwanted-recommendations",
+    "ms-python.black-formatter",
+    "ms-python.flake8",
+    "ms-python.isort",
     "ms-python.mypy-type-checker",
+    "ms-python.pylint",
     "streetsidesoftware.code-spell-checker",
     "travisillig.vscode-json-stable-stringify",
     "tyriar.sort-lines"
