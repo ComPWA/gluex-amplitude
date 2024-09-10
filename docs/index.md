@@ -17,15 +17,15 @@ I(\Omega,\Phi) = 2\kappa\sum_{k}\left(
 
 ```{include} ../README.md
 :start-line: 10
-:end-line: 12
+:end-line: 14
 ```
 
 :::{figure} fig/feynman-gluex-two-pseudoscalar.svg
 :::
 
 ```{include} ../README.md
-:start-line: 14
-:end-line: 15
+:start-line: 16
+:end-line: 17
 ```
 
 :::{figure} fig/feynman-gluex-vector-meson.svg
