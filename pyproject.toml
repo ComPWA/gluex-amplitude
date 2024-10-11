@@ -12,8 +12,7 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python",
     "Topic :: Scientific/Engineering :: Physics",
@@ -32,7 +31,7 @@ dependencies = [
 description = "Investigation of symbolic amplitude models for the GlueX experiment"
 license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 version = "0.0.0"
 
 [project.optional-dependencies]
@@ -65,7 +64,7 @@ extend-include = ["*.ipynb"]
 preview = true
 show-fixes = true
 src = ["src"]
-target-version = "py37"
+target-version = "py39"
 
 [tool.ruff.format]
 docstring-code-format = true
