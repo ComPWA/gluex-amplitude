@@ -52,6 +52,7 @@ jobs:
           tar_file=root_$ROOT_VERSION.Linux-ubuntu24.04-x86_64-gcc13.2.tar.gz
           wget https://root.cern/download/$tar_file -q
           tar xzf $tar_file
+          sudo apt install libtbb-dev
           source ./root/bin/thisroot.sh
           echo 'cout << "Works!" << endl;' | root -l
       - name: Enforce bash instead of dash
