@@ -32,14 +32,14 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - macos-12
-          - ubuntu-22.04
+          - macos-14
+          - ubuntu-24.04
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
       - name: Install ROOT (macOS)
-        if: matrix.os == 'macos-12'
+        if: matrix.os == 'macos-14'
         run: brew install root
       - uses: actions/cache@v3
         if: contains(matrix.os, 'ubuntu')
