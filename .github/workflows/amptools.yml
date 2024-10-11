@@ -26,20 +26,20 @@ jobs:
   build:
     name: Build and execute
     env:
-      ROOT_VERSION: v6.30.02
+      ROOT_VERSION: v6.32.06
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os:
-          - macos-12
-          - ubuntu-22.04
+          - macos-14
+          - ubuntu-24.04
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
       - name: Install ROOT (macOS)
-        if: matrix.os == 'macos-12'
+        if: matrix.os == 'macos-14'
         run: brew install root
       - uses: actions/cache@v3
         if: contains(matrix.os, 'ubuntu')
@@ -49,9 +49,10 @@ jobs:
       - name: Install ROOT (Ubuntu)
         if: contains(matrix.os, 'ubuntu') && ! hashFiles('root/**')
         run: |
-          tar_file=root_$ROOT_VERSION.Linux-ubuntu22.04-x86_64-gcc11.4.tar.gz
+          tar_file=root_$ROOT_VERSION.Linux-ubuntu24.04-x86_64-gcc13.2.tar.gz
           wget https://root.cern/download/$tar_file -q
           tar xzf $tar_file
+          sudo apt install libtbb-dev
           source ./root/bin/thisroot.sh
           echo 'cout << "Works!" << endl;' | root -l
       - name: Enforce bash instead of dash
