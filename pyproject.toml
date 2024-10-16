@@ -16,7 +16,7 @@ dependencies = [
 description = "Investigation of symbolic amplitude models for the GlueX experiment"
 license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 version = "0.0.0"
 
 [project.optional-dependencies]
