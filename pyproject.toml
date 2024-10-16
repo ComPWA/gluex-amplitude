@@ -124,6 +124,7 @@ task-tags = ["cspell"]
 split-on-trailing-comma = false
 
 [tool.ruff.lint.per-file-ignores]
+"**/widget.ipynb" = ["ARG001", "ARG002", "S307"]
 "*.ipynb" = [
     "B018",
     "C408",
