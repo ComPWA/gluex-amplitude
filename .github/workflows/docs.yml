@@ -14,9 +14,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - docs/**
-      - pyproject.toml
   workflow_dispatch:
 
 jobs:
