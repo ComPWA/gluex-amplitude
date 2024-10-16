@@ -25,8 +25,8 @@
   },
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
-  "git.autofetch": true,
   "git.autoRepositoryDetection": false,
+  "git.autofetch": true,
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.refresh.enabled": true,
   "github-actions.workflows.pinned.workflows": [
@@ -79,10 +79,14 @@
   },
   "notebook.formatOnSave.enabled": true,
   "notebook.gotoSymbols.showAllSymbols": true,
+  "python.terminal.activateEnvironment": false,
   "redhat.telemetry.enabled": false,
   "rewrap.wrappingColumn": 88,
   "ruff.enable": true,
   "ruff.importStrategy": "fromEnvironment",
   "ruff.organizeImports": true,
+  "search.exclude": {
+    "**/uv.lock": true
+  },
   "telemetry.telemetryLevel": "off"
 }

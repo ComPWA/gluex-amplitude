@@ -25,7 +25,6 @@ version.py
 *.log
 *.pyc
 *.synctex*
-*condaenv.*
 .coverage
 .coverage.*
 .ipynb_checkpoints/
