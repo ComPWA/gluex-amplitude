@@ -3,21 +3,6 @@ build-backend = "setuptools.build_meta"
 requires = ["setuptools"]
 
 [project]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "Intended Audience :: Education",
-    "Intended Audience :: Science/Research",
-    "Natural Language :: English",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python",
-    "Topic :: Scientific/Engineering :: Physics",
-    "Topic :: Scientific/Engineering",
-]
 dependencies = [
     "ampform",
     "ipympl",
@@ -31,7 +16,7 @@ dependencies = [
 description = "Investigation of symbolic amplitude models for the GlueX experiment"
 license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 version = "0.0.0"
 
 [project.optional-dependencies]
@@ -51,7 +36,7 @@ jupyter = [
     "python-lsp-server[rope]",
 ]
 sty = [
-    "pre-commit",
+    "pre-commit-uv",
     "ruff",
 ]
 
@@ -64,46 +49,16 @@ extend-include = ["*.ipynb"]
 preview = true
 show-fixes = true
 src = ["src"]
-target-version = "py39"
 
 [tool.ruff.format]
 docstring-code-format = true
 line-ending = "lf"
 
 [tool.ruff.lint]
-extend-select = [
-    "A",
-    "B",
-    "BLE",
-    "C4",
-    "C90",
-    "D",
-    "EM",
-    "ERA",
-    "FA",
-    "I",
-    "ICN",
-    "INP",
-    "ISC",
-    "N",
-    "NPY",
-    "PGH",
-    "PIE",
-    "PL",
-    "Q",
-    "RET",
-    "RSE",
-    "RUF",
-    "S",
-    "SIM",
-    "T20",
-    "TCH",
-    "TID",
-    "TRY",
-    "UP",
-    "YTT",
-]
 ignore = [
+    "ANN401",
+    "COM812",
+    "CPY001",
     "D101",
     "D102",
     "D103",
@@ -113,22 +68,45 @@ ignore = [
     "D213",
     "D407",
     "D416",
+    "DOC",
     "E501",
+    "FURB101",
+    "FURB103",
+    "FURB140",
+    "G004",
     "ISC001",
     "PLW1514",
+    "PT001",
+    "PTH",
     "SIM108",
 ]
+select = ["ALL"]
 task-tags = ["cspell"]
+
+[tool.ruff.lint.flake8-builtins]
+builtins-ignorelist = ["display"]
+
+[tool.ruff.lint.flake8-comprehensions]
+allow-dict-calls-with-keyword-arguments = true
+
+[tool.ruff.lint.flake8-self]
+ignore-names = [
+    "_global_settings",
+    "_latex",
+    "_print",
+]
 
 [tool.ruff.lint.isort]
 split-on-trailing-comma = false
 
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = [
+    "ANN",
     "B018",
     "C408",
     "C90",
     "D",
+    "E303",
     "E703",
     "E741",
     "N803",
@@ -143,13 +121,13 @@ split-on-trailing-comma = false
     "T20",
     "TCH00",
 ]
+"**/widget.ipynb" = ["ARG001", "ARG002", "S307"]
 "docs/*" = [
     "INP001",
     "S101",
     "S113",
 ]
 "script/*" = ["D100", "INP001"]
-"widget.ipynb" = ["S307"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
@@ -164,6 +142,5 @@ sort_first = [
     "tool.setuptools",
     "tool.setuptools_scm",
 ]
-sort_table_keys = true
 spaces_indent_inline_array = 4
 trailing_comma_inline_array = true

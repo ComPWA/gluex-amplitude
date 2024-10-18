@@ -14,9 +14,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - docs/**
-      - pyproject.toml
   workflow_dispatch:
 
 jobs:
@@ -24,13 +21,17 @@ jobs:
     name: Execute and build
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: ComPWA/actions/pip-install@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          extras: doc
-          python-version: "3.10"
-      - run: jupyter book build docs -W
-      - uses: actions/upload-pages-artifact@v1
+          python-version-file: .python-version
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: True
+      - run: >-
+          uv run --extra doc \
+            jupyter book build docs --warningiserror
+      - uses: actions/upload-pages-artifact@v3
         if: always()
         with:
           path: docs/_build/html
@@ -49,4 +50,4 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
