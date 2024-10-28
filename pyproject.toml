@@ -36,7 +36,6 @@ jupyter = [
     "python-lsp-server[rope]",
 ]
 sty = [
-    "pre-commit-uv",
     "ruff",
 ]
 
