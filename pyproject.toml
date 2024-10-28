@@ -38,9 +38,7 @@ notebooks = [
     "ipympl",
     "ipywidgets",
     "matplotlib",
-    "pandas",
     "sympy",
-    "uproot",
 ]
 
 [tool.ruff]
