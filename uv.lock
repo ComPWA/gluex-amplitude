@@ -570,7 +570,7 @@ dependencies = [
     { name = "uproot" },
 ]
 
-[package.optional-dependencies]
+[package.dependency-groups]
 dev = [
     { name = "jupyter-book" },
     { name = "jupyterlab" },
@@ -594,31 +594,39 @@ jupyter = [
     { name = "python-lsp-ruff" },
     { name = "python-lsp-server", extra = ["rope"] },
 ]
-sty = [
-    { name = "ruff" },
-]
 
 [package.metadata]
 requires-dist = [
     { name = "ampform" },
-    { name = "gluex-amplitude", extras = ["doc"], marker = "extra == 'dev'" },
-    { name = "gluex-amplitude", extras = ["jupyter"], marker = "extra == 'dev'" },
-    { name = "gluex-amplitude", extras = ["sty"], marker = "extra == 'dev'" },
     { name = "ipympl" },
     { name = "ipywidgets" },
-    { name = "jupyter-book", marker = "extra == 'doc'" },
-    { name = "jupyterlab", marker = "extra == 'jupyter'" },
-    { name = "jupyterlab-code-formatter", marker = "extra == 'jupyter'", specifier = ">=3.0.0" },
-    { name = "jupyterlab-git", marker = "extra == 'jupyter'" },
-    { name = "jupyterlab-lsp", marker = "extra == 'jupyter'" },
-    { name = "jupyterlab-myst", marker = "extra == 'jupyter'" },
     { name = "matplotlib" },
     { name = "pandas" },
-    { name = "python-lsp-ruff", marker = "extra == 'jupyter'" },
-    { name = "python-lsp-server", extras = ["rope"], marker = "extra == 'jupyter'" },
-    { name = "ruff", marker = "extra == 'sty'" },
     { name = "sympy" },
     { name = "uproot" },
+]
+
+[package.metadata.dependency-groups]
+dev = [
+    { name = "jupyter-book" },
+    { name = "jupyterlab" },
+    { name = "jupyterlab-code-formatter" },
+    { name = "jupyterlab-git" },
+    { name = "jupyterlab-lsp" },
+    { name = "jupyterlab-myst" },
+    { name = "python-lsp-ruff" },
+    { name = "python-lsp-server", extras = ["rope"] },
+    { name = "ruff" },
+]
+doc = [{ name = "jupyter-book" }]
+jupyter = [
+    { name = "jupyterlab" },
+    { name = "jupyterlab-code-formatter" },
+    { name = "jupyterlab-git" },
+    { name = "jupyterlab-lsp" },
+    { name = "jupyterlab-myst" },
+    { name = "python-lsp-ruff" },
+    { name = "python-lsp-server", extras = ["rope"] },
 ]
 
 [[package]]
