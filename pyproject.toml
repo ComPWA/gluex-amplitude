@@ -3,16 +3,6 @@ build-backend = "setuptools.build_meta"
 requires = ["setuptools"]
 
 [project]
-dependencies = [
-    "ampform",
-    "ipympl",
-    "ipywidgets",
-    "ipywidgets",
-    "matplotlib",
-    "pandas",
-    "sympy",
-    "uproot",
-]
 description = "Investigation of symbolic amplitude models for the GlueX experiment"
 license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"
@@ -29,7 +19,10 @@ dev = [
     {include-group = "doc"},
     {include-group = "jupyter"},
 ]
-doc = ["jupyter-book"]
+doc = [
+    "jupyter-book",
+    {include-group = "notebooks"},
+]
 jupyter = [
     "jupyterlab",
     "jupyterlab-code-formatter",
@@ -38,6 +31,16 @@ jupyter = [
     "jupyterlab-myst",
     "python-lsp-ruff",
     "python-lsp-server[rope]",
+    {include-group = "notebooks"},
+]
+notebooks = [
+    "ampform",
+    "ipympl",
+    "ipywidgets",
+    "matplotlib",
+    "pandas",
+    "sympy",
+    "uproot",
 ]
 
 [tool.ruff]
