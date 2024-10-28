@@ -3,46 +3,43 @@ build-backend = "setuptools.build_meta"
 requires = ["setuptools"]
 
 [project]
-dependencies = [
-    "ampform",
-    "ipympl",
-    "ipywidgets",
-    "ipywidgets",
-    "matplotlib",
-    "pandas",
-    "sympy",
-    "uproot",
-]
 description = "Investigation of symbolic amplitude models for the GlueX experiment"
 license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"
 requires-python = ">=3.12"
 version = "0.0.0"
 
-[project.optional-dependencies]
+[project.readme]
+content-type = "text/markdown"
+file = "README.md"
+
+[dependency-groups]
 dev = [
-    "gluex-amplitude[doc]",
-    "gluex-amplitude[jupyter]",
-    "gluex-amplitude[sty]",
+    "ruff",
+    {include-group = "doc"},
+    {include-group = "jupyter"},
 ]
-doc = ["jupyter-book"]
+doc = [
+    "jupyter-book",
+    {include-group = "notebooks"},
+]
 jupyter = [
     "jupyterlab",
-    "jupyterlab-code-formatter >=3.0.0",
+    "jupyterlab-code-formatter",
     "jupyterlab-git",
     "jupyterlab-lsp",
     "jupyterlab-myst",
     "python-lsp-ruff",
     "python-lsp-server[rope]",
+    {include-group = "notebooks"},
 ]
-sty = [
-    "pre-commit-uv",
-    "ruff",
+notebooks = [
+    "ampform",
+    "ipympl",
+    "ipywidgets",
+    "matplotlib",
+    "sympy",
 ]
-
-[project.readme]
-content-type = "text/markdown"
-file = "README.md"
 
 [tool.ruff]
 extend-include = ["*.ipynb"]

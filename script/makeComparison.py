@@ -1,3 +1,10 @@
+# /// script
+# dependencies = [
+#   "numpy",
+#   "pandas",
+#   "uproot",
+# ]
+# ///
 import re
 
 import numpy as np
