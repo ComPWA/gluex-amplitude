@@ -26,8 +26,6 @@ jobs:
         with:
           python-version-file: .python-version
       - uses: astral-sh/setup-uv@v5
-        with:
-          enable-cache: True
       - run: >-
           uv run --extra doc \
             jupyter book build docs --warningiserror

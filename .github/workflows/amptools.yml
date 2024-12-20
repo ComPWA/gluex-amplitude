@@ -81,8 +81,6 @@ jobs:
         with:
           python-version: "3.12"
       - uses: astral-sh/setup-uv@v5
-        with:
-          enable-cache: true
       - name: Run executables
         run: |
           ./print_amplitudes -c zlm.cfg > .print_amplitudes.log
