@@ -2,6 +2,9 @@ ci:
   autoupdate_commit_msg: "MAINT: update lock files"
   autoupdate_schedule: quarterly
 
+  skip:
+    - uv-lock
+
 repos:
   - repo: meta
     hooks:

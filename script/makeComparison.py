@@ -20,7 +20,7 @@ intensities = []
 with open(".print_amplitudes.log") as file:
     for line in file:
         if "INTENSITY =" in line:
-            line = re.sub(" +", " ", line.rstrip().lstrip())  # noqa: PLW2901
+            line = re.sub(r" +", " ", line.rstrip().lstrip())  # noqa: PLW2901
             intensities.append(float(line.split()[2]))
 intensities = np.array(intensities)
 
