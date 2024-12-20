@@ -116,7 +116,7 @@ split-on-trailing-comma = false
     "RUF001",
     "S101",
     "T20",
-    "TCH00",
+    "TC00",
 ]
 "**/widget.ipynb" = ["ARG001", "ARG002", "S307"]
 "docs/*" = [
