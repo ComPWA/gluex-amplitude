@@ -136,8 +136,6 @@ in_place = true
 sort_first = [
     "build-system",
     "project",
-    "tool.setuptools",
-    "tool.setuptools_scm",
 ]
 spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
