@@ -88,9 +88,10 @@ jobs:
           uv run makeComparison.py
           ./draw_zlm
         working-directory: script
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
+          name: cpp-logs-${{ matrix.os }}
           path: |
             script/**.log
             script/**.root
