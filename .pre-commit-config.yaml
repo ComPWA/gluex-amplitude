@@ -22,6 +22,7 @@ repos:
           - --repo-name=gluex-amplitude
       - id: remove-empty-tags
 
+      - id: set-nb-display-name
   - repo: https://github.com/kynan/nbstripout
     rev: 0.8.1
     hooks:
