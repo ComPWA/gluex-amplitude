@@ -121,6 +121,6 @@ repos:
           - "-y=defaultIndent: '  '"
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.5.18
+    rev: 0.5.24
     hooks:
       - id: uv-lock
