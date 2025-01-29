@@ -79,6 +79,7 @@
   },
   "notebook.formatOnSave.enabled": true,
   "notebook.gotoSymbols.showAllSymbols": true,
+  "python.defaultInterpreterPath": ".venv/bin/python",
   "python.terminal.activateEnvironment": false,
   "redhat.telemetry.enabled": false,
   "rewrap.wrappingColumn": 88,
