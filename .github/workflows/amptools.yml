@@ -42,7 +42,7 @@ jobs:
       - name: Install ROOT (macOS)
         if: matrix.os == 'macos-14'
         run: brew install root
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         if: contains(matrix.os, 'ubuntu')
         with:
           key: root-${{ env.ROOT_VERSION }}
@@ -61,7 +61,7 @@ jobs:
         run: |
           sudo rm /bin/sh
           sudo ln -s /bin/bash /bin/sh
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           key: binaries-${{ matrix.os }}-${{ hashFiles('**/*.cc', '**/*.h', 'extern/AmpTools', '**/Makefile*') }}
           path: |
@@ -78,10 +78,10 @@ jobs:
           fi
           pushd extern/AmpTools; make -j$(nproc); popd
           make -j$(nproc)
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - uses: astral-sh/setup-uv@v5
+      - uses: astral-sh/setup-uv@v6
       - name: Run executables
         run: |
           ./print_amplitudes -c zlm.cfg > .print_amplitudes.log
