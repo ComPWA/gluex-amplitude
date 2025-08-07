@@ -11,7 +11,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.6.2
+    rev: 0.6.4
     hooks:
       - id: colab-toc-visible
       - id: check-dev-files
@@ -52,7 +52,7 @@ repos:
             metadata.vscode
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.12.2
+    rev: v0.12.7
     hooks:
       - id: ruff
         args: [--fix]
@@ -95,7 +95,7 @@ repos:
           - --in-place
 
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v20.1.7
+    rev: v20.1.8
     hooks:
       - id: clang-format
         types_or:
@@ -122,6 +122,6 @@ repos:
           - "-y=defaultIndent: '  '"
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.7.19
+    rev: 0.8.5
     hooks:
       - id: uv-lock
