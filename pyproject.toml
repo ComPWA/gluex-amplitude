@@ -15,6 +15,7 @@ file = "README.md"
 
 [dependency-groups]
 dev = [
+    "poethepoet",
     "ruff",
     {include-group = "doc"},
     {include-group = "jupyter"},
@@ -40,6 +41,22 @@ notebooks = [
     "matplotlib",
     "sympy",
 ]
+
+[tool.poe]
+executor.type = "uv"
+
+[tool.poe.tasks.all]
+help = "Run all continuous integration (CI) tasks locally"
+ignore_fail = "return_non_zero"
+sequence = ["style", "doc"]
+
+[tool.poe.tasks.doc]
+cmd = "jupyter book build docs --warningiserror"
+help = "Build website"
+
+[tool.poe.tasks.style]
+cmd = "pre-commit run --all-files"
+help = "Perform all linting, formatting, and spelling checks"
 
 [tool.ruff]
 extend-include = ["*.ipynb"]

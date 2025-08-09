@@ -29,7 +29,6 @@ version.py
 .coverage.*
 .ipynb_checkpoints/
 .mypy*/
-.pytest_cache/
 .virtual_documents/
 __pycache__/
 htmlcov/
@@ -38,7 +37,6 @@ prof/
 
 # Virtual environments
 *venv/
-.tox/
 pyvenv*/
 
 # Settings
