@@ -25,6 +25,9 @@
   },
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
+  "files.associations": {
+    "Makefile.settings": "makefile"
+  },
   "git.autoRepositoryDetection": false,
   "git.autofetch": true,
   "git.rebaseWhenSync": true,
