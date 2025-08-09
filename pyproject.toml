@@ -3,6 +3,7 @@ build-backend = "setuptools.build_meta"
 requires = ["setuptools"]
 
 [project]
+dependencies = ["numpy", "pandas", "uproot"]
 description = "Investigation of symbolic amplitude models for the GlueX experiment"
 license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"

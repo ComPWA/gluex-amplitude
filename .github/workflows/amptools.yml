@@ -53,11 +53,10 @@ jobs:
           activate-environment: true
           cache: true
       - run: pixi run build
-      - uses: astral-sh/setup-uv@v6
       - name: Run executables
         run: |
           ./print_amplitudes -c zlm.cfg > .print_amplitudes.log
-          uv run makeComparison.py
+          python makeComparison.py
           ./draw_zlm
         working-directory: script
       - uses: actions/upload-artifact@v4
