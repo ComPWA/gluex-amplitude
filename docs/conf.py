@@ -30,11 +30,24 @@ html_show_copyright = False
 html_sourcelink_suffix = ""
 html_theme = "sphinx_book_theme"
 html_theme_options = {
-    "launch_buttons": {
-        "notebook_interface": "jupyterlab",
-        "binderhub_url": "https://mybinder.org",
-        "colab_url": "https://colab.research.google.com",
-    },
+    "icon_links": [
+        {
+            "name": "Common Partial Wave Analysis",
+            "url": "https://compwa.github.io",
+            "icon": "_static/favicon.ico",
+            "type": "local",
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/ComPWA/gluex-ampform",
+            "icon": "fa-brands fa-github",
+        },
+        {
+            "name": "Jupyter Lite",
+            "url": "lite/lab",
+            "icon": "fa-solid fa-play",
+        },
+    ],
     "path_to_docs": "docs",
     "repository_branch": "main",
     "repository_url": "https://github.com/ComPWA/gluex-amplitude",
