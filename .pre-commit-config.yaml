@@ -116,13 +116,13 @@ repos:
           )$
 
   - repo: https://github.com/cmhughes/latexindent.pl
-    rev: V3.24.5
+    rev: V3.24.6
     hooks:
       - id: latexindent
         args:
           - "-y=defaultIndent: '  '"
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.8.6
+    rev: 0.8.8
     hooks:
       - id: uv-lock
