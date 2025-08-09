@@ -52,7 +52,10 @@ jobs:
         with:
           activate-environment: true
           cache: true
-      - run: pixi run build
+      - if: startsWith(matrix.os, 'macos')
+        run: pixi run build -j$(sysctl -n hw.ncpu)
+      - if: startsWith(matrix.os, 'ubuntu')
+        run: pixi run build -j$(nproc)
       - name: Run executables
         run: |
           ./print_amplitudes -c zlm.cfg > .print_amplitudes.log
