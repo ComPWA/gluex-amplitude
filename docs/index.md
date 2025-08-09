@@ -33,7 +33,7 @@ I(\Omega,\Phi) = 2\kappa\sum_{k}\left(
 
 See [the repository](https://github.com/compwa/gluex-amplitude) for installation instructions.
 
-## Table of contents
-
-:::{tableofcontents}
-:::
+```{toctree}
+:caption: Table of contents
+widget
+```

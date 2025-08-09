@@ -304,7 +304,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.23.0-py312h66e93f0_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb8e6e7a_2.conda
       - pypi: https://files.pythonhosted.org/packages/8d/3f/95338030883d8c8b91223b4e21744b04d11b161a3ef117295d8241f50ab4/accessible_pygments-0.0.5-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/32/34/d4e1c02d3bee589efb5dfa17f88ea08bdb3e3eac12bc475462aec52ed223/alabaster-0.7.16-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/7e/b3/6b4067be973ae96ba0d615946e314c5ae35f9f993eca561b356540bb0c2b/alabaster-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/48/2a/91f45b108c77830aacc4bae109f57a69d1c894fae08e95aee3959b98b272/ampform-0.15.8-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/57/19/c547e21267fb9bbeb8acde6996fcc21ff4a76eed182e9a9a441480992f57/awkward-2.8.7-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f4/a1/5af6bc2c1fad0867256110e64ca5cd5ae2b987b4cce1e647aceeb5e4271b/awkward_cpp-48-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
@@ -346,7 +346,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/69/a6/03d410c114b8c4856579b3d294dafc27626a7690a552625eec42b16dfa41/myst_nb-1.3.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/e2/de/21aa8394f16add8f7427f0a1326ccd2b3a2a8a3245c9252bc5ac034c6155/myst_parser-3.0.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/5f/df/76d0321c3797b54b60fef9ec3bd6f4cfd124b9e422182156a1dd418722cf/myst_parser-4.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/73/23/824b295f4cc53f4437f6917e8f46c519cd3a9be909dd36ca0682fdc7fff1/nbdime-4.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/da/01/e383018feba0a1ead6cf5fe8728e5d767fee02f06a3d800e82c489e5daaf/pandas-2.3.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/10/d6/42a843435e043934807bb8fdc380aa68a5ac5df5393c94bc495dec454783/particle-0.25.4-py3-none-any.whl
@@ -362,18 +362,18 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/a9/65/ab9fb9174ea65852eb01a7998ee1e373a1f5c167d2228a9dd096277678cd/python_lsp_server-1.13.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/44/da239917f5711ca7105f7d7f9e2765716dd883b241529beafc0f28504725/pytoolconfig-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ff/99/a63e865c51106b9371c43b6250b359ceb2d4e5807106cddfac1a9e1c3b3a/qrules-0.10.5-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/53/97/d2cbbaa10c9b826af0e10fdf836e1bf344d9f0abb873ebc34d1f49642d3f/roman_numerals_py-3.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/75/35/130469d1901da2b3a5a377539b4ffcd8a5c983f1c9e3ba5ffdd8d71ae314/rope-1.14.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e8/67/0c3c9179a3ad19791ef1b8f7138aa27d4578c78700551c60d9260b2c660d/ruff-0.12.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c8/78/3565d011c61f5a43488987ee32b6f3f656e7f107ac2782dd57bdd7d91d9a/snowballstemmer-3.0.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/0d/ef/153f6803c5d5f8917dbb7f7fcf6d34a871ede3296fa89c2c703f5f8a6c8e/sphinx-7.4.7-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/31/53/136e9eca6e0b9dc0e1962e2c908fbea2e5ac000c2a2fbd9a35797958c48b/sphinx-8.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f5/e3/2852dd608bb9b68cc2d1975e7fa1029e73a360d3b102c073edacc405a5a2/sphinx_api_relink-0.0.12-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/18/c0/eba125db38c84d3c74717008fd3cb5000b68cd7e2cbafd1349c6a38c3d3b/sphinx_autobuild-2024.10.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/9e/c41d68be04eef5b6202b468e0f90faf0c469f3a03353f2a218fd78279710/sphinx_book_theme-1.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/e2/a7232766639b8a447e5e1884f6f33bd704d213bc5d4eb376f81cd5a0cb1d/sphinx_codeautolink-0.17.5-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/9e/48/1ea60e74949eecb12cdd6ac43987f9fd331156388dcc2319b45e2ebb81bf/sphinx_copybutton-0.5.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c6/43/65c0acbd8cc6f50195a3a1fc195c404988b15c67090e73c7a41a9f57d6bd/sphinx_design-0.6.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/5f/9a/cb412957424012869b43a5aa3d95ccebcac737dafc5a545ce15bb8037f6e/sphinx_external_toc-1.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e9/18/267ce39f29d26cdc7177231428ba823fe5ca94db8c56d1bed69033b364c8/sphinx_togglebutton-0.3.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/5d/85/9ebeae2f76e9e77b952f4b274c27238156eae7979c5421fba91a28f4970d/sphinxcontrib_applehelp-2.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/35/7a/987e583882f985fe4d7323774889ec58049171828b58c2217e7f79cdf44e/sphinxcontrib_devhelp-2.0.0-py3-none-any.whl
@@ -692,7 +692,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/zstandard-0.23.0-py312hb2c0f52_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/zstd-1.5.7-hbcf94c1_2.conda
       - pypi: https://files.pythonhosted.org/packages/8d/3f/95338030883d8c8b91223b4e21744b04d11b161a3ef117295d8241f50ab4/accessible_pygments-0.0.5-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/32/34/d4e1c02d3bee589efb5dfa17f88ea08bdb3e3eac12bc475462aec52ed223/alabaster-0.7.16-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/7e/b3/6b4067be973ae96ba0d615946e314c5ae35f9f993eca561b356540bb0c2b/alabaster-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/48/2a/91f45b108c77830aacc4bae109f57a69d1c894fae08e95aee3959b98b272/ampform-0.15.8-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/57/19/c547e21267fb9bbeb8acde6996fcc21ff4a76eed182e9a9a441480992f57/awkward-2.8.7-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/85/b3/a0374a7a10d188077fa6ae0f50148d575365abfa5f550448cb5d61bba72b/awkward_cpp-48-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl
@@ -734,7 +734,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/69/a6/03d410c114b8c4856579b3d294dafc27626a7690a552625eec42b16dfa41/myst_nb-1.3.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/e2/de/21aa8394f16add8f7427f0a1326ccd2b3a2a8a3245c9252bc5ac034c6155/myst_parser-3.0.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/5f/df/76d0321c3797b54b60fef9ec3bd6f4cfd124b9e422182156a1dd418722cf/myst_parser-4.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/73/23/824b295f4cc53f4437f6917e8f46c519cd3a9be909dd36ca0682fdc7fff1/nbdime-4.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/a5/c76a8311833c24ae61a376dbf360eb1b1c9247a5d9c1e8b356563b31b80c/pandas-2.3.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
       - pypi: https://files.pythonhosted.org/packages/10/d6/42a843435e043934807bb8fdc380aa68a5ac5df5393c94bc495dec454783/particle-0.25.4-py3-none-any.whl
@@ -750,18 +750,18 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/a9/65/ab9fb9174ea65852eb01a7998ee1e373a1f5c167d2228a9dd096277678cd/python_lsp_server-1.13.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/44/da239917f5711ca7105f7d7f9e2765716dd883b241529beafc0f28504725/pytoolconfig-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ff/99/a63e865c51106b9371c43b6250b359ceb2d4e5807106cddfac1a9e1c3b3a/qrules-0.10.5-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/53/97/d2cbbaa10c9b826af0e10fdf836e1bf344d9f0abb873ebc34d1f49642d3f/roman_numerals_py-3.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/75/35/130469d1901da2b3a5a377539b4ffcd8a5c983f1c9e3ba5ffdd8d71ae314/rope-1.14.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/fe/ac/a363d25ec53040408ebdd4efcee929d48547665858ede0505d1d8041b2e5/ruff-0.12.8-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
       - pypi: https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c8/78/3565d011c61f5a43488987ee32b6f3f656e7f107ac2782dd57bdd7d91d9a/snowballstemmer-3.0.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/0d/ef/153f6803c5d5f8917dbb7f7fcf6d34a871ede3296fa89c2c703f5f8a6c8e/sphinx-7.4.7-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/31/53/136e9eca6e0b9dc0e1962e2c908fbea2e5ac000c2a2fbd9a35797958c48b/sphinx-8.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f5/e3/2852dd608bb9b68cc2d1975e7fa1029e73a360d3b102c073edacc405a5a2/sphinx_api_relink-0.0.12-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/18/c0/eba125db38c84d3c74717008fd3cb5000b68cd7e2cbafd1349c6a38c3d3b/sphinx_autobuild-2024.10.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/9e/c41d68be04eef5b6202b468e0f90faf0c469f3a03353f2a218fd78279710/sphinx_book_theme-1.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/e2/a7232766639b8a447e5e1884f6f33bd704d213bc5d4eb376f81cd5a0cb1d/sphinx_codeautolink-0.17.5-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/9e/48/1ea60e74949eecb12cdd6ac43987f9fd331156388dcc2319b45e2ebb81bf/sphinx_copybutton-0.5.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c6/43/65c0acbd8cc6f50195a3a1fc195c404988b15c67090e73c7a41a9f57d6bd/sphinx_design-0.6.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/5f/9a/cb412957424012869b43a5aa3d95ccebcac737dafc5a545ce15bb8037f6e/sphinx_external_toc-1.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e9/18/267ce39f29d26cdc7177231428ba823fe5ca94db8c56d1bed69033b364c8/sphinx_togglebutton-0.3.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/5d/85/9ebeae2f76e9e77b952f4b274c27238156eae7979c5421fba91a28f4970d/sphinxcontrib_applehelp-2.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/35/7a/987e583882f985fe4d7323774889ec58049171828b58c2217e7f79cdf44e/sphinxcontrib_devhelp-2.0.0-py3-none-any.whl
@@ -1042,7 +1042,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstandard-0.23.0-py312h01d7ebd_2.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstd-1.5.7-h8210216_2.conda
       - pypi: https://files.pythonhosted.org/packages/8d/3f/95338030883d8c8b91223b4e21744b04d11b161a3ef117295d8241f50ab4/accessible_pygments-0.0.5-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/32/34/d4e1c02d3bee589efb5dfa17f88ea08bdb3e3eac12bc475462aec52ed223/alabaster-0.7.16-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/7e/b3/6b4067be973ae96ba0d615946e314c5ae35f9f993eca561b356540bb0c2b/alabaster-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/48/2a/91f45b108c77830aacc4bae109f57a69d1c894fae08e95aee3959b98b272/ampform-0.15.8-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/57/19/c547e21267fb9bbeb8acde6996fcc21ff4a76eed182e9a9a441480992f57/awkward-2.8.7-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/35/28/2395ea0b138fb11769f499221d5e73179881d63f9fef7bfd1d1bc45d0240/awkward_cpp-48-cp312-cp312-macosx_10_13_x86_64.whl
@@ -1084,7 +1084,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/69/a6/03d410c114b8c4856579b3d294dafc27626a7690a552625eec42b16dfa41/myst_nb-1.3.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/e2/de/21aa8394f16add8f7427f0a1326ccd2b3a2a8a3245c9252bc5ac034c6155/myst_parser-3.0.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/5f/df/76d0321c3797b54b60fef9ec3bd6f4cfd124b9e422182156a1dd418722cf/myst_parser-4.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/73/23/824b295f4cc53f4437f6917e8f46c519cd3a9be909dd36ca0682fdc7fff1/nbdime-4.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/46/de/b8445e0f5d217a99fe0eeb2f4988070908979bec3587c0633e5428ab596c/pandas-2.3.1-cp312-cp312-macosx_10_13_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/10/d6/42a843435e043934807bb8fdc380aa68a5ac5df5393c94bc495dec454783/particle-0.25.4-py3-none-any.whl
@@ -1100,18 +1100,18 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/a9/65/ab9fb9174ea65852eb01a7998ee1e373a1f5c167d2228a9dd096277678cd/python_lsp_server-1.13.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/44/da239917f5711ca7105f7d7f9e2765716dd883b241529beafc0f28504725/pytoolconfig-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ff/99/a63e865c51106b9371c43b6250b359ceb2d4e5807106cddfac1a9e1c3b3a/qrules-0.10.5-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/53/97/d2cbbaa10c9b826af0e10fdf836e1bf344d9f0abb873ebc34d1f49642d3f/roman_numerals_py-3.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/75/35/130469d1901da2b3a5a377539b4ffcd8a5c983f1c9e3ba5ffdd8d71ae314/rope-1.14.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/24/ee/af6e5c2a8ca3a81676d5480a1025494fd104b8896266502bb4de2a0e8388/ruff-0.12.8-py3-none-macosx_10_12_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c8/78/3565d011c61f5a43488987ee32b6f3f656e7f107ac2782dd57bdd7d91d9a/snowballstemmer-3.0.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/0d/ef/153f6803c5d5f8917dbb7f7fcf6d34a871ede3296fa89c2c703f5f8a6c8e/sphinx-7.4.7-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/31/53/136e9eca6e0b9dc0e1962e2c908fbea2e5ac000c2a2fbd9a35797958c48b/sphinx-8.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f5/e3/2852dd608bb9b68cc2d1975e7fa1029e73a360d3b102c073edacc405a5a2/sphinx_api_relink-0.0.12-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/18/c0/eba125db38c84d3c74717008fd3cb5000b68cd7e2cbafd1349c6a38c3d3b/sphinx_autobuild-2024.10.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/9e/c41d68be04eef5b6202b468e0f90faf0c469f3a03353f2a218fd78279710/sphinx_book_theme-1.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/e2/a7232766639b8a447e5e1884f6f33bd704d213bc5d4eb376f81cd5a0cb1d/sphinx_codeautolink-0.17.5-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/9e/48/1ea60e74949eecb12cdd6ac43987f9fd331156388dcc2319b45e2ebb81bf/sphinx_copybutton-0.5.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c6/43/65c0acbd8cc6f50195a3a1fc195c404988b15c67090e73c7a41a9f57d6bd/sphinx_design-0.6.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/5f/9a/cb412957424012869b43a5aa3d95ccebcac737dafc5a545ce15bb8037f6e/sphinx_external_toc-1.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e9/18/267ce39f29d26cdc7177231428ba823fe5ca94db8c56d1bed69033b364c8/sphinx_togglebutton-0.3.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/5d/85/9ebeae2f76e9e77b952f4b274c27238156eae7979c5421fba91a28f4970d/sphinxcontrib_applehelp-2.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/35/7a/987e583882f985fe4d7323774889ec58049171828b58c2217e7f79cdf44e/sphinxcontrib_devhelp-2.0.0-py3-none-any.whl
@@ -1391,7 +1391,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstandard-0.23.0-py312hea69d52_2.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-h6491c7d_2.conda
       - pypi: https://files.pythonhosted.org/packages/8d/3f/95338030883d8c8b91223b4e21744b04d11b161a3ef117295d8241f50ab4/accessible_pygments-0.0.5-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/32/34/d4e1c02d3bee589efb5dfa17f88ea08bdb3e3eac12bc475462aec52ed223/alabaster-0.7.16-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/7e/b3/6b4067be973ae96ba0d615946e314c5ae35f9f993eca561b356540bb0c2b/alabaster-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/48/2a/91f45b108c77830aacc4bae109f57a69d1c894fae08e95aee3959b98b272/ampform-0.15.8-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/57/19/c547e21267fb9bbeb8acde6996fcc21ff4a76eed182e9a9a441480992f57/awkward-2.8.7-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/24/12/5327840edd46f8322d16dd907d938c2fca8179324cbb145a0a7934ccbde9/awkward_cpp-48-cp312-cp312-macosx_11_0_arm64.whl
@@ -1432,7 +1432,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/69/a6/03d410c114b8c4856579b3d294dafc27626a7690a552625eec42b16dfa41/myst_nb-1.3.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/e2/de/21aa8394f16add8f7427f0a1326ccd2b3a2a8a3245c9252bc5ac034c6155/myst_parser-3.0.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/5f/df/76d0321c3797b54b60fef9ec3bd6f4cfd124b9e422182156a1dd418722cf/myst_parser-4.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/73/23/824b295f4cc53f4437f6917e8f46c519cd3a9be909dd36ca0682fdc7fff1/nbdime-4.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/1e/e0/801cdb3564e65a5ac041ab99ea6f1d802a6c325bb6e58c79c06a3f1cd010/pandas-2.3.1-cp312-cp312-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/10/d6/42a843435e043934807bb8fdc380aa68a5ac5df5393c94bc495dec454783/particle-0.25.4-py3-none-any.whl
@@ -1448,18 +1448,18 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/a9/65/ab9fb9174ea65852eb01a7998ee1e373a1f5c167d2228a9dd096277678cd/python_lsp_server-1.13.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/44/da239917f5711ca7105f7d7f9e2765716dd883b241529beafc0f28504725/pytoolconfig-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ff/99/a63e865c51106b9371c43b6250b359ceb2d4e5807106cddfac1a9e1c3b3a/qrules-0.10.5-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/53/97/d2cbbaa10c9b826af0e10fdf836e1bf344d9f0abb873ebc34d1f49642d3f/roman_numerals_py-3.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/75/35/130469d1901da2b3a5a377539b4ffcd8a5c983f1c9e3ba5ffdd8d71ae314/rope-1.14.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/99/9d/e91f84dfe3866fa648c10512904991ecc326fd0b66578b324ee6ecb8f725/ruff-0.12.8-py3-none-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c8/78/3565d011c61f5a43488987ee32b6f3f656e7f107ac2782dd57bdd7d91d9a/snowballstemmer-3.0.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/0d/ef/153f6803c5d5f8917dbb7f7fcf6d34a871ede3296fa89c2c703f5f8a6c8e/sphinx-7.4.7-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/31/53/136e9eca6e0b9dc0e1962e2c908fbea2e5ac000c2a2fbd9a35797958c48b/sphinx-8.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f5/e3/2852dd608bb9b68cc2d1975e7fa1029e73a360d3b102c073edacc405a5a2/sphinx_api_relink-0.0.12-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/18/c0/eba125db38c84d3c74717008fd3cb5000b68cd7e2cbafd1349c6a38c3d3b/sphinx_autobuild-2024.10.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/9e/c41d68be04eef5b6202b468e0f90faf0c469f3a03353f2a218fd78279710/sphinx_book_theme-1.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/e2/a7232766639b8a447e5e1884f6f33bd704d213bc5d4eb376f81cd5a0cb1d/sphinx_codeautolink-0.17.5-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/9e/48/1ea60e74949eecb12cdd6ac43987f9fd331156388dcc2319b45e2ebb81bf/sphinx_copybutton-0.5.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c6/43/65c0acbd8cc6f50195a3a1fc195c404988b15c67090e73c7a41a9f57d6bd/sphinx_design-0.6.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/5f/9a/cb412957424012869b43a5aa3d95ccebcac737dafc5a545ce15bb8037f6e/sphinx_external_toc-1.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e9/18/267ce39f29d26cdc7177231428ba823fe5ca94db8c56d1bed69033b364c8/sphinx_togglebutton-0.3.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/5d/85/9ebeae2f76e9e77b952f4b274c27238156eae7979c5421fba91a28f4970d/sphinxcontrib_applehelp-2.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/35/7a/987e583882f985fe4d7323774889ec58049171828b58c2217e7f79cdf44e/sphinxcontrib_devhelp-2.0.0-py3-none-any.whl
@@ -1542,11 +1542,11 @@ packages:
   purls: []
   size: 619606
   timestamp: 1750236493212
-- pypi: https://files.pythonhosted.org/packages/32/34/d4e1c02d3bee589efb5dfa17f88ea08bdb3e3eac12bc475462aec52ed223/alabaster-0.7.16-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/7e/b3/6b4067be973ae96ba0d615946e314c5ae35f9f993eca561b356540bb0c2b/alabaster-1.0.0-py3-none-any.whl
   name: alabaster
-  version: 0.7.16
-  sha256: b46733c07dce03ae4e150330b975c75737fa60f0a7c591b6c8bf4928a28e2c92
-  requires_python: '>=3.9'
+  version: 1.0.0
+  sha256: fc6786402dc3fcb2de3cabd5fe455a2db534b371124f1f21de8731783dec828b
+  requires_python: '>=3.10'
 - pypi: https://files.pythonhosted.org/packages/48/2a/91f45b108c77830aacc4bae109f57a69d1c894fae08e95aee3959b98b272/ampform-0.15.8-py3-none-any.whl
   name: ampform
   version: 0.15.8
@@ -4639,7 +4639,7 @@ packages:
 - pypi: ./
   name: gluex-amplitude
   version: 0.0.0
-  sha256: 76cec092a3f1d3f17ee637aaabd4c4569794c3dd10b569fe2343b672d4968f7f
+  sha256: 4d953c475c5ab172277d552eddfce1e3e4ca34d6bf470b9dac9da11bde20aad9
   requires_dist:
   - numpy
   - pandas
@@ -9352,18 +9352,18 @@ packages:
   - pytest-param-files ; extra == 'testing'
   - sympy>=1.10.1 ; extra == 'testing'
   requires_python: '>=3.9'
-- pypi: https://files.pythonhosted.org/packages/e2/de/21aa8394f16add8f7427f0a1326ccd2b3a2a8a3245c9252bc5ac034c6155/myst_parser-3.0.1-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/5f/df/76d0321c3797b54b60fef9ec3bd6f4cfd124b9e422182156a1dd418722cf/myst_parser-4.0.1-py3-none-any.whl
   name: myst-parser
-  version: 3.0.1
-  sha256: 6457aaa33a5d474aca678b8ead9b3dc298e89c68e67012e73146ea6fd54babf1
+  version: 4.0.1
+  sha256: 9134e88959ec3b5780aedf8a99680ea242869d012e8821db3126d427edc9c95d
   requires_dist:
-  - docutils>=0.18,<0.22
+  - docutils>=0.19,<0.22
   - jinja2
   - markdown-it-py~=3.0
-  - mdit-py-plugins~=0.4
+  - mdit-py-plugins~=0.4,>=0.4.1
   - pyyaml
-  - sphinx>=6,<8
-  - pre-commit~=3.0 ; extra == 'code-style'
+  - sphinx>=7,<9
+  - pre-commit~=4.0 ; extra == 'code-style'
   - linkify-it-py~=2.0 ; extra == 'linkify'
   - sphinx>=7 ; extra == 'rtd'
   - ipython ; extra == 'rtd'
@@ -9384,10 +9384,11 @@ packages:
   - pytest-regressions ; extra == 'testing'
   - pytest-param-files~=0.6.0 ; extra == 'testing'
   - sphinx-pytest ; extra == 'testing'
+  - pygments<2.19 ; extra == 'testing'
   - pygments ; extra == 'testing-docutils'
   - pytest>=8,<9 ; extra == 'testing-docutils'
   - pytest-param-files~=0.6.0 ; extra == 'testing-docutils'
-  requires_python: '>=3.8'
+  requires_python: '>=3.10'
 - conda: https://conda.anaconda.org/conda-forge/noarch/nbclient-0.10.2-pyhd8ed1ab_0.conda
   sha256: a20cff739d66c2f89f413e4ba4c6f6b59c50d5c30b5f0d840c13e8c9c2df9135
   md5: 6bb0d77277061742744176ab555b723c
@@ -11538,6 +11539,16 @@ packages:
   - pkg:pypi/rfc3987-syntax?source=hash-mapping
   size: 22913
   timestamp: 1752876729969
+- pypi: https://files.pythonhosted.org/packages/53/97/d2cbbaa10c9b826af0e10fdf836e1bf344d9f0abb873ebc34d1f49642d3f/roman_numerals_py-3.1.0-py3-none-any.whl
+  name: roman-numerals-py
+  version: 3.1.0
+  sha256: 9da2ad2fb670bcf24e81070ceb3be72f6c11c440d73bd579fbeca1e9f330954c
+  requires_dist:
+  - mypy==1.15.0 ; extra == 'lint'
+  - ruff==0.9.7 ; extra == 'lint'
+  - pyright==1.1.394 ; extra == 'lint'
+  - pytest>=8 ; extra == 'test'
+  requires_python: '>=3.9'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/root-6.34.10-py312hb9845cd_0.conda
   sha256: a73b323bc0982061b3aa8f7307d775bf83c97709b98475fe282ca343f9709ad9
   md5: aea36b1197fcd8692cd192ccfead5c59
@@ -12199,45 +12210,50 @@ packages:
   - pkg:pypi/soupsieve?source=hash-mapping
   size: 37773
   timestamp: 1746563720271
-- pypi: https://files.pythonhosted.org/packages/0d/ef/153f6803c5d5f8917dbb7f7fcf6d34a871ede3296fa89c2c703f5f8a6c8e/sphinx-7.4.7-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/31/53/136e9eca6e0b9dc0e1962e2c908fbea2e5ac000c2a2fbd9a35797958c48b/sphinx-8.2.3-py3-none-any.whl
   name: sphinx
-  version: 7.4.7
-  sha256: c2419e2135d11f1951cd994d6eb18a1835bd8fdd8429f9ca375dc1f3281bd239
+  version: 8.2.3
+  sha256: 4405915165f13521d875a8c29c8970800a0141c14cc5416a38feca4ea5d9b9c3
   requires_dist:
-  - sphinxcontrib-applehelp
-  - sphinxcontrib-devhelp
-  - sphinxcontrib-jsmath
-  - sphinxcontrib-htmlhelp>=2.0.0
+  - sphinxcontrib-applehelp>=1.0.7
+  - sphinxcontrib-devhelp>=1.0.6
+  - sphinxcontrib-htmlhelp>=2.0.6
+  - sphinxcontrib-jsmath>=1.0.1
+  - sphinxcontrib-qthelp>=1.0.6
   - sphinxcontrib-serializinghtml>=1.1.9
-  - sphinxcontrib-qthelp
   - jinja2>=3.1
   - pygments>=2.17
   - docutils>=0.20,<0.22
   - snowballstemmer>=2.2
   - babel>=2.13
-  - alabaster~=0.7.14
+  - alabaster>=0.7.14
   - imagesize>=1.3
   - requests>=2.30.0
+  - roman-numerals-py>=1.0.0
   - packaging>=23.0
-  - importlib-metadata>=6.0 ; python_full_version < '3.10'
-  - tomli>=2 ; python_full_version < '3.11'
   - colorama>=0.4.6 ; sys_platform == 'win32'
   - sphinxcontrib-websupport ; extra == 'docs'
-  - flake8>=6.0 ; extra == 'lint'
-  - ruff==0.5.2 ; extra == 'lint'
-  - mypy==1.10.1 ; extra == 'lint'
+  - ruff==0.9.9 ; extra == 'lint'
+  - mypy==1.15.0 ; extra == 'lint'
   - sphinx-lint>=0.9 ; extra == 'lint'
-  - types-docutils==0.21.0.20240711 ; extra == 'lint'
-  - types-requests>=2.30.0 ; extra == 'lint'
-  - importlib-metadata>=6.0 ; extra == 'lint'
-  - tomli>=2 ; extra == 'lint'
-  - pytest>=6.0 ; extra == 'lint'
+  - types-colorama==0.4.15.20240311 ; extra == 'lint'
+  - types-defusedxml==0.7.0.20240218 ; extra == 'lint'
+  - types-docutils==0.21.0.20241128 ; extra == 'lint'
+  - types-pillow==10.2.0.20240822 ; extra == 'lint'
+  - types-pygments==2.19.0.20250219 ; extra == 'lint'
+  - types-requests==2.32.0.20241016 ; extra == 'lint'
+  - types-urllib3==1.26.25.14 ; extra == 'lint'
+  - pyright==1.1.395 ; extra == 'lint'
+  - pytest>=8.0 ; extra == 'lint'
+  - pypi-attestations==0.0.21 ; extra == 'lint'
+  - betterproto==2.0.0b6 ; extra == 'lint'
   - pytest>=8.0 ; extra == 'test'
+  - pytest-xdist[psutil]>=3.4 ; extra == 'test'
   - defusedxml>=0.7.1 ; extra == 'test'
   - cython>=3.0 ; extra == 'test'
   - setuptools>=70.0 ; extra == 'test'
   - typing-extensions>=4.9 ; extra == 'test'
-  requires_python: '>=3.9'
+  requires_python: '>=3.11'
 - pypi: https://files.pythonhosted.org/packages/f5/e3/2852dd608bb9b68cc2d1975e7fa1029e73a360d3b102c073edacc405a5a2/sphinx_api_relink-0.0.12-py3-none-any.whl
   name: sphinx-api-relink
   version: 0.0.12
@@ -12341,22 +12357,6 @@ packages:
   - pydata-sphinx-theme~=0.15.2 ; extra == 'theme-pydata'
   - sphinx-rtd-theme~=2.0 ; extra == 'theme-rtd'
   - sphinx-book-theme~=1.1 ; extra == 'theme-sbt'
-  requires_python: '>=3.9'
-- pypi: https://files.pythonhosted.org/packages/5f/9a/cb412957424012869b43a5aa3d95ccebcac737dafc5a545ce15bb8037f6e/sphinx_external_toc-1.0.1-py3-none-any.whl
-  name: sphinx-external-toc
-  version: 1.0.1
-  sha256: d9e02d50731dee9697c1887e4f8b361e7b86d38241f0e66bd5a9f4096779646f
-  requires_dist:
-  - click>=7.1
-  - pyyaml
-  - sphinx>=5
-  - pre-commit>=2.12 ; extra == 'code-style'
-  - myst-parser>=1.0.0 ; extra == 'rtd'
-  - sphinx-book-theme>=1.0.0 ; extra == 'rtd'
-  - coverage ; extra == 'testing'
-  - pytest>=7.1 ; extra == 'testing'
-  - pytest-cov ; extra == 'testing'
-  - pytest-regressions ; extra == 'testing'
   requires_python: '>=3.9'
 - pypi: https://files.pythonhosted.org/packages/e9/18/267ce39f29d26cdc7177231428ba823fe5ca94db8c56d1bed69033b364c8/sphinx_togglebutton-0.3.2-py3-none-any.whl
   name: sphinx-togglebutton

@@ -30,7 +30,6 @@ doc = [
     "sphinx-codeautolink[ipython]",
     "sphinx-copybutton",
     "sphinx-design",
-    "sphinx-external-toc",
     "sphinx-togglebutton",
 ]
 jupyter = [

@@ -21,7 +21,6 @@ extensions = [
     "sphinx_codeautolink",
     "sphinx_copybutton",
     "sphinx_design",
-    "sphinx_external_toc",
     "sphinx_togglebutton",
     "sphinx.ext.intersphinx",
 ]
