@@ -51,6 +51,7 @@ platforms = [
 ]
 
 [tool.pixi.dependencies]
+clang = "*"
 make = "*"
 python = "3.12.*"
 root = "*"
@@ -66,8 +67,12 @@ depends-on = ["build", "doc", "style"]
 description = "Run all continuous integration (CI) tasks locally"
 
 [tool.pixi.tasks.build]
-cmd = "make SHELL=/bin/bash"
+cmd = 'make SHELL=/bin/bash'
 description = "Build C++ project"
+
+[tool.pixi.tasks.build.env]
+CXX = "clang"
+CXXFLAGS = "-std=c++20 -O3 -Wno-"
 
 [tool.pixi.tasks.doc]
 cmd = "jupyter book build docs --warningiserror"

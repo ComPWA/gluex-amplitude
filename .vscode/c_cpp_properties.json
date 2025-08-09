@@ -5,7 +5,6 @@
       "cStandard": "c17",
       "includePath": [
         "${workspaceFolder}/src/GlueXAmplitude",
-        "${workspaceFolder}/.pixi/envs/default/include/c++/v1",
         "${workspaceFolder}/.pixi/envs/default/include",
         "${workspaceFolder}/extern/AmpTools/AmpTools",
         "${workspaceFolder}/extern/AmpTools/Tutorials/Dalitz/DalitzLib"

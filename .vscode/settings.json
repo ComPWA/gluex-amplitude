@@ -23,6 +23,7 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "C_Cpp.default.compilerPath": "${workspaceFolder}/.pixi/envs/default/bin/clang",
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
   "files.associations": {
