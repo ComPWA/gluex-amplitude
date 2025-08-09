@@ -17,6 +17,7 @@
 compiler_flags
 dist/
 lib/
+lite/
 version.py
 
 # Temporary files
@@ -28,6 +29,7 @@ version.py
 .coverage
 .coverage.*
 .ipynb_checkpoints/
+.jupyterlite.doit.db
 .mypy*/
 .virtual_documents/
 __pycache__/

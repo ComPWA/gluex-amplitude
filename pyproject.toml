@@ -39,6 +39,8 @@ jupyter = [
     "jupyterlab-git",
     "jupyterlab-lsp",
     "jupyterlab-myst",
+    "jupyterlite-core",
+    "jupyterlite-pyodide-kernel",
     "python-lsp-ruff",
     "python-lsp-server[rope]",
 ]
@@ -76,6 +78,7 @@ depends-on = [
     "build",
     "doc",
     "linkcheck",
+    "lite",
     "style",
 ]
 description = "Run all continuous integration (CI) tasks locally"
@@ -142,6 +145,16 @@ sphinx-build \
 """
 description = "Check external links in the documentation (requires internet connection)"
 env = {PYTHONWARNINGS = ""}
+
+[tool.pixi.tasks.lite]
+cmd = """
+jupyter lite build \
+    --contents widget.ipynb \
+    --ignore-contents=_build \
+    --output-dir lite
+"""
+cwd = "docs"
+description = "Build Jupyter Lite server"
 
 [tool.pixi.tasks.style]
 cmd = "pre-commit run --all-files"
