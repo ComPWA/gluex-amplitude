@@ -26,7 +26,6 @@ jobs:
         with:
           activate-environment: false
           cache: true
-      - run: pixi run lite
       - run: pixi run doc
       - uses: actions/upload-pages-artifact@v3
         if: always()

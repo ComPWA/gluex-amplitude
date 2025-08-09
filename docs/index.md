@@ -20,7 +20,7 @@ I(\Omega,\Phi) = 2\kappa\sum_{k}\left(
 :end-line: 15
 ```
 
-:::{figure} fig/feynman-gluex-two-pseudoscalar.svg
+:::{figure} feynman-gluex-two-pseudoscalar.svg
 :::
 
 ```{include} ../README.md
@@ -28,7 +28,7 @@ I(\Omega,\Phi) = 2\kappa\sum_{k}\left(
 :end-line: 18
 ```
 
-:::{figure} fig/feynman-gluex-vector-meson.svg
+:::{figure} feynman-gluex-vector-meson.svg
 :::
 
 See [the repository](https://github.com/compwa/gluex-amplitude) for installation instructions.

@@ -100,6 +100,7 @@ sphinx-build \
     docs/ \
     docs/_build/html/
 """
+depends-on = "lite"
 description = "Build website"
 env = {EXECUTE_NB = "yes", PYTHONWARNINGS = ""}
 
@@ -148,6 +149,7 @@ env = {PYTHONWARNINGS = ""}
 [tool.pixi.tasks.lite]
 cmd = """
 jupyter lite build \
+    --contents feynman-gluex-two-pseudoscalar.svg \
     --contents widget.ipynb \
     --ignore-contents=_build \
     --output-dir lite
