@@ -17,12 +17,21 @@ file = "README.md"
 [dependency-groups]
 dev = [
     "ruff",
+    "sphinx-autobuild",
     {include-group = "doc"},
     {include-group = "jupyter"},
     {include-group = "notebooks"},
 ]
 doc = [
-    "jupyter-book",
+    "myst-nb",
+    "sphinx",
+    "sphinx-api-relink",
+    "sphinx-book-theme",
+    "sphinx-codeautolink[ipython]",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "sphinx-external-toc",
+    "sphinx-togglebutton",
 ]
 jupyter = [
     "jupyterlab",
@@ -63,7 +72,12 @@ default = {features = ["dev"], solve-group = "main"}
 gluex-amplitude = {path = ".", editable = true}
 
 [tool.pixi.tasks.all]
-depends-on = ["build", "doc", "style"]
+depends-on = [
+    "build",
+    "doc",
+    "linkcheck",
+    "style",
+]
 description = "Run all continuous integration (CI) tasks locally"
 
 [tool.pixi.tasks.build]
@@ -75,12 +89,59 @@ CXX = "clang"
 CXXFLAGS = "-std=c++20 -O3 -Wno-"
 
 [tool.pixi.tasks.doc]
-cmd = "jupyter book build docs --warningiserror"
+cmd = """
+sphinx-build \
+    --builder=html \
+    --fail-on-warning \
+    --keep-going \
+    --show-traceback \
+    docs/ \
+    docs/_build/html/
+"""
 description = "Build website"
+env = {EXECUTE_NB = "yes", PYTHONWARNINGS = ""}
+
+[tool.pixi.tasks.doclive]
+cmd = """
+sphinx-autobuild \
+    --builder=html \
+    --open-browser \
+    --port=0 \
+    --re-ignore='/_build(/.*)?$' \
+    --re-ignore='/\\.cache(/.*)?$' \
+    --re-ignore='/\\.egg-info(/.*)?$' \
+    --re-ignore='/\\.ipynb_checkpoints(/.*)?$' \
+    --re-ignore='/\\.virtual_documents(/.*)?$' \
+    --re-ignore='/docs$' \
+    --re-ignore='\\.egg-info(/.*)?$' \
+    --re-ignore='\\.gif$' \
+    --re-ignore='\\.pickle$' \
+    --re-ignore='\\.png$' \
+    --re-ignore='\\.svg$' \
+    docs/ \
+    docs/_build/html/
+"""
+description = "Set up a server to directly preview changes to the HTML pages"
+
+[tool.pixi.tasks.docnblive]
+cmd = "pixi run doclive"
+description = "Set up a server to directly preview changes to the HTML pages with cached notebook execution"
+env = {EXECUTE_NB = "yes"}
 
 [tool.pixi.tasks.lab]
 cmd = "jupyter lab docs"
 description = "Start Jupyter Lab"
+
+[tool.pixi.tasks.linkcheck]
+cmd = """
+sphinx-build \
+    --builder=linkcheck \
+    --show-traceback \
+    docs/ \
+    docs/_build/linkcheck/
+"""
+description = "Check external links in the documentation (requires internet connection)"
+env = {PYTHONWARNINGS = ""}
 
 [tool.pixi.tasks.style]
 cmd = "pre-commit run --all-files"
@@ -169,6 +230,7 @@ split-on-trailing-comma = false
     "S101",
     "S113",
 ]
+"docs/conf.py" = ["A001", "D100"]
 "script/*" = ["D100", "INP001"]
 
 [tool.ruff.lint.pydocstyle]
