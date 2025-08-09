@@ -17,6 +17,7 @@ repos:
       - id: colab-toc-visible
       - id: check-dev-files
         args:
+          - --dependabot=keep
           - --no-cd
           - --no-github-actions
           - --no-pypi
