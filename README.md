@@ -1,7 +1,7 @@
 # Comparison repository for GlueX amplitude models
 
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
+[![Pixi Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prefix-dev/pixi/main/assets/badge/v0.json)](https://pixi.sh)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 This repository was created during PWA working group meetings for GlueX at Jefferson Lab, July 31st to August 4th, 2023. Live notes for these discussions can be found [here](https://hackmd.io/@QHYjhejHTIWXL2MltV3WNQ/r17prtBo3) on HackMD. Each meeting was organised like a 'hackathon' and the results of these programming sessions can be found on [compwa.github.io/gluex-amplitude](https://compwa.github.io/gluex-amplitude).
@@ -22,56 +22,43 @@ The amplitude model is implemented in [AmpTools](https://github.com/mashephe/Amp
 
 ## Installation
 
-### C++ implementation
-
-This repository comes with [AmpTools](https://github.com/mashephe/AmpTools) as a submodule. If you clone this repository as:
+This repository comes with [AmpTools](https://github.com/mashephe/AmpTools) as a submodule, under [`extern/AmpTools`](./extern/AmpTools). If you clone this repository as:
 
 ```shell
 git clone https://github.com/compwa/gluex-amplitude --recurse-submodules
 ```
 
-you should get AmpTools as well. Navigate to [`extern/AmpTools`](./extern/AmpTools) for further build instructions. Additionally, you need to have ROOT installed. Official installation instructions can be found [here](https://root.cern/install), but alternatively, you can install ROOT in your conda environment (see [Python implementation](#python-implementation)) as follows:
+you should get AmpTools as well. Alternatively, if you have already cloned the repository, you can initialize the submodule with:
 
 ```shell
-conda activate gluex-amplitude
-conda install root -c conda-forge
+git submodule update --init
 ```
 
-The benefit of AmpTools as a sub-module and installing ROOT into the conda environment is that you have out-of-the-box [language navigation in VSCode](https://code.visualstudio.com/docs/cpp/cpp-ide#_navigate-source-code).
+All required dependencies can be installed within an isolated virtual environment through the [Pixi](https://pixi.sh) package manager. Installation instructions can be found [here](https://pixi.sh/latest/installation).
 
-To build all source code, you first need to compile AmpTools. Either do this by cloning AmpTools and following the instructions, or with:
+To build all source code, simply run:
 
 ```shell
-cd extern/AmpTools
-make
+pixi run build
 ```
 
-You can then compile the code for this repository by navigating back to the root directory (`cd ../../`) and running:
-
-```
-make
-```
-
-### Python implementation
-
-Install Conda (recommended: [Miniconda](https://docs.conda.io/en/latest/miniconda.html#linux-installers)), then just create a Conda environment from [`environment.yml`](./environment.yml):
+Other Pixi tasks can be listed with
 
 ```shell
-conda env create
-conda activate gluex-amplitude
-pre-commit install --install-hooks  # optional
+pixi task list
 ```
 
-The Python implementation mainly consists of Jupyter notebooks located under the [`docs`](./docs) folder. It's best to view, run, and edit them with VSCode or with
+In particular, you can build the website with the Python notebook with the `doc` task:
 
 ```shell
-jupyter lab
-```
-
-You can also run all notebooks and render them as static HTML pages with [Jupyter Book](https://jupyterbook.org) as follows:
-
-```shell
-jb build docs/ -W
+pixi run doc
 ```
 
 Open `docs/_build/html/index.html` to view the resulting HTML pages. In VSCode, you can view the output HTML files by searching for "Live Preview: Start Server" through the [command pallette](https://code.visualstudio.com/api/ux-guidelines/command-palette) (`Ctrl+Shift+P`).
+
+Finally, to automatically run style checks over files you are committing, it is recommended to install [`pre-commit`](https://pre-commit.com):
+
+```shell
+pixi global install --expose pre-commit pre-commit-uv
+pre-commit install --install-hooks
+```

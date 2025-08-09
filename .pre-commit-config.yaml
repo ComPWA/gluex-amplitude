@@ -2,9 +2,6 @@ ci:
   autofix_commit_msg: "MAINT: implement pre-commit autofixes"
   autoupdate_commit_msg: "MAINT: upgrade lock files"
   autoupdate_schedule: quarterly
-  skip:
-    - uv-lock
-
 repos:
   - repo: meta
     hooks:
@@ -12,15 +9,17 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 67a41477b9ccb7b8910224a2374c35745c4612aa
+    rev: ec0bc3d0f7906434c4aefa0fb66dd899dd8372f2
     hooks:
       - id: colab-toc-visible
       - id: check-dev-files
         args:
           - --dependabot=keep
+          - --no-binder
           - --no-cd
           - --no-github-actions
           - --no-pypi
+          - --package-manager=pixi
           - --repo-name=gluex-amplitude
       - id: remove-empty-tags
       - id: set-nb-display-name
@@ -122,8 +121,3 @@ repos:
       - id: latexindent
         args:
           - "-y=defaultIndent: '  '"
-
-  - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.8.8
-    hooks:
-      - id: uv-lock

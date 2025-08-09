@@ -36,8 +36,7 @@ node_modules/
 prof/
 
 # Virtual environments
-*venv/
-pyvenv*/
+.pixi/
 
 # Settings
 .idea/

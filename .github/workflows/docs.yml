@@ -22,13 +22,11 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: prefix-dev/setup-pixi@v0.8.14
         with:
-          python-version-file: .python-version
-      - uses: astral-sh/setup-uv@v6
-      - run: >-
-          uv run --group doc \
-            jupyter book build docs --warningiserror
+          activate-environment: false
+          cache: true
+      - run: pixi run doc
       - uses: actions/upload-pages-artifact@v3
         if: always()
         with:
