@@ -4640,7 +4640,7 @@ packages:
 - pypi: ./
   name: gluex-amplitude
   version: 0.0.0
-  sha256: f9c596f36092b8b87fa5afa138af90ce2daf8a9e03f9acdc92fe05434bbfc3ce
+  sha256: 001d1d978a35b07fff5d8a3e50aa3d631d729af20564f7d171a35a5a74d07f5d
   requires_dist:
   - numpy
   - pandas
