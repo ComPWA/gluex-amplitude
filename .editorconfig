@@ -14,6 +14,3 @@ indent_size = 4
 
 [.gitmodules]
 indent_size = unset
-
-[uv.lock]
-indent_size = 4

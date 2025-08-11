@@ -23,10 +23,16 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "C_Cpp.default.compilerPath": "${workspaceFolder}/.pixi/envs/default/bin/clang",
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
+  "files.associations": {
+    "**/pixi.lock": "yaml",
+    "Makefile.settings": "makefile"
+  },
   "git.autoRepositoryDetection": false,
   "git.autofetch": true,
+  "git.detectSubmodules": false,
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.refresh.enabled": true,
   "github-actions.workflows.pinned.workflows": [
@@ -79,7 +85,7 @@
   },
   "notebook.formatOnSave.enabled": true,
   "notebook.gotoSymbols.showAllSymbols": true,
-  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.defaultInterpreterPath": ".pixi/envs/default/bin/python",
   "python.terminal.activateEnvironment": false,
   "redhat.telemetry.enabled": false,
   "rewrap.wrappingColumn": 88,
@@ -87,7 +93,7 @@
   "ruff.importStrategy": "fromEnvironment",
   "ruff.organizeImports": true,
   "search.exclude": {
-    "**/uv.lock": true
+    "**/pixi.lock": true
   },
   "telemetry.telemetryLevel": "off"
 }

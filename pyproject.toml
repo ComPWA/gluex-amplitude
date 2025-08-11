@@ -3,6 +3,7 @@ build-backend = "setuptools.build_meta"
 requires = ["setuptools"]
 
 [project]
+dependencies = ["numpy", "pandas", "uproot"]
 description = "Investigation of symbolic amplitude models for the GlueX experiment"
 license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"
@@ -16,12 +17,20 @@ file = "README.md"
 [dependency-groups]
 dev = [
     "ruff",
+    "sphinx-autobuild",
     {include-group = "doc"},
     {include-group = "jupyter"},
+    {include-group = "notebooks"},
 ]
 doc = [
-    "jupyter-book",
-    {include-group = "notebooks"},
+    "myst-nb",
+    "sphinx",
+    "sphinx-api-relink",
+    "sphinx-book-theme",
+    "sphinx-codeautolink[ipython]",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "sphinx-togglebutton",
 ]
 jupyter = [
     "jupyterlab",
@@ -29,9 +38,10 @@ jupyter = [
     "jupyterlab-git",
     "jupyterlab-lsp",
     "jupyterlab-myst",
+    "jupyterlite-core",
+    "jupyterlite-pyodide-kernel",
     "python-lsp-ruff",
     "python-lsp-server[rope]",
-    {include-group = "notebooks"},
 ]
 notebooks = [
     "ampform",
@@ -40,6 +50,112 @@ notebooks = [
     "matplotlib",
     "sympy",
 ]
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = [
+    "linux-64",
+    "linux-aarch64",
+    "osx-64",
+    "osx-arm64",
+]
+
+[tool.pixi.dependencies]
+clang = "*"
+make = "*"
+python = "3.12.*"
+root = "*"
+
+[tool.pixi.environments]
+default = {features = ["dev"], solve-group = "main"}
+
+[tool.pixi.pypi-dependencies]
+gluex-amplitude = {path = ".", editable = true}
+
+[tool.pixi.tasks.all]
+depends-on = [
+    "build",
+    "doc",
+    "linkcheck",
+    "lite",
+    "style",
+]
+description = "Run all continuous integration (CI) tasks locally"
+
+[tool.pixi.tasks.build]
+cmd = "make CXX=clang CXXFLAGS='-std=c++20 -O3 -Wno-' SHELL=/bin/bash"
+description = "Build C++ project"
+
+[tool.pixi.tasks.doc]
+cmd = """
+sphinx-build \
+    --builder=html \
+    --fail-on-warning \
+    --keep-going \
+    --show-traceback \
+    docs/ \
+    docs/_build/html/
+"""
+depends-on = "lite"
+description = "Build website"
+env = {EXECUTE_NB = "yes", PYTHONWARNINGS = ""}
+
+[tool.pixi.tasks.doclive]
+cmd = """
+sphinx-autobuild \
+    --builder=html \
+    --open-browser \
+    --port=0 \
+    --re-ignore='/_build(/.*)?$' \
+    --re-ignore='/\\.cache(/.*)?$' \
+    --re-ignore='/\\.egg-info(/.*)?$' \
+    --re-ignore='/\\.ipynb_checkpoints(/.*)?$' \
+    --re-ignore='/\\.virtual_documents(/.*)?$' \
+    --re-ignore='/docs$' \
+    --re-ignore='\\.egg-info(/.*)?$' \
+    --re-ignore='\\.gif$' \
+    --re-ignore='\\.pickle$' \
+    --re-ignore='\\.png$' \
+    --re-ignore='\\.svg$' \
+    docs/ \
+    docs/_build/html/
+"""
+description = "Set up a server to directly preview changes to the HTML pages"
+
+[tool.pixi.tasks.docnblive]
+cmd = "pixi run doclive"
+description = "Set up a server to directly preview changes to the HTML pages with cached notebook execution"
+env = {EXECUTE_NB = "yes"}
+
+[tool.pixi.tasks.lab]
+cmd = "jupyter lab docs"
+description = "Start Jupyter Lab"
+
+[tool.pixi.tasks.linkcheck]
+cmd = """
+sphinx-build \
+    --builder=linkcheck \
+    --show-traceback \
+    docs/ \
+    docs/_build/linkcheck/
+"""
+description = "Check external links in the documentation (requires internet connection)"
+env = {PYTHONWARNINGS = ""}
+
+[tool.pixi.tasks.lite]
+cmd = """
+jupyter lite build \
+    --contents feynman-gluex-two-pseudoscalar.svg \
+    --contents widget.ipynb \
+    --ignore-contents=_build \
+    --output-dir lite
+"""
+cwd = "docs"
+description = "Build Jupyter Lite server"
+
+[tool.pixi.tasks.style]
+cmd = "pre-commit run --all-files"
+description = "Perform all linting, formatting, and spelling checks"
 
 [tool.ruff]
 extend-include = ["*.ipynb"]
@@ -124,6 +240,7 @@ split-on-trailing-comma = false
     "S101",
     "S113",
 ]
+"docs/conf.py" = ["A001", "D100"]
 "script/*" = ["D100", "INP001"]
 
 [tool.ruff.lint.pydocstyle]

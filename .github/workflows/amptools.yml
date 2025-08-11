@@ -5,6 +5,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
+  PIXI_COLOR: always
   PYTHONHASHSEED: "0"
 
 on:
@@ -25,8 +26,6 @@ on:
 jobs:
   build:
     name: Build and execute
-    env:
-      ROOT_VERSION: v6.32.06
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -39,28 +38,6 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
-      - name: Install ROOT (macOS)
-        if: matrix.os == 'macos-14'
-        run: brew install root
-      - uses: actions/cache@v3
-        if: contains(matrix.os, 'ubuntu')
-        with:
-          key: root-${{ env.ROOT_VERSION }}
-          path: ./root
-      - name: Install ROOT (Ubuntu)
-        if: contains(matrix.os, 'ubuntu') && ! hashFiles('root/**')
-        run: |
-          tar_file=root_$ROOT_VERSION.Linux-ubuntu24.04-x86_64-gcc13.2.tar.gz
-          wget https://root.cern/download/$tar_file -q
-          tar xzf $tar_file
-          sudo apt install libtbb-dev
-          source ./root/bin/thisroot.sh
-          echo 'cout << "Works!" << endl;' | root -l
-      - name: Enforce bash instead of dash
-        if: contains(matrix.os, 'ubuntu')
-        run: |
-          sudo rm /bin/sh
-          sudo ln -s /bin/bash /bin/sh
       - uses: actions/cache@v3
         with:
           key: binaries-${{ matrix.os }}-${{ hashFiles('**/*.cc', '**/*.h', 'extern/AmpTools', '**/Makefile*') }}
@@ -71,21 +48,18 @@ jobs:
             **/compiler_flags
             **/bin
             **/lib
-      - name: Build libraries and executables
-        run: |
-          if [[ ${{ matrix.os }} =~ "ubuntu" ]]; then
-            source ./root/bin/thisroot.sh
-          fi
-          pushd extern/AmpTools; make -j$(nproc); popd
-          make -j$(nproc)
-      - uses: actions/setup-python@v4
+      - uses: prefix-dev/setup-pixi@v0.8.14
         with:
-          python-version: "3.12"
-      - uses: astral-sh/setup-uv@v5
+          activate-environment: true
+          cache: true
+      - if: startsWith(matrix.os, 'macos')
+        run: pixi run build -j$(sysctl -n hw.ncpu)
+      - if: startsWith(matrix.os, 'ubuntu')
+        run: pixi run build -j$(nproc)
       - name: Run executables
         run: |
           ./print_amplitudes -c zlm.cfg > .print_amplitudes.log
-          uv run makeComparison.py
+          python makeComparison.py
           ./draw_zlm
         working-directory: script
       - uses: actions/upload-artifact@v4
