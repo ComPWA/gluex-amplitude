@@ -14,4 +14,4 @@ updates:
     labels:
       - ⬆️ Lock
     schedule:
-      interval: quarterly
+      interval: semiannually
