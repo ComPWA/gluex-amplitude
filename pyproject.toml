@@ -3,7 +3,34 @@ build-backend = "setuptools.build_meta"
 requires = ["setuptools"]
 
 [project]
-dependencies = ["numpy", "pandas", "uproot"]
+dependencies = [
+    "ampform",
+    "ipympl",
+    "ipywidgets",
+    "jupyterlab",
+    "jupyterlab-code-formatter",
+    "jupyterlab-git",
+    "jupyterlab-lsp",
+    "jupyterlab-myst",
+    "jupyterlite-core",
+    "jupyterlite-pyodide-kernel",
+    "matplotlib",
+    "myst-nb",
+    "numpy",
+    "pandas",
+    "python-lsp-ruff",
+    "python-lsp-server[rope]",
+    "sphinx",
+    "sphinx-api-relink",
+    "sphinx-autobuild",
+    "sphinx-book-theme",
+    "sphinx-codeautolink[ipython]",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "sphinx-togglebutton",
+    "sympy",
+    "uproot",
+]
 description = "Investigation of symbolic amplitude models for the GlueX experiment"
 license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"
