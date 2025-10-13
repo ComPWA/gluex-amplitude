@@ -90,7 +90,7 @@ platforms = [
 [tool.pixi.dependencies]
 clang = "*"
 make = "*"
-python = "3.12.*"
+python = "3.13.*"
 root = "*"
 
 [tool.pixi.environments]
