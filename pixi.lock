@@ -4682,7 +4682,7 @@ packages:
 - pypi: ./
   name: gluex-amplitude
   version: 0.0.0
-  sha256: 060a901a306d4525eb510b6b0c84efc0399178817d5f82c6d968b1768f53fae8
+  sha256: ddc5edcfd7789cce80401d871ff361bc0c80641b541d6b7bb5bafd44aa38c9f9
   requires_dist:
   - ampform
   - ipympl
@@ -4710,7 +4710,7 @@ packages:
   - sphinx-togglebutton
   - sympy
   - uproot
-  requires_python: '>=3.12'
+  requires_python: '>=3.13'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/osx-64/gmp-6.3.0-hf036a51_2.conda
   sha256: 75aa5e7a875afdcf4903b7dc98577672a3dc17b528ac217b915f9528f93c85fc
