@@ -4740,33 +4740,10 @@ packages:
 - pypi: ./
   name: gluex-amplitude
   version: 0.0.0
-  sha256: ddc5edcfd7789cce80401d871ff361bc0c80641b541d6b7bb5bafd44aa38c9f9
+  sha256: 37ec37d67c00d5291c625beee5c0c0578a1bfaeabea53209bd9b6bcc6ffe3b7a
   requires_dist:
-  - ampform
-  - ipympl
-  - ipywidgets
-  - jupyterlab
-  - jupyterlab-code-formatter
-  - jupyterlab-git
-  - jupyterlab-lsp
-  - jupyterlab-myst
-  - jupyterlite-core
-  - jupyterlite-pyodide-kernel
-  - matplotlib
-  - myst-nb
   - numpy
   - pandas
-  - python-lsp-ruff
-  - python-lsp-server[rope]
-  - sphinx
-  - sphinx-api-relink
-  - sphinx-autobuild
-  - sphinx-book-theme
-  - sphinx-codeautolink[ipython]
-  - sphinx-copybutton
-  - sphinx-design
-  - sphinx-togglebutton
-  - sympy
   - uproot
   requires_python: '>=3.13'
   editable: true
