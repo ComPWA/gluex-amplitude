@@ -38,6 +38,7 @@ jupyter = [
     "jupyterlab-git",
     "jupyterlab-lsp",
     "jupyterlab-myst",
+    "jupyterlab-quickopen",
     "jupyterlite-core",
     "jupyterlite-pyodide-kernel",
     "python-lsp-ruff",

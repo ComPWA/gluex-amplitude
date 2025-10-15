@@ -344,6 +344,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/50/dc/d59ae2a9e4671c090ba9ef9f1228a62cf49ad80b4bc3d716565bb7e6a81b/jupyterlab_git-0.51.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d6/0a/faf41c7a22b363a2746a41d66081000c84dc055e98e22cc3dfdf121be6c9/jupyterlab_lsp-5.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ac/7c/98ad14b3cf7a7987d3c6ef5fc83609458739f28a1a34a91a9bb1b12c5f8a/jupyterlab_myst-2.4.2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/da/ca/7bcd912484cb5eadf43f8bfca49fe6b6d2cb16ea6127f3fd646865820ca1/jupyterlab_quickopen-2.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/43/6a/ca128561b22b60bd5a0c4ea26649e68c8556b82bc70a0c396eebc977fe86/jupyterlab_widgets-3.0.15-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8d/25/003881b07217e270fc71083185e4e48bf48c41b4f398f9d24e7d727f6e64/jupyterlite_core-0.6.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/a4/bf3270357175d410d98edd00e42c1826cb26e33742c1ee5421d00d4cf97d/jupyterlite_pyodide_kernel-0.6.1-py3-none-any.whl
@@ -743,6 +744,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/50/dc/d59ae2a9e4671c090ba9ef9f1228a62cf49ad80b4bc3d716565bb7e6a81b/jupyterlab_git-0.51.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d6/0a/faf41c7a22b363a2746a41d66081000c84dc055e98e22cc3dfdf121be6c9/jupyterlab_lsp-5.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ac/7c/98ad14b3cf7a7987d3c6ef5fc83609458739f28a1a34a91a9bb1b12c5f8a/jupyterlab_myst-2.4.2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/da/ca/7bcd912484cb5eadf43f8bfca49fe6b6d2cb16ea6127f3fd646865820ca1/jupyterlab_quickopen-2.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/43/6a/ca128561b22b60bd5a0c4ea26649e68c8556b82bc70a0c396eebc977fe86/jupyterlab_widgets-3.0.15-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8d/25/003881b07217e270fc71083185e4e48bf48c41b4f398f9d24e7d727f6e64/jupyterlite_core-0.6.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/a4/bf3270357175d410d98edd00e42c1826cb26e33742c1ee5421d00d4cf97d/jupyterlite_pyodide_kernel-0.6.1-py3-none-any.whl
@@ -1098,6 +1100,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/50/dc/d59ae2a9e4671c090ba9ef9f1228a62cf49ad80b4bc3d716565bb7e6a81b/jupyterlab_git-0.51.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d6/0a/faf41c7a22b363a2746a41d66081000c84dc055e98e22cc3dfdf121be6c9/jupyterlab_lsp-5.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ac/7c/98ad14b3cf7a7987d3c6ef5fc83609458739f28a1a34a91a9bb1b12c5f8a/jupyterlab_myst-2.4.2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/da/ca/7bcd912484cb5eadf43f8bfca49fe6b6d2cb16ea6127f3fd646865820ca1/jupyterlab_quickopen-2.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/43/6a/ca128561b22b60bd5a0c4ea26649e68c8556b82bc70a0c396eebc977fe86/jupyterlab_widgets-3.0.15-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8d/25/003881b07217e270fc71083185e4e48bf48c41b4f398f9d24e7d727f6e64/jupyterlite_core-0.6.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/a4/bf3270357175d410d98edd00e42c1826cb26e33742c1ee5421d00d4cf97d/jupyterlite_pyodide_kernel-0.6.1-py3-none-any.whl
@@ -1451,6 +1454,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/50/dc/d59ae2a9e4671c090ba9ef9f1228a62cf49ad80b4bc3d716565bb7e6a81b/jupyterlab_git-0.51.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d6/0a/faf41c7a22b363a2746a41d66081000c84dc055e98e22cc3dfdf121be6c9/jupyterlab_lsp-5.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ac/7c/98ad14b3cf7a7987d3c6ef5fc83609458739f28a1a34a91a9bb1b12c5f8a/jupyterlab_myst-2.4.2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/da/ca/7bcd912484cb5eadf43f8bfca49fe6b6d2cb16ea6127f3fd646865820ca1/jupyterlab_quickopen-2.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/43/6a/ca128561b22b60bd5a0c4ea26649e68c8556b82bc70a0c396eebc977fe86/jupyterlab_widgets-3.0.15-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8d/25/003881b07217e270fc71083185e4e48bf48c41b4f398f9d24e7d727f6e64/jupyterlite_core-0.6.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/a4/bf3270357175d410d98edd00e42c1826cb26e33742c1ee5421d00d4cf97d/jupyterlite_pyodide_kernel-0.6.1-py3-none-any.whl
@@ -4740,7 +4744,7 @@ packages:
 - pypi: ./
   name: gluex-amplitude
   version: 0.0.0
-  sha256: 37ec37d67c00d5291c625beee5c0c0578a1bfaeabea53209bd9b6bcc6ffe3b7a
+  sha256: 79eb1bb0917d3be91c2e9a5df597f83b103ec9cd96297053085c1c555822bcfb
   requires_dist:
   - numpy
   - pandas
@@ -6180,6 +6184,13 @@ packages:
   - pytest-asyncio ; extra == 'test'
   - pytest-cov ; extra == 'test'
   - pytest-jupyter[server]>=0.6.0 ; extra == 'test'
+  requires_python: '>=3.8'
+- pypi: https://files.pythonhosted.org/packages/da/ca/7bcd912484cb5eadf43f8bfca49fe6b6d2cb16ea6127f3fd646865820ca1/jupyterlab_quickopen-2.1.0-py3-none-any.whl
+  name: jupyterlab-quickopen
+  version: 2.1.0
+  sha256: a45609d1c723f5eebb92c60108aba6dbfeec793e30042750cb5bd44daac639cc
+  requires_dist:
+  - jupyter-server>=2.4.2,<3
   requires_python: '>=3.8'
 - pypi: https://files.pythonhosted.org/packages/43/6a/ca128561b22b60bd5a0c4ea26649e68c8556b82bc70a0c396eebc977fe86/jupyterlab_widgets-3.0.15-py3-none-any.whl
   name: jupyterlab-widgets
