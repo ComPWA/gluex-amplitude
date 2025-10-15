@@ -129,8 +129,9 @@ description = "Set up a server to directly preview changes to the HTML pages wit
 env = {EXECUTE_NB = "yes"}
 
 [tool.pixi.tasks.lab]
-cmd = "jupyter lab docs"
-description = "Start Jupyter Lab"
+args = [{"arg" = "paths", "default" = ""}]
+cmd = "jupyter lab {{ paths }}"
+description = "Run Jupyter Lab"
 
 [tool.pixi.tasks.linkcheck]
 cmd = """
