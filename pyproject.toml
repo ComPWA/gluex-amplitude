@@ -7,7 +7,7 @@ dependencies = ["numpy", "pandas", "uproot"]
 description = "Investigation of symbolic amplitude models for the GlueX experiment"
 license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"
-requires-python = ">=3.12"
+requires-python = "~=3.13.0"
 version = "0.0.0"
 
 [project.readme]
@@ -38,6 +38,7 @@ jupyter = [
     "jupyterlab-git",
     "jupyterlab-lsp",
     "jupyterlab-myst",
+    "jupyterlab-quickopen",
     "jupyterlite-core",
     "jupyterlite-pyodide-kernel",
     "python-lsp-ruff",
@@ -63,7 +64,7 @@ platforms = [
 [tool.pixi.dependencies]
 clang = "*"
 make = "*"
-python = "3.12.*"
+python = "3.13.*"
 root = "*"
 
 [tool.pixi.environments]
@@ -128,8 +129,9 @@ description = "Set up a server to directly preview changes to the HTML pages wit
 env = {EXECUTE_NB = "yes"}
 
 [tool.pixi.tasks.lab]
-cmd = "jupyter lab docs"
-description = "Start Jupyter Lab"
+args = [{"arg" = "paths", "default" = ""}]
+cmd = "jupyter lab {{ paths }}"
+description = "Run Jupyter Lab"
 
 [tool.pixi.tasks.linkcheck]
 cmd = """
