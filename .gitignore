@@ -30,7 +30,6 @@ version.py
 .coverage.*
 .ipynb_checkpoints/
 .jupyterlite.doit.db
-.mypy*/
 .virtual_documents/
 __pycache__/
 htmlcov/
