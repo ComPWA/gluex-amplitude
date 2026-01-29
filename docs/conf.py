@@ -71,6 +71,7 @@ intersphinx_mapping = {
 html_title = "GlueX amplitude model"
 linkcheck_ignore = [
     "https://doi.org/10.1103/PhysRevD.100.054017",
+    R".*lite/lab\?path=widget\.ipynb",
 ]
 myst_enable_extensions = [
     "amsmath",
