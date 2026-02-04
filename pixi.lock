@@ -1784,7 +1784,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/async-lru?source=hash-mapping
+  - pkg:pypi/async-lru?source=compressed-mapping
   size: 19458
   timestamp: 1768752884184
 - conda: https://conda.anaconda.org/conda-forge/linux-64/at-spi2-atk-2.38.0-h0630a04_3.tar.bz2
@@ -3717,7 +3717,7 @@ packages:
   - typing_extensions >=4.6.0
   license: MIT and PSF-2.0
   purls:
-  - pkg:pypi/exceptiongroup?source=compressed-mapping
+  - pkg:pypi/exceptiongroup?source=hash-mapping
   size: 21333
   timestamp: 1763918099466
 - conda: https://conda.anaconda.org/conda-forge/noarch/executing-2.2.1-pyhd8ed1ab_0.conda
@@ -6079,7 +6079,7 @@ packages:
   license: Apache-2.0
   license_family: APACHE
   purls:
-  - pkg:pypi/json5?source=hash-mapping
+  - pkg:pypi/json5?source=compressed-mapping
   size: 34017
   timestamp: 1767325114901
 - conda: https://conda.anaconda.org/conda-forge/noarch/jsonpointer-3.0.0-pyhcf101f3_3.conda
@@ -6299,7 +6299,7 @@ packages:
   license: BSD-3-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/jupyter-server-terminals?source=hash-mapping
+  - pkg:pypi/jupyter-server-terminals?source=compressed-mapping
   size: 22052
   timestamp: 1768574057200
 - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-4.5.3-pyhd8ed1ab_0.conda
@@ -9929,7 +9929,7 @@ packages:
   license: BSD-3-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/mistune?source=hash-mapping
+  - pkg:pypi/mistune?source=compressed-mapping
   size: 74250
   timestamp: 1766504456031
 - conda: https://conda.anaconda.org/conda-forge/osx-64/mpc-1.3.1-h9d8efa1_1.conda
@@ -14834,7 +14834,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/zipp?source=hash-mapping
+  - pkg:pypi/zipp?source=compressed-mapping
   size: 24194
   timestamp: 1764460141901
 - conda: https://conda.anaconda.org/conda-forge/linux-64/zlib-1.3.1-hb9d3cd8_2.conda
