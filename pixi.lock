@@ -387,7 +387,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c8/78/3565d011c61f5a43488987ee32b6f3f656e7f107ac2782dd57bdd7d91d9a/snowballstemmer-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/73/f7/b1884cb3188ab181fc81fa00c266699dab600f927a964df02ec3d5d1916a/sphinx-9.1.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/f2/fc/5633f7099508cd30d7f9a97dc48ca75bc9a6773d02081fc4a1a6bcaf2ce6/sphinx_api_relink-0.1.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/6c/c7/3d049d143c1a102085c90552a4e33867013771419f74f0a297705ff3ba38/sphinx_api_relink-0.1.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d7/20/56411b52f917696995f5ad27d2ea7e9492c84a043c5b49a3a3173573cd93/sphinx_autobuild-2025.8.25-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/9e/c41d68be04eef5b6202b468e0f90faf0c469f3a03353f2a218fd78279710/sphinx_book_theme-1.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/e2/a7232766639b8a447e5e1884f6f33bd704d213bc5d4eb376f81cd5a0cb1d/sphinx_codeautolink-0.17.5-py3-none-any.whl
@@ -791,7 +791,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c8/78/3565d011c61f5a43488987ee32b6f3f656e7f107ac2782dd57bdd7d91d9a/snowballstemmer-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/73/f7/b1884cb3188ab181fc81fa00c266699dab600f927a964df02ec3d5d1916a/sphinx-9.1.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/f2/fc/5633f7099508cd30d7f9a97dc48ca75bc9a6773d02081fc4a1a6bcaf2ce6/sphinx_api_relink-0.1.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/6c/c7/3d049d143c1a102085c90552a4e33867013771419f74f0a297705ff3ba38/sphinx_api_relink-0.1.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d7/20/56411b52f917696995f5ad27d2ea7e9492c84a043c5b49a3a3173573cd93/sphinx_autobuild-2025.8.25-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/9e/c41d68be04eef5b6202b468e0f90faf0c469f3a03353f2a218fd78279710/sphinx_book_theme-1.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/e2/a7232766639b8a447e5e1884f6f33bd704d213bc5d4eb376f81cd5a0cb1d/sphinx_codeautolink-0.17.5-py3-none-any.whl
@@ -1150,7 +1150,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c8/78/3565d011c61f5a43488987ee32b6f3f656e7f107ac2782dd57bdd7d91d9a/snowballstemmer-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/73/f7/b1884cb3188ab181fc81fa00c266699dab600f927a964df02ec3d5d1916a/sphinx-9.1.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/f2/fc/5633f7099508cd30d7f9a97dc48ca75bc9a6773d02081fc4a1a6bcaf2ce6/sphinx_api_relink-0.1.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/6c/c7/3d049d143c1a102085c90552a4e33867013771419f74f0a297705ff3ba38/sphinx_api_relink-0.1.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d7/20/56411b52f917696995f5ad27d2ea7e9492c84a043c5b49a3a3173573cd93/sphinx_autobuild-2025.8.25-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/9e/c41d68be04eef5b6202b468e0f90faf0c469f3a03353f2a218fd78279710/sphinx_book_theme-1.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/e2/a7232766639b8a447e5e1884f6f33bd704d213bc5d4eb376f81cd5a0cb1d/sphinx_codeautolink-0.17.5-py3-none-any.whl
@@ -1507,7 +1507,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c8/78/3565d011c61f5a43488987ee32b6f3f656e7f107ac2782dd57bdd7d91d9a/snowballstemmer-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/73/f7/b1884cb3188ab181fc81fa00c266699dab600f927a964df02ec3d5d1916a/sphinx-9.1.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/f2/fc/5633f7099508cd30d7f9a97dc48ca75bc9a6773d02081fc4a1a6bcaf2ce6/sphinx_api_relink-0.1.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/6c/c7/3d049d143c1a102085c90552a4e33867013771419f74f0a297705ff3ba38/sphinx_api_relink-0.1.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d7/20/56411b52f917696995f5ad27d2ea7e9492c84a043c5b49a3a3173573cd93/sphinx_autobuild-2025.8.25-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/51/9e/c41d68be04eef5b6202b468e0f90faf0c469f3a03353f2a218fd78279710/sphinx_book_theme-1.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/e2/a7232766639b8a447e5e1884f6f33bd704d213bc5d4eb376f81cd5a0cb1d/sphinx_codeautolink-0.17.5-py3-none-any.whl
@@ -13026,10 +13026,10 @@ packages:
   - packaging>=23.0
   - colorama>=0.4.6 ; sys_platform == 'win32'
   requires_python: '>=3.12'
-- pypi: https://files.pythonhosted.org/packages/f2/fc/5633f7099508cd30d7f9a97dc48ca75bc9a6773d02081fc4a1a6bcaf2ce6/sphinx_api_relink-0.1.0-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/6c/c7/3d049d143c1a102085c90552a4e33867013771419f74f0a297705ff3ba38/sphinx_api_relink-0.1.1-py3-none-any.whl
   name: sphinx-api-relink
-  version: 0.1.0
-  sha256: 7e8a7fd29c215aed93a727a80930e7050ccf2158f112451f8f84db0465ce98fb
+  version: 0.1.1
+  sha256: 1dcb75777ac4e0d5621c61aceb61cdfbb1d37095481af857676581a68790a466
   requires_dist:
   - colorama
   - docutils
