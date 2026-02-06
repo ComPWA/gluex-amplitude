@@ -26,3 +26,7 @@ jobs:
       id-token: write
     with:
       gh-pages: true
+  style:
+    secrets:
+      token: ${{ secrets.PAT }}
+    uses: ComPWA/actions/.github/workflows/style.yml@v4.0

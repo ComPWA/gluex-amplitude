@@ -2,6 +2,7 @@ ci:
   autofix_commit_msg: "MAINT: implement pre-commit autofixes"
   autoupdate_commit_msg: "MAINT: upgrade lock files"
   autoupdate_schedule: quarterly
+
 repos:
   - repo: meta
     hooks:
@@ -9,7 +10,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.8.2rc15
+    rev: 288de0153b31537597d9a4e7a6d5e3d1ef69769c
     hooks:
       - id: colab-toc-visible
       - id: check-dev-files
