@@ -10,7 +10,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 288de0153b31537597d9a4e7a6d5e3d1ef69769c
+    rev: 0.8.2rc18
     hooks:
       - id: colab-toc-visible
       - id: check-dev-files
