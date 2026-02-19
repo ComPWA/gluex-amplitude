@@ -1,0 +1,32 @@
+name: CI
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: |-
+    ${{ github.ref != format('refs/heads/{0}', github.event.repository.default_branch) }}
+
+on:
+  push:
+    branches:
+      - main
+      - epic/*
+      - "[0-9]+.[0-9]+.x"
+  pull_request:
+    branches:
+      - main
+      - epic/*
+      - "[0-9]+.[0-9]+.x"
+  workflow_dispatch:
+
+jobs:
+  doc:
+    uses: ComPWA/actions/.github/workflows/ci-docs.yml@v4.0
+    permissions:
+      pages: write
+      id-token: write
+    with:
+      gh-pages: true
+  style:
+    secrets:
+      token: ${{ secrets.PAT }}
+    uses: ComPWA/actions/.github/workflows/style.yml@v4.0

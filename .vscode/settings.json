@@ -30,14 +30,14 @@
     "**/pixi.lock": "yaml",
     "Makefile.settings": "makefile"
   },
-  "git.autoRepositoryDetection": false,
   "git.autofetch": true,
+  "git.autoRepositoryDetection": false,
   "git.detectSubmodules": false,
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.refresh.enabled": true,
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/amptools.yml",
-    ".github/workflows/docs.yml"
+    ".github/workflows/ci.yml"
   ],
   "gitlens.telemetry.enabled": false,
   "latex-workshop.latex.autoBuild.run": "onSave",
