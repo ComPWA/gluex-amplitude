@@ -12,3 +12,8 @@ updates:
     labels: [⬆️ Lock]
     multi-ecosystem-group: lock
     patterns: ["*"]
+  - package-ecosystem: pre-commit
+    directory: "/"
+    labels: [⬆️ Lock]
+    multi-ecosystem-group: lock
+    patterns: ["*"]
