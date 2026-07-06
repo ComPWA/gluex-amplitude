@@ -10,7 +10,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.8.9
+    rev: 0.8.13
     hooks:
       - id: colab-toc-visible
       - id: check-dev-files
@@ -53,7 +53,7 @@ repos:
             metadata.vscode
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.10
+    rev: v0.15.20
     hooks:
       - id: ruff-check
         args: [--fix]
@@ -96,7 +96,7 @@ repos:
           - --in-place
 
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v22.1.3
+    rev: v22.1.5
     hooks:
       - id: clang-format
         types_or:
@@ -116,7 +116,7 @@ repos:
           )$
 
   - repo: https://github.com/cmhughes/latexindent.pl
-    rev: V4.0
+    rev: V4.0.2
     hooks:
       - id: latexindent
         args:
