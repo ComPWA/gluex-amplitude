@@ -165,6 +165,18 @@ description = "Build Jupyter Lite server"
 cmd = "pre-commit run --all-files"
 description = "Perform all linting, formatting, and spelling checks"
 
+[tool.pixi.tasks.upgrade]
+depends-on = [
+    "_upgrade-precommit",
+    "_upgrade-pixi",
+]
+
+[tool.pixi.tasks._upgrade-pixi]
+cmd = "pixi update"
+
+[tool.pixi.tasks._upgrade-precommit]
+cmd = "pre-commit autoupdate -j8"
+
 [tool.pixi.workspace]
 channels = ["conda-forge"]
 platforms = [
