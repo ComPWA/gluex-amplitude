@@ -4,6 +4,7 @@ version = "0.0.0"
 description = "Investigation of symbolic amplitude models for the GlueX experiment"
 requires-python = "~=3.13.0"
 license = "BSD-3-Clause"
+license-files = ["LICENSE"]
 dependencies = [
     "numpy",
     "pandas",
@@ -268,5 +269,5 @@ key-empty = "off"
 
 [[tool.tombi.schemas]]
 root = "tool.compwa.policy"
-path = "https://raw.githubusercontent.com/ComPWA/policy/1a1d5e8a13c4f76cee452121b5bafe2286dec2f4/compwa-policy.schema.json"
+path = "https://raw.githubusercontent.com/ComPWA/policy/0.9.0/compwa-policy.schema.json"
 include = ["pyproject.toml"]
