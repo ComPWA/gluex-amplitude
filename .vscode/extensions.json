@@ -20,7 +20,7 @@
     "redhat.vscode-yaml",
     "soulcode.vscode-unwanted-extensions",
     "stkb.rewrap",
-    "tamasfe.even-better-toml",
+    "tombi-toml.tombi",
     "yzhang.markdown-all-in-one"
   ],
   "unwantedRecommendations": [
@@ -36,6 +36,7 @@
     "ms-python.vscode-pylance",
     "ms-toolsai.vscode-jupyter-slideshow",
     "streetsidesoftware.code-spell-checker",
+    "tamasfe.even-better-toml",
     "travisillig.vscode-json-stable-stringify",
     "tyriar.sort-lines"
   ]

@@ -20,11 +20,11 @@ intensities = []
 with open(".print_amplitudes.log") as file:
     for line in file:
         if "INTENSITY =" in line:
-            line = re.sub(r" +", " ", line.rstrip().lstrip())  # noqa: PLW2901
+            line = re.sub(r" +", " ", line.rstrip().lstrip())  # ruff:ignore[redefined-loop-name]
             intensities.append(float(line.split()[2]))
 intensities = np.array(intensities)
 
-assert len(intensities) == len(data["cosTheta_eta_hel_thrown"])  # noqa: S101
+assert len(intensities) == len(data["cosTheta_eta_hel_thrown"])  # ruff:ignore[assert]
 
 # Rename dictionary keys
 data["intensity"] = intensities

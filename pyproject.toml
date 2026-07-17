@@ -1,26 +1,27 @@
-[build-system]
-build-backend = "setuptools.build_meta"
-requires = ["setuptools"]
-
 [project]
-dependencies = ["numpy", "pandas", "uproot"]
-description = "Investigation of symbolic amplitude models for the GlueX experiment"
-license = {text = "BSD 3-Clause License"}
 name = "gluex-amplitude"
-requires-python = "~=3.13.0"
 version = "0.0.0"
+description = "Investigation of symbolic amplitude models for the GlueX experiment"
+requires-python = "~=3.13.0"
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+dependencies = [
+    "numpy",
+    "pandas",
+    "uproot",
+]
 
 [project.readme]
-content-type = "text/markdown"
 file = "README.md"
+content-type = "text/markdown"
 
 [dependency-groups]
 dev = [
     "ruff",
     "sphinx-autobuild",
-    {include-group = "doc"},
-    {include-group = "jupyter"},
-    {include-group = "notebooks"},
+    { include-group = "doc" },
+    { include-group = "jupyter" },
+    { include-group = "notebooks" },
 ]
 doc = [
     "myst-nb",
@@ -41,8 +42,6 @@ jupyter = [
     "jupyterlab-quickopen",
     "jupyterlite-core",
     "jupyterlite-pyodide-kernel",
-    "python-lsp-ruff",
-    "python-lsp-server",
 ]
 notebooks = [
     "ampform",
@@ -52,6 +51,25 @@ notebooks = [
     "sympy",
 ]
 
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.compwa.policy]
+package-manager = "pixi"
+repo-name = "gluex-amplitude"
+
+[tool.compwa.policy.nb]
+excluded-dependencies = [
+    "python-lsp-ruff",
+    "python-lsp-server",
+]
+no-binder = true
+
+[tool.compwa.policy.github]
+no-cd = true
+no-pypi = true
+
 [tool.pixi.dependencies]
 clang = "*"
 make = "*"
@@ -59,10 +77,10 @@ python = "3.13.*"
 root = "*"
 
 [tool.pixi.environments]
-default = {features = ["dev"], solve-group = "main"}
+default = { features = ["dev"], solve-group = "main" }
 
 [tool.pixi.pypi-dependencies]
-gluex-amplitude = {path = ".", editable = true}
+gluex-amplitude = { path = ".", editable = true }
 
 [tool.pixi.tasks.all]
 depends-on = [
@@ -90,7 +108,7 @@ sphinx-build \
 """
 depends-on = "lite"
 description = "Build website"
-env = {EXECUTE_NB = "yes", PYTHONWARNINGS = ""}
+env = { EXECUTE_NB = "yes" }
 
 [tool.pixi.tasks.doclive]
 cmd = """
@@ -117,10 +135,10 @@ description = "Set up a server to directly preview changes to the HTML pages"
 [tool.pixi.tasks.docnblive]
 cmd = "pixi run doclive"
 description = "Set up a server to directly preview changes to the HTML pages with cached notebook execution"
-env = {EXECUTE_NB = "yes"}
+env = { EXECUTE_NB = "yes" }
 
 [tool.pixi.tasks.lab]
-args = [{"arg" = "paths", "default" = ""}]
+args = [{ "arg" = "paths", "default" = "" }]
 cmd = "jupyter lab {{ paths }}"
 description = "Run Jupyter Lab"
 
@@ -133,7 +151,6 @@ sphinx-build \
     docs/_build/linkcheck/
 """
 description = "Check external links in the documentation (requires internet connection)"
-env = {PYTHONWARNINGS = ""}
 
 [tool.pixi.tasks.lite]
 cmd = """
@@ -149,6 +166,19 @@ description = "Build Jupyter Lite server"
 [tool.pixi.tasks.style]
 cmd = "pre-commit run --all-files"
 description = "Perform all linting, formatting, and spelling checks"
+
+[tool.pixi.tasks.upgrade]
+depends-on = [
+    "_upgrade-pixi",
+    "_upgrade-precommit",
+]
+description = "Upgrade all lock files"
+
+[tool.pixi.tasks._upgrade-pixi]
+cmd = "pixi update"
+
+[tool.pixi.tasks._upgrade-precommit]
+cmd = "pre-commit autoupdate -j8"
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
@@ -200,7 +230,7 @@ select = ["ALL"]
 task-tags = ["cspell"]
 
 [tool.ruff.lint.flake8-builtins]
-builtins-ignorelist = ["display"]
+ignorelist = ["display"]
 
 [tool.ruff.lint.flake8-comprehensions]
 allow-dict-calls-with-keyword-arguments = true
@@ -238,24 +268,21 @@ split-on-trailing-comma = false
     "TC00",
 ]
 "**/widget.ipynb" = ["ARG001", "ARG002", "S307"]
-"docs/*" = [
-    "INP001",
-    "S101",
-    "S113",
-]
+"docs/*" = ["INP001", "S101", "S113"]
 "docs/conf.py" = ["A001", "D100"]
 "script/*" = ["D100", "INP001"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
-[tool.tomlsort]
-all = false
-ignore_case = true
-in_place = true
-sort_first = [
-    "build-system",
-    "project",
-]
-spaces_indent_inline_array = 4
-trailing_comma_inline_array = true
+[tool.tombi.format.rules]
+indent-width = 4
+line-width = 88
+
+[tool.tombi.lint.rules]
+key-empty = "off"
+
+[[tool.tombi.schemas]]
+root = "tool.compwa.policy"
+path = "https://raw.githubusercontent.com/ComPWA/policy/0.9.1/compwa-policy.schema.json"
+include = ["pyproject.toml"]
