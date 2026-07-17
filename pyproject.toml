@@ -284,5 +284,5 @@ key-empty = "off"
 
 [[tool.tombi.schemas]]
 root = "tool.compwa.policy"
-path = "https://raw.githubusercontent.com/ComPWA/policy/9a92e54e6a2217e06986b8c3d61286d65f02d1a1/compwa-policy.schema.json"
+path = "https://raw.githubusercontent.com/ComPWA/policy/eeabd21efcee28b47e0f98dbcbb278e918932aee/compwa-policy.schema.json"
 include = ["pyproject.toml"]

@@ -1,5 +1,4 @@
 {
-  "C_Cpp.default.compilerPath": "${workspaceFolder}/.pixi/envs/default/bin/clang",
   "[git-commit]": {
     "editor.rulers": [72],
     "rewrap.wrappingColumn": 72
@@ -27,14 +26,15 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "C_Cpp.default.compilerPath": "${workspaceFolder}/.pixi/envs/default/bin/clang",
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
   "files.associations": {
     "**/pixi.lock": "yaml",
     "Makefile.settings": "makefile"
   },
-  "git.autoRepositoryDetection": false,
   "git.autofetch": true,
+  "git.autoRepositoryDetection": false,
   "git.detectSubmodules": false,
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.refresh.enabled": true,
@@ -82,6 +82,7 @@
     }
   ],
   "livePreview.defaultPreviewPath": "docs/_build/html",
+  "makefile.configureOnOpen": false,
   "multiDiffEditor.experimental.enabled": true,
   "notebook.codeActionsOnSave": {
     "notebook.source.organizeImports": "explicit"
