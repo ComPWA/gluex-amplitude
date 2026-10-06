@@ -178,7 +178,7 @@ description = "Upgrade all lock files"
 cmd = "pixi update"
 
 [tool.pixi.tasks._upgrade-precommit]
-cmd = "pre-commit autoupdate -j8"
+cmd = "prek autoupdate"
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
@@ -225,6 +225,28 @@ ignore = [
     "PTH",
     "RUF067",
     "SIM108",
+    "any-type",
+    "if-else-block-instead-of-if-exp",
+    "incorrect-blank-line-before-class",
+    "line-too-long",
+    "logging-f-string",
+    "missing-copyright-notice",
+    "missing-dashed-underline-after-section",
+    "missing-section-name-colon",
+    "missing-trailing-comma",
+    "multi-line-summary-second-line",
+    "non-empty-init-module",
+    "pytest-fixture-incorrect-parentheses-style",
+    "read-whole-file",
+    "reimplemented-starmap",
+    "single-line-implicit-string-concatenation",
+    "undocumented-magic-method",
+    "undocumented-public-class",
+    "undocumented-public-function",
+    "undocumented-public-init",
+    "undocumented-public-method",
+    "unspecified-encoding",
+    "write-whole-file",
 ]
 select = ["ALL"]
 task-tags = ["cspell"]
@@ -266,10 +288,31 @@ split-on-trailing-comma = false
     "S101",
     "T20",
     "TC00",
+    "assert",
+    "global-statement",
+    "global-variable-not-assigned",
+    "magic-value-comparison",
+    "mixed-case-variable-in-global-scope",
+    "non-lowercase-variable-in-function",
+    "too-many-blank-lines",
+    "useless-expression",
+    "useless-semicolon",
 ]
 "**/widget.ipynb" = ["ARG001", "ARG002", "S307"]
-"docs/*" = ["INP001", "S101", "S113"]
-"docs/conf.py" = ["A001", "D100"]
+"docs/*" = [
+    "INP001",
+    "S101",
+    "S113",
+    "assert",
+    "implicit-namespace-package",
+    "request-without-timeout",
+]
+"docs/conf.py" = [
+    "A001",
+    "D100",
+    "builtin-variable-shadowing",
+    "undocumented-public-module",
+]
 "script/*" = ["D100", "INP001"]
 
 [tool.ruff.lint.pydocstyle]
@@ -284,5 +327,5 @@ key-empty = "off"
 
 [[tool.tombi.schemas]]
 root = "tool.compwa.policy"
-path = "https://raw.githubusercontent.com/ComPWA/policy/0.9.1/compwa-policy.schema.json"
+path = "https://raw.githubusercontent.com/ComPWA/policy/0.9.8/compwa-policy.schema.json"
 include = ["pyproject.toml"]
