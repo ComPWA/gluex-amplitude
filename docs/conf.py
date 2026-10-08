@@ -7,7 +7,7 @@ if os.path.exists("lite"):
     shutil.copytree("lite", "_build/html/lite", dirs_exist_ok=True)
 
 author = "GlueX PWA team"
-copyright = "2023"
+copyright = ""
 default_role = "py:obj"
 exclude_patterns = [
     "_build",
