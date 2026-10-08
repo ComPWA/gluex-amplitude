@@ -201,30 +201,8 @@ line-ending = "lf"
 
 [tool.ruff.lint]
 ignore = [
-    "ANN401",
-    "COM812",
-    "CPY001",
-    "D101",
-    "D102",
-    "D103",
-    "D105",
-    "D107",
-    "D203",
-    "D213",
-    "D407",
-    "D416",
     "DOC",
-    "E501",
-    "FURB101",
-    "FURB103",
-    "FURB140",
-    "G004",
-    "ISC001",
-    "PLW1514",
-    "PT001",
     "PTH",
-    "RUF067",
-    "SIM108",
     "any-type",
     "if-else-block-instead-of-if-exp",
     "incorrect-blank-line-before-class",
@@ -270,50 +248,40 @@ split-on-trailing-comma = false
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = [
     "ANN",
-    "B018",
-    "C408",
     "C90",
     "D",
-    "E303",
-    "E703",
-    "E741",
-    "N803",
-    "N806",
-    "N816",
     "PLR09",
-    "PLR2004",
-    "PLW0602",
-    "PLW0603",
-    "RUF001",
-    "S101",
     "T20",
     "TC00",
+    "ambiguous-unicode-character-string",
+    "ambiguous-variable-name",
     "assert",
     "global-statement",
     "global-variable-not-assigned",
+    "invalid-argument-name",
     "magic-value-comparison",
     "mixed-case-variable-in-global-scope",
     "non-lowercase-variable-in-function",
     "too-many-blank-lines",
+    "unnecessary-collection-call",
     "useless-expression",
     "useless-semicolon",
 ]
-"**/widget.ipynb" = ["ARG001", "ARG002", "S307"]
+"**/widget.ipynb" = [
+    "unused-function-argument",
+    "unused-method-argument",
+    "suspicious-eval-usage"
+]
 "docs/*" = [
-    "INP001",
-    "S101",
-    "S113",
     "assert",
     "implicit-namespace-package",
     "request-without-timeout",
 ]
 "docs/conf.py" = [
-    "A001",
-    "D100",
     "builtin-variable-shadowing",
     "undocumented-public-module",
 ]
-"script/*" = ["D100", "INP001"]
+"script/*" = ["undocumented-public-module", "implicit-namespace-package"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
