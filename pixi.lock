@@ -1558,6 +1558,7 @@ packages:
   depends:
   - binutils_impl_linux-64 >=2.46.1,<2.46.2.0a0
   license: GPL-3.0-only
+  license_family: GPL
   purls: []
   run_exports: {}
   size: 35373
@@ -1570,6 +1571,7 @@ packages:
   - sysroot_linux-64
   - zstd >=1.5.7,<1.6.0a0
   license: GPL-3.0-only
+  license_family: GPL
   purls: []
   run_exports: {}
   size: 3706604
@@ -2380,6 +2382,7 @@ packages:
   constrains:
   - binutils_impl_linux-64 2.46.1
   license: GPL-3.0-only
+  license_family: GPL
   purls: []
   run_exports: {}
   size: 742109
@@ -3582,6 +3585,7 @@ packages:
   constrains:
   - jinja2 >=3.0.0
   license: BSD-3-Clause
+  license_family: BSD
   purls:
   - pkg:pypi/markupsafe?source=compressed-mapping
   run_exports: {}
@@ -4659,6 +4663,7 @@ packages:
   depends:
   - binutils_impl_linux-aarch64 >=2.46.1,<2.46.2.0a0
   license: GPL-3.0-only
+  license_family: GPL
   purls: []
   run_exports: {}
   size: 35521
@@ -4671,6 +4676,7 @@ packages:
   - sysroot_linux-aarch64
   - zstd >=1.5.7,<1.6.0a0
   license: GPL-3.0-only
+  license_family: GPL
   purls: []
   run_exports: {}
   size: 4911258
@@ -4759,7 +4765,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/cffi?source=compressed-mapping
+  - pkg:pypi/cffi?source=hash-mapping
   run_exports: {}
   size: 329121
   timestamp: 1788485263944
@@ -5429,6 +5435,7 @@ packages:
   constrains:
   - binutils_impl_linux-aarch64 2.46.1
   license: GPL-3.0-only
+  license_family: GPL
   purls: []
   run_exports: {}
   size: 905349
@@ -6560,6 +6567,7 @@ packages:
   constrains:
   - jinja2 >=3.0.0
   license: BSD-3-Clause
+  license_family: BSD
   purls:
   - pkg:pypi/markupsafe?source=hash-mapping
   run_exports: {}
@@ -7563,7 +7571,7 @@ packages:
   license: BSD-2-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/appnope?source=hash-mapping
+  - pkg:pypi/appnope?source=compressed-mapping
   run_exports: {}
   size: 12232
   timestamp: 1787337124448
@@ -9556,7 +9564,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/cffi?source=compressed-mapping
+  - pkg:pypi/cffi?source=hash-mapping
   run_exports: {}
   size: 292318
   timestamp: 1788485600231
@@ -10985,6 +10993,7 @@ packages:
   constrains:
   - jinja2 >=3.0.0
   license: BSD-3-Clause
+  license_family: BSD
   purls:
   - pkg:pypi/markupsafe?source=hash-mapping
   run_exports: {}
@@ -13185,6 +13194,7 @@ packages:
   constrains:
   - jinja2 >=3.0.0
   license: BSD-3-Clause
+  license_family: BSD
   purls:
   - pkg:pypi/markupsafe?source=hash-mapping
   run_exports: {}
