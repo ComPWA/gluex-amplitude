@@ -6,7 +6,7 @@ from sphinx_api_relink.helpers import get_execution_mode
 if os.path.exists("lite"):
     shutil.copytree("lite", "_build/html/lite", dirs_exist_ok=True)
 
-author = "GlueX PWA team"
+author = ""
 copyright = "2023"
 default_role = "py:obj"
 exclude_patterns = [
