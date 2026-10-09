@@ -164,7 +164,7 @@ cwd = "docs"
 description = "Build Jupyter Lite server"
 
 [tool.pixi.tasks.style]
-cmd = "pre-commit run --all-files"
+cmd = "prek run --all-files"
 description = "Perform all linting, formatting, and spelling checks"
 
 [tool.pixi.tasks.upgrade]
@@ -295,5 +295,5 @@ key-empty = "off"
 
 [[tool.tombi.schemas]]
 root = "tool.compwa.policy"
-path = "https://raw.githubusercontent.com/ComPWA/policy/0.9.8/compwa-policy.schema.json"
+path = "https://raw.githubusercontent.com/ComPWA/policy/0.10.0/compwa-policy.schema.json"
 include = ["pyproject.toml"]
