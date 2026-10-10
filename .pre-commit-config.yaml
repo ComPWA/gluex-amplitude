@@ -13,7 +13,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.9.1
+    rev: "0.10.1"
     hooks:
       - id: check-dev-files
 
@@ -46,7 +46,7 @@ repos:
             metadata.vscode
 
   - repo: https://github.com/ComPWA/nbhooks
-    rev: 0.0.1
+    rev: 0.0.2
     hooks:
       - id: colab-toc-visible
       - id: remove-empty-tags
@@ -54,7 +54,7 @@ repos:
       - id: strip-nb-whitespace
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.22
+    rev: v0.17.0
     hooks:
       - id: ruff-check
         args: [--fix]
@@ -80,7 +80,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/tombi-toml/tombi-pre-commit
-    rev: v1.2.0
+    rev: v1.7.3
     hooks:
       - id: tombi-format
       - id: tombi-lint
@@ -92,7 +92,7 @@ repos:
       - id: prettier
 
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v22.1.8
+    rev: v23.1.3
     hooks:
       - id: clang-format
         types_or:
@@ -101,7 +101,7 @@ repos:
           - cuda
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.6.1
+    rev: 3.11.1
     hooks:
       - id: editorconfig-checker
         name: editorconfig
@@ -112,7 +112,7 @@ repos:
           )$
 
   - repo: https://github.com/cmhughes/latexindent.pl
-    rev: V4.0.2
+    rev: V4.0.3
     hooks:
       - id: latexindent
         args:
