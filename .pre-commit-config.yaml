@@ -13,7 +13,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: "0.10.1"
+    rev: 0.10.1
     hooks:
       - id: check-dev-files
 
@@ -80,7 +80,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/tombi-toml/tombi-pre-commit
-    rev: v1.7.3
+    rev: v1.8.1
     hooks:
       - id: tombi-format
       - id: tombi-lint
