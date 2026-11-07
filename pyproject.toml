@@ -174,11 +174,26 @@ depends-on = [
 ]
 description = "Upgrade all lock files"
 
+[tool.pixi.tasks._upgrade-amptools]
+cmd = """
+git submodule sync -- extern/AmpTools && \
+git submodule update --init --remote --checkout -- extern/AmpTools
+"""
+
 [tool.pixi.tasks._upgrade-pixi]
 cmd = "pixi update"
 
 [tool.pixi.tasks._upgrade-precommit]
 cmd = "prek autoupdate"
+
+# Extend the policy-managed upgrade task in the default developer environment.
+[tool.pixi.feature.dev.tasks.upgrade]
+depends-on = [
+    "_upgrade-amptools",
+    "_upgrade-pixi",
+    "_upgrade-precommit",
+]
+description = "Upgrade dependency pins and the AmpTools submodule"
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
