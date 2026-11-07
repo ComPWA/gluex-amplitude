@@ -34,6 +34,8 @@ you should get AmpTools as well. Alternatively, if you have already cloned the r
 git submodule update --init
 ```
 
+`pixi run upgrade` advances the AmpTools submodule to the upstream default branch alongside the project's dependency pins.
+
 All required dependencies can be installed within an isolated virtual environment through the [Pixi](https://pixi.sh) package manager. Installation instructions can be found [here](https://pixi.sh/latest/installation).
 
 To build all source code, simply run:
