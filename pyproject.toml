@@ -70,6 +70,10 @@ no-binder = true
 no-cd = true
 no-pypi = true
 
+[tool.docstrfmt]
+docstring-trailing-line = false
+format-python-code-blocks = false
+
 [tool.lychee]
 cache = true
 cache_exclude_status = "400.."
@@ -326,5 +330,5 @@ key-empty = "off"
 
 [[tool.tombi.schemas]]
 root = "tool.compwa.policy"
-path = "https://raw.githubusercontent.com/ComPWA/policy/0.10.3/compwa-policy.schema.json"
+path = "https://raw.githubusercontent.com/ComPWA/policy/0.10.4/compwa-policy.schema.json"
 include = ["pyproject.toml"]
