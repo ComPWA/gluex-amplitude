@@ -106,11 +106,11 @@ gluex-amplitude = { path = ".", editable = true }
 
 [tool.pixi.tasks.all]
 depends-on = [
+    "style",
+    "linkcheck",
     "build",
     "doc",
-    "linkcheck",
     "lite",
-    "style",
 ]
 description = "Run all continuous integration (CI) tasks locally"
 
