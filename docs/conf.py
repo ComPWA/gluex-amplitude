@@ -39,7 +39,7 @@ html_theme_options = {
         },
         {
             "name": "GitHub",
-            "url": "https://github.com/ComPWA/gluex-ampform",
+            "url": "https://github.com/ComPWA/gluex-amplitude",
             "icon": "fa-brands fa-github",
         },
         {
@@ -69,10 +69,6 @@ intersphinx_mapping = {
     "sympy": ("https://docs.sympy.org/latest", None),
 }
 html_title = "GlueX amplitude model"
-linkcheck_ignore = [
-    "https://doi.org/10.1103/PhysRevD.100.054017",
-    R".*lite/lab\?path=widget\.ipynb",
-]
 myst_colon_fence_exact_match = True
 myst_enable_extensions = [
     "alert",
