@@ -79,6 +79,7 @@ cache = true
 cache_exclude_status = "400.."
 # [:] keeps Lychee from extracting regex patterns as URLs.
 exclude = [
+    '^https[:]//doi\.org/10\.1103/PhysRevD\.100\.054017$',  # APS rejects automated requests from GitHub Actions
     '.*lite/lab\?path=widget\.ipynb',  # Preserved from the Sphinx linkcheck configuration
     "%7B[^/]*%7D",  # URL templates are completed at build or runtime
     "^https[:]//x-access-token/$",  # Token-authenticated Git remote placeholder
