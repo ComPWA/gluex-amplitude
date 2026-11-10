@@ -14,6 +14,9 @@ exclude_patterns = [
     "lite",
     "**.ipynb_checkpoints",
     "**.virtual_documents",
+    "**AGENTS.md",
+    "**CLAUDE.md",
+    "**GEMINI.md",
 ]
 extensions = [
     "myst_nb",
