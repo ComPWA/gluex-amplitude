@@ -67,6 +67,7 @@ excluded-dependencies = [
 no-binder = true
 
 [tool.compwa.policy.github]
+dependabot-assignees = ["redeboer"]
 no-cd = true
 no-pypi = true
 
