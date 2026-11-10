@@ -3702,7 +3702,7 @@ packages:
   license: BSD-2-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/numba?source=compressed-mapping
+  - pkg:pypi/numba?source=hash-mapping
   run_exports: {}
   size: 6247985
   timestamp: 1793629394915
@@ -4068,7 +4068,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/rpds-py?source=hash-mapping
+  - pkg:pypi/rpds-py?source=compressed-mapping
   run_exports: {}
   size: 302823
   timestamp: 1791202484532
@@ -7664,7 +7664,7 @@ packages:
   license: BSD-2-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/appnope?source=hash-mapping
+  - pkg:pypi/appnope?source=compressed-mapping
   run_exports: {}
   size: 12232
   timestamp: 1787337124448
@@ -8360,7 +8360,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/jsonschema?source=hash-mapping
+  - pkg:pypi/jsonschema?source=compressed-mapping
   run_exports: {}
   size: 82084
   timestamp: 1787579299493
@@ -8743,7 +8743,7 @@ packages:
   license: BSD-3-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/nbclient?source=hash-mapping
+  - pkg:pypi/nbclient?source=compressed-mapping
   run_exports: {}
   size: 29971
   timestamp: 1788212974885
@@ -9069,7 +9069,7 @@ packages:
   license: BSD-2-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/python-json-logger?source=compressed-mapping
+  - pkg:pypi/python-json-logger?source=hash-mapping
   run_exports: {}
   size: 19367
   timestamp: 1786872772907
@@ -11906,7 +11906,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/cffi?source=compressed-mapping
+  - pkg:pypi/cffi?source=hash-mapping
   run_exports: {}
   size: 292373
   timestamp: 1788485305495
@@ -13760,7 +13760,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/rpds-py?source=compressed-mapping
+  - pkg:pypi/rpds-py?source=hash-mapping
   run_exports: {}
   size: 286096
   timestamp: 1791202353806
