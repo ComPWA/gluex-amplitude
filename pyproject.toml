@@ -81,22 +81,12 @@ cache_exclude_status = "400.."
 # [:] keeps Lychee from extracting regex patterns as URLs.
 exclude = [
     '^https[:]//doi\.org/10\.1103/PhysRevD\.100\.054017$',  # APS rejects automated requests from GitHub Actions
-    '.*lite/lab\?path=widget\.ipynb',  # Preserved from the Sphinx linkcheck configuration
-    "%7B[^/]*%7D",  # URL templates are completed at build or runtime
-    "^https[:]//x-access-token/$",  # Token-authenticated Git remote placeholder
-    '\$(?:NEXT_[A-Z_]+|PREVIOUS_TAG)',  # Release Drafter substitutes these placeholders at runtime
 ]
 extensions = ["ipynb", "json", "md", "py", "toml", "yaml", "yml"]
 hidden = true  # Include the workflows under .github/
 include_fragments = "anchor-only"
 include_verbatim = true
 max_cache_age = "7d"
-remap = [
-    '^git\+(https[:]//[^@]+)(@.*)?$ $1',
-    "^(.+)/n$ $1",
-    '^(https[:]//github\.com/ComPWA/gluex\-amplitude/compare)/\$PREVIOUS_TAG.*$ $1',
-    '^https[:]//pypi\.org/p/\$$ https://pypi.org/project/gluex-amplitude/',
-]
 
 [tool.pixi.dependencies]
 clang = "*"
