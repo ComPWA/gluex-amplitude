@@ -78,8 +78,8 @@ format-python-code-blocks = false
 [tool.lychee]
 cache = true
 cache_exclude_status = "400.."
-# [:] keeps Lychee from extracting regex patterns as URLs.
 exclude = [
+    # [:] keeps Lychee from extracting regex patterns as URLs.
     '^https[:]//doi\.org/10\.1103/PhysRevD\.100\.054017$',  # APS rejects automated requests from GitHub Actions
 ]
 extensions = ["ipynb", "json", "md", "py", "toml", "yaml", "yml"]
@@ -198,7 +198,6 @@ cmd = "pixi update"
 [tool.pixi.tasks._upgrade-precommit]
 cmd = "prek autoupdate"
 
-# Extend the policy-managed upgrade task in the default developer environment.
 [tool.pixi.feature.dev.tasks.upgrade]
 depends-on = [
     "_upgrade-amptools",
