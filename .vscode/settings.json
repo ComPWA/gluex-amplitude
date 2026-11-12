@@ -1,16 +1,13 @@
 {
+  "C_Cpp.default.compilerPath": "${workspaceFolder}/.pixi/envs/default/bin/clang",
   "[git-commit]": {
     "editor.rulers": [72],
     "rewrap.wrappingColumn": 72
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.wordWrap": "on"
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
+  "[json][jsonc][markdown][yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
@@ -23,18 +20,14 @@
   "[toml]": {
     "editor.defaultFormatter": "tombi-toml.tombi"
   },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "C_Cpp.default.compilerPath": "${workspaceFolder}/.pixi/envs/default/bin/clang",
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
   "files.associations": {
     "**/pixi.lock": "yaml",
     "Makefile.settings": "makefile"
   },
-  "git.autofetch": true,
   "git.autoRepositoryDetection": false,
+  "git.autofetch": true,
   "git.detectSubmodules": false,
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.refresh.enabled": true,
@@ -83,7 +76,6 @@
   ],
   "livePreview.defaultPreviewPath": "docs/_build/html",
   "makefile.configureOnOpen": false,
-  "multiDiffEditor.experimental.enabled": true,
   "notebook.codeActionsOnSave": {
     "notebook.source.organizeImports": "explicit"
   },

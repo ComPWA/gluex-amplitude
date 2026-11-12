@@ -30,6 +30,7 @@ version.py
 .coverage.*
 .ipynb_checkpoints/
 .jupyterlite.doit.db
+.lycheecache
 .virtual_documents/
 __pycache__/
 htmlcov/
@@ -42,3 +43,12 @@ prof/
 # Settings
 .idea/
 **.code-workspace
+
+# Agent tooling
+.agents/
+.claude/
+.codex/
+.gemini/
+AGENTS.md
+CLAUDE.md
+GEMINI.md

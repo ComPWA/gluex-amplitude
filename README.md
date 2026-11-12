@@ -1,7 +1,7 @@
 # Comparison repository for GlueX amplitude models
 
+[![Pixi Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prefix-dev/pixi/main/assets/badge/v0.json)](https://pixi.prefix.dev)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Pixi Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prefix-dev/pixi/main/assets/badge/v0.json)](https://pixi.sh)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 This repository was created during PWA working group meetings for GlueX at Jefferson Lab, July 31st to August 4th, 2023. Live notes for these discussions can be found [here](https://hackmd.io/@QHYjhejHTIWXL2MltV3WNQ/r17prtBo3) on HackMD. Each meeting was organised like a 'hackathon' and the results of these programming sessions can be found on [compwa.github.io/gluex-amplitude](https://compwa.github.io/gluex-amplitude).
@@ -33,6 +33,8 @@ you should get AmpTools as well. Alternatively, if you have already cloned the r
 ```shell
 git submodule update --init
 ```
+
+`pixi run upgrade` advances the AmpTools submodule to the upstream default branch alongside the project's dependency pins.
 
 All required dependencies can be installed within an isolated virtual environment through the [Pixi](https://pixi.sh) package manager. Installation instructions can be found [here](https://pixi.sh/latest/installation).
 

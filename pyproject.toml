@@ -67,8 +67,26 @@ excluded-dependencies = [
 no-binder = true
 
 [tool.compwa.policy.github]
+dependabot-assignees = ["redeboer"]
 no-cd = true
 no-pypi = true
+
+[tool.docstrfmt]
+docstring-trailing-line = false
+format-python-code-blocks = false
+
+[tool.lychee]
+cache = true
+cache_exclude_status = "400.."
+exclude = [
+    # [:] keeps Lychee from extracting regex patterns as URLs.
+    '^https[:]//doi\.org/10\.1103/PhysRevD\.100\.054017$',  # APS rejects automated requests from GitHub Actions
+]
+extensions = ["ipynb", "json", "md", "py", "toml", "yaml", "yml"]
+hidden = true  # Include the workflows under .github/
+include_fragments = "anchor-only"
+include_verbatim = true
+max_cache_age = "7d"
 
 [tool.pixi.dependencies]
 clang = "*"
@@ -84,11 +102,11 @@ gluex-amplitude = { path = ".", editable = true }
 
 [tool.pixi.tasks.all]
 depends-on = [
+    "style",
+    "linkcheck",
     "build",
     "doc",
-    "linkcheck",
     "lite",
-    "style",
 ]
 description = "Run all continuous integration (CI) tasks locally"
 
@@ -143,14 +161,8 @@ cmd = "jupyter lab {{ paths }}"
 description = "Run Jupyter Lab"
 
 [tool.pixi.tasks.linkcheck]
-cmd = """
-sphinx-build \
-    --builder=linkcheck \
-    --show-traceback \
-    docs/ \
-    docs/_build/linkcheck/
-"""
-description = "Check external links in the documentation (requires internet connection)"
+cmd = "uvx --from lychee-bin lychee . --quiet"
+description = "Check links and fragments in repository sources (requires internet connection)"
 
 [tool.pixi.tasks.lite]
 cmd = """
@@ -174,11 +186,25 @@ depends-on = [
 ]
 description = "Upgrade all lock files"
 
+[tool.pixi.tasks._upgrade-amptools]
+cmd = """
+git submodule sync -- extern/AmpTools && \
+git submodule update --init --remote --checkout -- extern/AmpTools
+"""
+
 [tool.pixi.tasks._upgrade-pixi]
 cmd = "pixi update"
 
 [tool.pixi.tasks._upgrade-precommit]
 cmd = "prek autoupdate"
+
+[tool.pixi.feature.dev.tasks.upgrade]
+depends-on = [
+    "_upgrade-amptools",
+    "_upgrade-pixi",
+    "_upgrade-precommit",
+]
+description = "Upgrade dependency pins and the AmpTools submodule"
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
@@ -242,6 +268,9 @@ ignore-names = [
     "_print",
 ]
 
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"__future__.annotations".msg = "Notebooks should not use postponed evaluation of annotations."
+
 [tool.ruff.lint.isort]
 split-on-trailing-comma = false
 
@@ -295,5 +324,5 @@ key-empty = "off"
 
 [[tool.tombi.schemas]]
 root = "tool.compwa.policy"
-path = "https://raw.githubusercontent.com/ComPWA/policy/0.10.1/compwa-policy.schema.json"
+path = "https://raw.githubusercontent.com/ComPWA/policy/0.10.7/compwa-policy.schema.json"
 include = ["pyproject.toml"]
